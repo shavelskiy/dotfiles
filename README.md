@@ -73,7 +73,33 @@ Nvim config primarily for PHP development
 - <a href="https://github.com/rcarriga/nvim-dap-ui">rcarriga/nvim-dap-ui</a> - UI for debug
 
 #### Color scheme
+
 Base16 based made from this impatientation <a href="https://github.com/NvChad/base46">base46</a>
+
+#### LSP Servers
+
+|            | completion   | lint         | format       |
+| ---------- | ------------ | ------------ | ------------ |
+| lua        | sumneko_lua  | sumneko_lua  | stylua       |
+| php        | intelephense | intelephense | intelephense |
+| twig       | -            | twigcs       | djlint       |
+| Dockerfile | dockerls     | dockerls     | dockerls     |
+| yaml       | yamlls       | yamlls       | prettier     |
+| xml        | -            | tidy         | xmlformat    |
+| markdown   | -            | -            | prettier     |
+
+- <a href="https://github.com/sumneko/lua-language-server">sumneko_lua (lua-language-server)</a> - Lsp-config
+- <a href="https://intelephense.com">intelephense</a> - Lsp-config
+- <a href="https://github.com/redhat-developer/yaml-language-server">yamlls</a> - Lsp-config
+- <a href="https://github.com/rcjsuen/dockerfile-language-server-nodejs">dockerls</a> - Lsp-config
+- <a href="https://github.com/JohnnyMorganz/StyLua">stylua</a> - Null-ls
+- <a href="https://prettier.io">prettier</a> - Null-ls
+- <a href="https://github.com/friendsoftwig/twigcs">twigcs</a> - Null-ls
+- <a href="https://github.com/Riverside-Healthcare/djLint">djlint</a> - Null-ls
+- <a href="https://github.com/pamoller/xmlformatter">xmlformat</a> - Null-ls
+- <a href="https://www.html-tidy.org/">tidy</a> - Null-ls (!Install manualy, mason not have it)
+
+todo frontend development
 
 ### try with docker (fish + nvim)
 
@@ -91,10 +117,10 @@ docker run -w /root -it --rm alpine:edge sh -uelic '
 
 ##### After install run
 
-1. ```tmux``` - run tmux
-1. ```fish``` - run fish
-1. ```curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher``` - install fisher for fish plugins
-1. ```cd dotfiles && git reset --hard``` - after fisher install reset plugins
-1. ```fisher update``` - and then configurate tide plugin
-1. ```vim``` - start nvim and wait plugins and other install
+1. `tmux` - run tmux
+1. `fish` - run fish
+1. `curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher` - install fisher for fish plugins
+1. `cd dotfiles && git reset --hard` - after fisher install reset plugins
+1. `fisher update` - and then configurate tide plugin
+1. `vim` - start nvim and wait plugins and other install
 1. restart vim for apply color scheme

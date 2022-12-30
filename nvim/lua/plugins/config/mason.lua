@@ -5,7 +5,6 @@ require('mason').setup {
       package_installed = ' ',
       package_uninstalled = ' ﮊ',
     },
-
     keymaps = {
       toggle_server_expand = '<CR>',
       install_server = 'i',
@@ -26,7 +25,7 @@ require('mason-lspconfig').setup {
 }
 
 require('mason-null-ls').setup {
-  ensure_installed = { 'tidy', 'prettier', 'djlint', 'twigcs', 'yamllint' },
+  ensure_installed = { 'prettier', 'stylua', 'djlint', 'twigcs', 'xmlformatter' },
 }
 
 require('utils.loader').highlight 'mason'
