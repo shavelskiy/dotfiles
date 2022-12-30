@@ -1,0 +1,40 @@
+{
+  "doc_variable": {
+    "prefix": "/*",
+    "body": "/** @var ${1:Type} \\$${2:var} */",
+    "description": "Variable documentation"
+  },
+  "doc_function": {
+    "prefix": "/**",
+    "body": ["/**", " * ${1}", " */"],
+    "description": "Function documentation"
+  },
+  "getter_setter": {
+    "prefix": "gs",
+    "body": [
+      "public function get${1:Var}(): ${2:int}",
+      "{",
+      "    return \\$this->${3:var};",
+      "}",
+      "",
+      "public function set${1:Var}(${2} \\$${3}): self",
+      "{",
+      "    \\$this->${3} = $${3};",
+      "    return \\$this;",
+      "}",
+      ""
+    ],
+    "description": "Getter and setter"
+  },
+  "getter": {
+    "prefix": "getter",
+    "body": [
+      "public function get${1:Var}(): ${2:int}",
+      "{",
+      "    return \\$this->${3:var};",
+      "}",
+      ""
+    ],
+    "description": "Getter"
+  }
+}

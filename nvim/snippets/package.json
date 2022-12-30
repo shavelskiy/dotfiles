@@ -1,0 +1,13 @@
+{
+  "name": "nvim snippets",
+  "version": "1.0.0",
+  "description": "nvim Snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./php.json"
+      }
+    ]
+  }
+}
