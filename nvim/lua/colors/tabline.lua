@@ -1,16 +1,14 @@
 local colors = require 'colors.colors'
 
 return {
-  { 'BufferCurrent', { bg = colors.base01, fg = colors.base07 } },
-  { 'BufferCurrentMod', { bg = colors.base01, fg = colors.base08 } },
-  { 'BufferInactive', { bg = colors.base02, fg = colors.base04 } },
-  { 'BufferInactiveMod', { bg = colors.base02, fg = colors.base08 } },
+  { 'TblineFill', { bg = colors.base02 } },
+  { 'TbLineBufOn', { fg = colors.base07, bg = colors.base01 } },
+  { 'TbLineBufOff', { fg = colors.base04, bg = colors.base02 } },
+  { 'TbLineBufOnModified', { fg = colors.base08 } },
+  { 'TbLineBufOffModified', { fg = colors.base08, bg = colors.base02 } },
+  { 'TbLineBufOnClose', { fg = colors.base07, bg = colors.base01 } },
+  { 'TbLineBufOffClose', { fg = colors.base04, bg = colors.base02 } },
 
-  { 'BufferOffset', { bg = colors.base00, fg = colors.base08 } },
-
-  { 'BufferTabpageFill', { bg = colors.base02, fg = colors.base00 } },
-  { 'BufferTabpages', { bg = colors.base02, fg = colors.base0C, bold = true } },
-
-  { 'BufferTabOn', { fg = colors.base01, bg = colors.base05, bold = true } },
-  { 'BufferTabOff', { fg = colors.base05, bg = colors.base03 } },
+  { 'TbLineTabOn', { fg = colors.base01, bg = colors.base05, bold = true } },
+  { 'TbLineTabOff', { fg = colors.base05, bg = colors.base03 } },
 }
