@@ -1,14 +1,14 @@
 local colors = require 'colors.colors'
 
 return {
-  { 'TblineFill', { bg = colors.base02 } },
-  { 'TbLineBufOn', { fg = colors.base07, bg = colors.base01 } },
-  { 'TbLineBufOff', { fg = colors.base04, bg = colors.base02 } },
-  { 'TbLineBufOnModified', { fg = colors.base08 } },
-  { 'TbLineBufOffModified', { fg = colors.base08, bg = colors.base02 } },
-  { 'TbLineBufOnClose', { fg = colors.base07, bg = colors.base01 } },
-  { 'TbLineBufOffClose', { fg = colors.base04, bg = colors.base02 } },
+  { 'TablineFill', { bg = colors.base02 } },
+  { 'TablineBufOn', { fg = colors.base07, bg = colors.base01 } },
+  { 'TablineBufOff', { fg = colors.base04, bg = colors.base02 } },
+  { 'TablineBufOnModified', { fg = colors.base08, bg = colors.base01 } },
+  { 'TablineBufOffModified', { fg = colors.base08, bg = colors.base02 } },
 
-  { 'TbLineTabOn', { fg = colors.base01, bg = colors.base05, bold = true } },
-  { 'TbLineTabOff', { fg = colors.base05, bg = colors.base03 } },
+  { 'TablinePick', { fg = colors.base08, bg = colors.base02 } },
+
+  { 'TablineTabOn', { fg = colors.base01, bg = colors.base05, bold = true } },
+  { 'TablineTabOff', { fg = colors.base05, bg = colors.base03 } },
 }
