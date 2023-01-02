@@ -5,7 +5,7 @@ require('gitsigns').setup {
     delete = { hl = 'GitSignsDiffDelete', text = '│' },
     topdelete = { hl = 'GitSignsDiffDelete', text = '‾' },
     changedelete = { hl = 'GitSignsDiffChangeDelete', text = '~' },
-    untracked = { hl = 'GitSignsAdd', text = '┆' },
+    untracked = { hl = 'GitSignsDiffAdd', text = '│' },
   },
   on_attach = function(bufnr)
     for _, map in pairs(require 'mapping.gitsigns') do
