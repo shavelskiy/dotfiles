@@ -28,4 +28,8 @@ require('mason-null-ls').setup {
   ensure_installed = { 'prettier', 'stylua', 'djlint', 'twigcs', 'xmlformatter' },
 }
 
+require('mason-nvim-dap').setup {
+  ensure_installed = { 'php' },
+}
+
 require('utils.loader').highlight 'mason'

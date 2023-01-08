@@ -82,6 +82,7 @@ return {
     dependencies = {
       'williamboman/mason-lspconfig.nvim',
       'jay-babu/mason-null-ls.nvim',
+      'jay-babu/mason-nvim-dap.nvim',
     },
     config = function() require 'plugins.config.mason' end,
   },

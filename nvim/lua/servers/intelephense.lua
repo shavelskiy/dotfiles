@@ -1,5 +1,5 @@
 -- local phpVersion = '7.0'
--- local pill/undotreehpVersion = '7.1'
+-- local phpVersion = '7.1'
 -- local phpVersion = '7.2'
 -- local phpVersion = '7.3'
 -- local phpVersion = '7.4'

@@ -54,6 +54,7 @@ Nvim config primarily for PHP development
 - <a href="https://github.com/williamboman/mason.nvim">williamboman/mason.nvim</a> - Lsp and other servers manager
 - <a href="https://github.com/williamboman/mason-lspconfig.nvim">williamboman/mason-lspconfig.nvim</a> - Plugin for auto provide mason servers to lsp-config
 - <a href="https://github.com/jay-babu/mason-null-ls.nvim">jay-babu/mason-null-ls.nvim</a> - Plugin for auto provide mason servers to null-ls
+- <a href="https://github.com/jay-babu/mason-nvim-dap.nvim">jay-babu/mason-nvim-dap.nvim</a> - Plugin for auto provide mason servers to dap
 - <a href="https://github.com/RRethy/vim-illuminate">RRethy/vim-illuminate</a> - Highlight words by lsp (e.g. same variable)
 - <a href="https://github.com/jose-elias-alvarez/null-ls.nvim">jose-elias-alvarez/null-ls.nvim</a> - Plugin for other formatters or linters
 

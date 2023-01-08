@@ -33,6 +33,8 @@ return {
   { '@text.literal', { fg = colors.base09 } },
   { '@text.uri', { fg = colors.base09, underline = true } },
   { '@type.builtin', { fg = colors.base0E, italic = true } },
+  { '@type.qualifier', { fg = colors.base0E, italic = true } },
+  { '@type.definition', { fg = colors.base07 } },
   { '@variable.builtin', { fg = colors.base05 } },
   { '@variable', { fg = colors.base05 } },
   { '@definition', { sp = colors.base04, underline = true } },
@@ -81,9 +83,6 @@ return {
   { 'htmlArg', { fg = colors.base0B } },
   { 'htmlString', { fg = colors.base0A } },
 
-  -- json
-  { 'JsonScalar', { fg = colors.base0E } },
-
   -- yaml
   { '@field.yaml', { fg = colors.base08 } },
 
@@ -93,7 +92,7 @@ return {
   { '@variable.php', { fg = colors.base0C } },
   { '@variable.builtin.php', { fg = colors.base0C } },
   { '@variable.php', { fg = colors.base0C } },
-  { '@function.php', { fg = colors.base0B } },
+  -- { '@function.php', { fg = colors.base0B } },
   { '@const.builtin.php', { fg = colors.base0E } },
   { '@exception.php', { fg = colors.base0E, italic = true } },
   { '@error.php', { fg = colors.base05 } },

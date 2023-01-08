@@ -6,4 +6,6 @@ return {
 
   { '[d', vim.diagnostic.goto_prev },
   { 'd]', vim.diagnostic.goto_next },
+
+  { '<leader>ca', vim.lsp.buf.code_action },
 }
