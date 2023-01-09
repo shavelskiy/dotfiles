@@ -80,7 +80,7 @@ return {
   { '@type.qualifier', { fg = colors.base0E, italic = true } }, -- type qualifiers (e.g. `const`)
 
   { '@storageclass', { fg = colors.base0A } }, -- visibility/life-time modifiers
-  { '@attribute', { fg = colors.base0A } }, -- attribute annotations (e.g. Python decorators)
+  { '@attribute', { fg = colors.base0D } }, -- attribute annotations (e.g. Python decorators)
   { '@field', { fg = colors.base0D } }, -- object and struct fields
   { '@property', { fg = colors.base07 } }, -- similar to `@field`
 
@@ -142,12 +142,10 @@ return {
   { '@field.yaml', { fg = colors.base08 } },
 
   -- php
-  { '@attribute.php', { fg = colors.base0D } },
   { '@string.php', { fg = colors.base0A } },
   { '@variable.php', { fg = colors.base0C } },
   { '@function.php', { fg = colors.base0B } },
   { '@function.call.php', { fg = colors.base0B } },
-  { '@variable.php', { fg = colors.base0C } },
   { '@variable.builtin.php', { fg = colors.base0C } },
   { '@exception.php', { fg = colors.base0E } },
   { '@error.php', { fg = colors.base05 } },
