@@ -151,7 +151,6 @@ return {
   { '@string.php', { fg = colors.base0A } },
   { '@variable.php', { fg = colors.base0C } },
   { '@variable.builtin.php', { fg = colors.base0C } },
-  { '@variable.php', { fg = colors.base0C } },
   { '@exception.php', { fg = colors.base0E } },
   { '@error.php', { fg = colors.base05 } },
 
