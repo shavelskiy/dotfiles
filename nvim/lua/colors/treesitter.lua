@@ -126,7 +126,6 @@ return {
   { '@variable.php', { fg = colors.base0C } },
   { '@variable.builtin.php', { fg = colors.base0C } },
   { '@variable.php', { fg = colors.base0C } },
-  { '@constant.builtin.php', { fg = colors.base0E } },
   { '@exception.php', { fg = colors.base0E } },
   { '@error.php', { fg = colors.base05 } },
 

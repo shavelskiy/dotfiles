@@ -3,7 +3,7 @@ return {
 
   { '<C-s>', ':w<cr>' },
 
-  { 'tn', ':tabedit <cr>' },
+  { 'te', ':tabedit <cr>' },
   { 'tq', ':tabclose <cr>' },
 
   { '<C-h>', '<C-w>h' },
