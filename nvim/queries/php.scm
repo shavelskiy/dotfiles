@@ -17,8 +17,6 @@
 (namespace_aliasing_clause (name)) @type
 (class_interface_clause
   [(name) (qualified_name)] @type)
-(scoped_call_expression
-  scope: [(name) (qualified_name)] @type)
 (class_constant_access_expression
   . [(name) (qualified_name)] @type
   (name) @constant)
@@ -27,7 +25,18 @@
 (use_declaration
     (name) @type)
 
-; Functions, methods, constructors
+(object_creation_expression
+  (name) @type)
+
+(variable_name) @variable
+
+(class_constant_access_expression
+  (relative_scope)
+  (name) @constant)
+(class_constant_access_expression
+  (name)
+  (name) @keyword
+    (#eq? @keyword "class"))
 
 (array_creation_expression "array" @function.builtin)
 (list_literal "list" @function.builtin)
@@ -35,28 +44,26 @@
 (method_declaration
   name: (name) @method)
 
-(function_call_expression
-  function: (qualified_name (name)) @function)
-
-(function_call_expression
-  (name) @function)
-
 (scoped_call_expression
-  name: (name) @function)
+  name: (name) @function.call)
+(scoped_call_expression
+  scope: [(name) (qualified_name)] @type)
+
+(function_call_expression
+  (name) @function.call)
 
 (member_call_expression
-  name: (name) @method)
+  name: (name) @function.call)
 
 (function_definition
   name: (name) @function)
 
 (nullsafe_member_call_expression
-    name: (name) @method)
+    name: (name) @method.call)
 
 (object_creation_expression
   [(name) (qualified_name)] @constructor)
 
-; Parameters
 [
   (simple_parameter)
   (variadic_parameter)
@@ -65,18 +72,11 @@
 (argument
     (name) @parameter)
 
-; Member
-
 (property_element
   (variable_name) @property)
 
 (member_access_expression
-  name: (variable_name (name)) @property)
-
-(member_access_expression
   name: (name) @property)
-
-; Variables
 
 (relative_scope) @variable.builtin
 
@@ -85,19 +85,12 @@
 
 (const_declaration (const_element (name) @constant))
 
-((name) @variable.builtin
- (#eq? @variable.builtin "this"))
-
-; Namespace
 (namespace_definition
   name: (namespace_name) @namespace)
 
-; Attributes
 (attribute_list) @attribute
 
-; Conditions ( ? : )
 (conditional_expression) @conditional
-; Basic tokens
 
 [
  (string)
@@ -113,7 +106,6 @@
 (comment) @comment
 
 (named_label_statement) @label
-; Keywords
 
 [
  "and"
@@ -172,7 +164,6 @@
   "return"
   "yield"
 ] @keyword.return
-
 
 [
  "continue"
@@ -278,47 +269,5 @@
   "["
 ] @punctuation.bracket
 
-(class_declaration
-  (name) @class_declaration)
-
-(interface_declaration
-  (name) @interface_declaration)
-
-(member_call_expression
-  (name) @function_call)
-
-(variable_name) @variable
-
-(class_constant_access_expression
-  (relative_scope) @keyword)
-
-(object_creation_expression
-  (name) @type)
-
-(scoped_call_expression
-  scope: (name) @class_declaration)
-
-(scoped_property_access_expression 
-  scope: (name) @class_declaration)
-
-(class_constant_access_expression
-  (name) @class_declaration
-  (name) @constant)
-
-(class_constant_access_expression
-  (relative_scope)
-  (name) @constant)
-
-(null) @number
-
-(attribute
-  parameters: (arguments
-    (argument
-      name: (name) @attribute_parameter)))
-
-(class_constant_access_expression
-  (name)
-  (name) @keyword
-    (#eq? @keyword "class"))
 
 (ERROR) @error

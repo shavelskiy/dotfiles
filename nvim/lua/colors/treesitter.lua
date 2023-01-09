@@ -125,23 +125,18 @@ return {
   -- { '@nospell', { underline = false } }, -- for defining regions that should NOT be spellchecked
 
   { '@definition', { sp = colors.base04, underline = true } }, -- various definitions
-  { '@definition.constant', { sp = colors.base04, underline = true } }, -- constants
-  { '@definition.function', { sp = colors.base04, underline = true } }, -- functions
-  { '@definition.method', { sp = colors.base04, underline = true } }, -- methods
-  { '@definition.var', { sp = colors.base04, underline = true } }, -- variables
-  { '@definition.parameter', { sp = colors.base04, underline = true } }, -- parameters
-  { '@definition.macro', { sp = colors.base04, underline = true } }, -- preprocessor macros
-  { '@definition.type', { sp = colors.base04, underline = true } }, -- types or classes
-  { '@definition.field', { sp = colors.base04, underline = true } }, -- fields or properties
-  { '@definition.enum', { sp = colors.base04, underline = true } }, -- enumerations
-  { '@definition.namespace', { sp = colors.base04, underline = true } }, -- modules or namespaces
-  { '@definition.import', { sp = colors.base04, underline = true } }, -- imported names
-  { '@definition.associated', { sp = colors.base04, underline = true } }, -- the associated type of a variable
-
-  { '@class_declaration', { fg = colors.base0B } },
-  { '@interface_declaration', { fg = colors.base0D } },
-  { '@function_call', { fg = colors.base0B } },
-  { '@attribute_parameter', { fg = colors.base0D } },
+  { '@definition.constant', { sp = colors.base0F } }, -- constants
+  { '@definition.function', { sp = colors.base0F } }, -- functions
+  { '@definition.method', { sp = colors.base0F } }, -- methods
+  { '@definition.var', { sp = colors.base0F } }, -- variables
+  { '@definition.parameter', { sp = colors.base0F } }, -- parameters
+  { '@definition.macro', { sp = colors.base0F } }, -- preprocessor macros
+  { '@definition.type', { sp = colors.base0F } }, -- types or classes
+  { '@definition.field', { sp = colors.base0F } }, -- fields or properties
+  { '@definition.enum', { sp = colors.base0F } }, -- enumerations
+  { '@definition.namespace', { sp = colors.base0F } }, -- modules or namespaces
+  { '@definition.import', { sp = colors.base0F } }, -- imported names
+  { '@definition.associated', { sp = colors.base0F } }, -- the associated type of a variable
 
   -- yaml
   { '@field.yaml', { fg = colors.base08 } },
@@ -150,9 +145,13 @@ return {
   { '@attribute.php', { fg = colors.base0D } },
   { '@string.php', { fg = colors.base0A } },
   { '@variable.php', { fg = colors.base0C } },
+  { '@function.php', { fg = colors.base0B } },
+  { '@function.call.php', { fg = colors.base0B } },
+  { '@variable.php', { fg = colors.base0C } },
   { '@variable.builtin.php', { fg = colors.base0C } },
   { '@exception.php', { fg = colors.base0E } },
   { '@error.php', { fg = colors.base05 } },
+  { '@parameter.php', { fg = colors.base0D } },
 
   -- twig
   { '@tag.twig', { fg = colors.base0E } },
