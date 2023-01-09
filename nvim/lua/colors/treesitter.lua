@@ -1,6 +1,32 @@
 local colors = require 'colors.colors'
 
 return {
+  { 'Boolean', { link = '@boolean' } },
+  { 'Character', { link = '@character' } },
+  { 'Conditional', { link = '@condition' } },
+  { 'Constant', { link = '@constant' } },
+  { 'Define', { link = '@define' } },
+  { 'Float', { link = '@float' } },
+  { 'Variable', { link = '@variable' } },
+  { 'Function', { link = '@function' } },
+  { 'Include', { link = '@include' } },
+  { 'Keyword', { link = '@keyword' } },
+  { 'Label', { link = '@label' } },
+  { 'Number', { link = '@number' } },
+  { 'Operator', { link = '@operator' } },
+  { 'PreProc', { link = '@preproc' } },
+  { 'Repeat', { link = '@repeat' } },
+  { 'StorageClass', { link = '@storageclass' } },
+  { 'String', { link = '@string' } },
+  { 'Tag', { link = '@tag' } },
+  { 'Todo', { link = '@text.todo' } },
+  { 'Type', { link = '@type' } },
+  { 'Typedef', { link = '@type.definition' } },
+  { 'Conceal', { link = '@conceal' } },
+  { 'Comment', { link = '@commnet' } },
+  { 'Debug', { link = '@debug' } },
+  { 'Error', { link = '@error' } },
+
   { '@comment', { fg = colors.base04 } }, -- line and block comments
   { '@error', { fg = colors.base08 } }, -- syntax/parser errors
   { '@none', { fg = colors.base05 } }, -- completely disable the highlight
