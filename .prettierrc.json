@@ -1,0 +1,23 @@
+{
+  "overrides": [
+    {
+      "files": "*.xml",
+      "options": {
+        "xmlSelfClosingSpace": false
+      }
+    },
+    {
+      "files": "*.yaml",
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.twig",
+      "options": {
+        "twigPrintWidth": 300,
+        "tabWidth": 4
+      }
+    }
+  ]
+}

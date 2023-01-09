@@ -83,10 +83,10 @@ Base16 based made from this impatientation <a href="https://github.com/NvChad/ba
 | ---------- | ------------ | ------------ | ------------ |
 | lua        | sumneko_lua  | sumneko_lua  | stylua       |
 | php        | intelephense | intelephense | intelephense |
-| twig       | -            | twigcs       | djlint       |
+| twig       | -            | twigcs       | prettier     |
 | Dockerfile | dockerls     | dockerls     | dockerls     |
 | yaml       | yamlls       | yamlls       | prettier     |
-| xml        | -            | tidy         | xmlformat    |
+| xml        | -            | tidy         | prettier     |
 | markdown   | -            | -            | prettier     |
 
 - <a href="https://github.com/sumneko/lua-language-server">sumneko_lua (lua-language-server)</a> - Lsp-config
@@ -94,10 +94,8 @@ Base16 based made from this impatientation <a href="https://github.com/NvChad/ba
 - <a href="https://github.com/redhat-developer/yaml-language-server">yamlls</a> - Lsp-config
 - <a href="https://github.com/rcjsuen/dockerfile-language-server-nodejs">dockerls</a> - Lsp-config
 - <a href="https://github.com/JohnnyMorganz/StyLua">stylua</a> - Null-ls
-- <a href="https://prettier.io">prettier</a> - Null-ls
+- <a href="https://prettier.io">prettier</a> - Null-ls, after install add plugins
 - <a href="https://github.com/friendsoftwig/twigcs">twigcs</a> - Null-ls
-- <a href="https://github.com/Riverside-Healthcare/djLint">djlint</a> - Null-ls
-- <a href="https://github.com/pamoller/xmlformatter">xmlformat</a> - Null-ls
 - <a href="https://www.html-tidy.org/">tidy</a> - Null-ls (!Install manualy, mason not have it)
 
 todo frontend development
@@ -112,8 +110,16 @@ docker run -w /root -it --rm alpine:edge sh -uelic '
              ln -s ~/dotfiles/nvim ~/.config/nvim
 	     ln -s ~/dotfiles/fish ~/.config/fish
 	     ln -s ~/dotfiles/tmux ~/.config/tmux
+	     ln -s ~/dotfiles/.prettierrc.json ~/.prettierrc.json
              fish
              '
+```
+
+After install mason packages install prettier plugins
+
+```
+cd ~/.local/share/nvim/mason/packages/prettier
+npm install --save-dev @prettier/plugin-xml prettier-plugin-twig-melody
 ```
 
 ##### After install run

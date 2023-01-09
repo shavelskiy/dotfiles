@@ -25,7 +25,7 @@ require('mason-lspconfig').setup {
 }
 
 require('mason-null-ls').setup {
-  ensure_installed = { 'prettier', 'stylua', 'djlint', 'twigcs', 'xmlformatter' },
+  ensure_installed = { 'prettier', 'stylua', 'twigcs', 'jsonlint'  },
 }
 
 require('mason-nvim-dap').setup {

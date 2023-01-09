@@ -116,8 +116,8 @@ return {
   { '@text.diff.delete', { fg = colors.base09 } }, -- deleted text (for diff files)
 
   { '@tag', { fg = colors.base08 } }, -- XML tag names
-  { '@tag.attribute', { fg = colors.base09 } }, -- XML tag attributes
-  { '@tag.delimiter', { fg = colors.base0A } }, -- XML tag delimiters
+  { '@tag.attribute', { fg = colors.base0A } }, -- XML tag attributes
+  { '@tag.delimiter', { fg = colors.base06 } }, -- XML tag delimiters
 
   { '@conceal', { bg = 'none' } }, -- for captures that are only used for concealing
 
@@ -154,14 +154,12 @@ return {
   -- twig
   { '@tag.twig', { fg = colors.base0E } },
   { '@tag.delimiter.twig', { fg = colors.base07 } },
-  { '@string.twig', { fg = colors.base0A } },
-  { '@variable.twig', { fg = colors.base07 } },
   { '@attribute.twig', { fg = colors.base07 } },
 
   -- xml
-  { 'xmlTag', { fg = colors.base0A } },
+  { 'xmlTag', { fg = colors.base06 } },
   { 'xmlTagName', { fg = colors.base08 } },
-  { 'xmlAttrib', { fg = colors.base08 } },
+  { 'xmlAttrib', { fg = colors.base0A } },
   { 'xmlString', { fg = colors.base0B } },
 
   -- makrdown
