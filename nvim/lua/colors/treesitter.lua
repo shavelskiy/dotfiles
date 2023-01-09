@@ -26,11 +26,11 @@ return {
 
   { '@function', { fg = colors.base0D } }, -- function definitions
   { '@function.builtin', { fg = colors.base0D } }, -- built-in functions
-  { '@function.call', { fg = colors.base0B } }, -- function calls
+  { '@function.call', { fg = colors.base0D } }, -- function calls
   { '@function.macro', { fg = colors.base08 } }, -- preprocessor macros
 
   { '@method', { fg = colors.base0D } }, -- method definitions
-  { '@method.call', { fg = colors.base0B } }, -- method calls
+  { '@method.call', { fg = colors.base0D } }, -- method calls
 
   { '@constructor', { fg = colors.base07 } }, -- constructor calls and definitions
   { '@parameter', { fg = colors.base08 } }, -- parameters of a function
