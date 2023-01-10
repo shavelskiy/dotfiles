@@ -19,7 +19,7 @@ return {
   },
   {
     'shavelskiy/colorscheme.nvim',
-    config = function() require('colorscheme').setup { theme = 'gruvbox' } end,
+    config = function() require 'plugins.config.colorscheme' end,
   },
   {
     'shavelskiy/statusline.nvim',
