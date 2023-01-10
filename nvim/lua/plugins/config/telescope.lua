@@ -52,4 +52,3 @@ require('telescope').setup {
 }
 
 require('utils.loader').mapping 'telescope'
-require('utils.loader').highlight 'telescope'

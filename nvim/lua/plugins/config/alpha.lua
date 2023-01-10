@@ -66,5 +66,3 @@ require('alpha').setup {
   },
   opts = {},
 }
-
-require('utils.loader').highlight 'alpha'

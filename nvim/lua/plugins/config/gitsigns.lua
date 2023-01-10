@@ -13,5 +13,3 @@ require('gitsigns').setup {
     end
   end,
 }
-
-require('utils.loader').highlight 'gitsigns'

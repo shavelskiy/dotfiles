@@ -6,11 +6,4 @@ M.mapping = function(name)
   end
 end
 
-M.highlight = function(name)
-  local groups = require('colors.' .. name)
-  for _, data in pairs(groups) do
-    vim.api.nvim_set_hl(0, data[1], data[2])
-  end
-end
-
 return M

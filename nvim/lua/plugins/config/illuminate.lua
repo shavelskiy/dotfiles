@@ -27,5 +27,3 @@ require('illuminate').configure {
   large_file_cutoff = nil,
   large_file_overrides = nil,
 }
-
-require('utils.loader').highlight 'illuminate'

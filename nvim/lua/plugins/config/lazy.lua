@@ -7,5 +7,3 @@ require('lazy').setup(require 'plugins.plugins', {
     },
   },
 })
-
-require('utils.loader').highlight 'lazy'

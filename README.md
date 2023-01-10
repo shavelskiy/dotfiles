@@ -20,6 +20,7 @@ Nvim config primarily for PHP development
 
 #### UI
 
+- <a href="https://github.com/shavelskiy/colorscheme.nvim">shavelskiy/colorscheme.nvim</a> - Colorscheme
 - <a href="https://github.com/kyazdani42/nvim-web-devicons">kyazdani42/nvim-web-devicons</a> - File icons pack
 - <a href="https://github.com/kyazdani42/nvim-tree.lua">kyazdani42/nvim-tree.lua</a> - File tree
 - <a href="https://github.com/shavelskiy/tabline.nvim">shavelskiy/tabline.nvim</a> - Tabline

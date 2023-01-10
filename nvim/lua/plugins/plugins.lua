@@ -18,13 +18,16 @@ return {
     config = function() require 'plugins.config.tabline' end,
   },
   {
+    'shavelskiy/colorscheme.nvim',
+    config = function() require('colorscheme').setup { theme = 'gruvbox' } end,
+  },
+  {
     'shavelskiy/statusline.nvim',
     config = function() require 'plugins.config.statusline' end,
   },
   { 'windwp/nvim-autopairs', config = true },
   {
     'lukas-reineke/indent-blankline.nvim',
-    config = function() require('utils.loader').highlight 'indentline' end,
   },
   {
     'uga-rosa/ccc.nvim',

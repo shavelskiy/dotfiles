@@ -31,5 +31,3 @@ require('mason-null-ls').setup {
 require('mason-nvim-dap').setup {
   ensure_installed = { 'php' },
 }
-
-require('utils.loader').highlight 'mason'

@@ -8,4 +8,3 @@ require('diffview').setup {
 }
 
 require('utils.loader').mapping 'diffview'
-require('utils.loader').highlight 'diffview'
