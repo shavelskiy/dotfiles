@@ -4,10 +4,7 @@ local moveAction = function(left)
 
   local node = lib.get_node_at_cursor()
 
-  if not node then
-    print 'not node'
-    return
-  end
+  if not node then return end
 
   if left then
     if node.open == true then
@@ -16,12 +13,7 @@ local moveAction = function(left)
       api.node.navigate.parent()
     end
   else
-    if node.open == false then
-      api.node.open.edit()
-    else
-      local r, c = unpack(vim.api.nvim_win_get_cursor(0))
-      vim.api.nvim_win_set_cursor(0, { r + 1, c })
-    end
+    if node.open == false then api.node.open.edit() end
   end
 end
 

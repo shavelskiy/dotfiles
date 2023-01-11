@@ -8,10 +8,7 @@ return function(exec)
 
   local node = lib.get_node_at_cursor()
 
-  if not node then
-    print 'not node'
-    return
-  end
+  if not node then return end
 
   if node.open == nil then
     exec { search_dirs = { node.parent.absolute_path } }
