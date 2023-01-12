@@ -1,8 +1,6 @@
 return {
   { '<ESC>', ':noh <cr>' },
 
-  { '<C-s>', ':w<cr>' },
-
   { 'te', ':tabedit <cr>' },
   { 'tq', ':tabclose <cr>' },
 
@@ -15,9 +13,6 @@ return {
   { 'K', ":m '<-2<CR>gv=gv", 'v' },
 
   { 'J', 'mzJ`z' },
-
-  -- { '<C-d>', '<C-d>zz' },
-  -- { '<C-u>', '<C-u>zz' },
 
   { 'n', 'nzzzv' },
   { 'N', 'Nzzzv' },

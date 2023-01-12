@@ -2,9 +2,6 @@ local opt = vim.opt
 
 vim.g.mapleader = ' '
 
-opt.spelllang = { 'en_us' }
--- opt.spell = true
-
 opt.scrolloff = 15
 
 opt.completeopt = 'menu,menuone,noselect'
