@@ -3,6 +3,24 @@ return {
     'lewis6991/impatient.nvim',
     config = function() require 'impatient' end,
   },
+  { 'windwp/nvim-autopairs', config = true },
+  { 'lukas-reineke/indent-blankline.nvim' },
+  {
+    'ggandor/leap.nvim',
+    config = function() require('leap').add_default_mappings() end,
+  },
+  {
+    'uga-rosa/ccc.nvim',
+    config = function() require 'plugins.config.ccc' end,
+  },
+  {
+    'numToStr/Comment.nvim',
+    config = function() require 'plugins.config.comment' end,
+  },
+  {
+    'karb94/neoscroll.nvim',
+    config = function() require 'plugins.config.neoscroll' end,
+  },
   {
     'goolord/alpha-nvim',
     config = function() require 'plugins.config.alpha' end,
@@ -21,28 +39,16 @@ return {
     config = function() require 'plugins.config.tabline' end,
   },
   {
+    'shavelskiy/statusline.nvim',
+    config = function() require 'plugins.config.statusline' end,
+  },
+  {
     'shavelskiy/colorscheme.nvim',
     config = function() require 'plugins.config.colorscheme' end,
   },
   {
-    'shavelskiy/statusline.nvim',
-    config = function() require 'plugins.config.statusline' end,
-  },
-  { 'windwp/nvim-autopairs', config = true },
-  {
-    'lukas-reineke/indent-blankline.nvim',
-  },
-  {
-    'uga-rosa/ccc.nvim',
-    config = function() require 'plugins.config.ccc' end,
-  },
-  {
-    'numToStr/Comment.nvim',
-    config = function() require 'plugins.config.comment' end,
-  },
-  {
-    'ggandor/leap.nvim',
-    config = function() require('leap').add_default_mappings() end,
+    'iamcco/markdown-preview.nvim',
+    build = 'cd app && npm install',
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -60,16 +66,6 @@ return {
   {
     'sindrets/diffview.nvim',
     config = function() require 'plugins.config.diffview' end,
-  },
-  {
-    'iamcco/markdown-preview.nvim',
-    build = 'cd app && npm install',
-    init = function() vim.g.mkdp_filetypes = { 'markdown' } end,
-    ft = { 'markdown' },
-  },
-  {
-    'karb94/neoscroll.nvim',
-    config = function() require 'plugins.config.neoscroll' end,
   },
   {
     'nvim-treesitter/nvim-treesitter',
