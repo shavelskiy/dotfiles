@@ -3,9 +3,18 @@ local dap = require('telescope').extensions.dap
 local execute = require 'utils.finder'
 
 return {
-  { '<leader>ff', function() execute(builtin.find_files) end },
-  { '<leader>fa', function() builtin.find_files { follow = true, no_ignore = true, hidden = true } end },
-  { '<leader>fw', function() execute(builtin.live_grep) end },
+  {
+    '<leader>ff',
+    function() execute(builtin.find_files) end,
+  },
+  {
+    '<leader>fa',
+    function() builtin.find_files { follow = true, no_ignore = true, hidden = true } end,
+  },
+  {
+    '<leader>fw',
+    function() execute(builtin.live_grep) end,
+  },
   { '<leader>fe', builtin.grep_string },
 
   { '<leader>fb', builtin.buffers },

@@ -10,5 +10,8 @@ return {
   { '<leader>dc', dap.continue },
 
   { '<leader>di', dapui.toggle },
-  { '<leader>df', function() dapui.float_element('scopes', { enter = true }) end },
+  {
+    '<leader>df',
+    function() dapui.float_element('scopes', { enter = true }) end,
+  },
 }
