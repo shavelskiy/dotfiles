@@ -52,6 +52,10 @@ return {
     config = function() require 'plugins.config.statusline' end,
   },
   {
+    'stevearc/dressing.nvim',
+    config = function() require 'plugins.config.dressing' end,
+  },
+  {
     'shavelskiy/colorscheme.nvim',
     config = function() require 'plugins.config.colorscheme' end,
   },

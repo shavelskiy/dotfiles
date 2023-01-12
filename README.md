@@ -26,6 +26,7 @@ Nvim config primarily for PHP development
 - <a href="https://github.com/shavelskiy/tabline.nvim">shavelskiy/tabline.nvim</a> - Tabline
 - <a href="https://github.com/shavelskiy/statusline.nvim">shavelskiy/statusline.nvim</a> - Statusline
 - <a href="https://github.com/karb94/neoscroll.nvim">karb94/neoscroll.nvim</a> - Smooth scroll (glitch with open tree)
+- <a href="https://github.com/stevearc/dressing.nvim">stevearc/dressing.nvim</a> - Ui select (i don't use) and change default select menu
 
 #### Other
 
