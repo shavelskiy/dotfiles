@@ -7,7 +7,10 @@ return {
     'goolord/alpha-nvim',
     config = function() require 'plugins.config.alpha' end,
   },
-  { 'rmagatti/auto-session', config = true },
+  {
+    'Shatur/neovim-session-manager',
+    config = function() require 'plugins.config.session-manager' end,
+  },
   { 'kyazdani42/nvim-web-devicons', config = true },
   {
     'kyazdani42/nvim-tree.lua',
