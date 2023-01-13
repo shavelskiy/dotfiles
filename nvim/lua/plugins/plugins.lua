@@ -8,6 +8,10 @@ return {
     config = function() require('nvim-autopairs').setup {} end,
   },
   {
+    'windwp/nvim-ts-autotag',
+    config = function() require 'plugins.config.ts-autotag' end,
+  },
+  {
     'lukas-reineke/indent-blankline.nvim',
     config = function() require('indent_blankline').setup {} end,
   },
