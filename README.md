@@ -33,6 +33,7 @@ Nvim config primarily for PHP development
 - <a href="https://github.com/goolord/alpha-nvim">goolord/alpha-nvim</a> - Start screen
 - <a href="https://github.com/Shatur/neovim-session-manager">Shatur/neovim-session-manager</a>
 - <a href="https://github.com/windwp/nvim-autopairs">windwp/nvim-autopairs</a> - Auto paris
+- <a href="https://github.com/windwp/nvim-ts-autotag">nvim-ts-autotag</a> - Auto tags
 - <a href="https://github.com/lukas-reineke/indent-blankline.nvim">lukas-reineke/indent-blankline.nvim</a> - indent lins
 - <a href="https://github.com/uga-rosa/ccc.nvim">uga-rosa/ccc.nvim</a> - highlight colors and color picker
 - <a href="https://github.com/numToStr/Comment.nvim">numToStr/Comment.nvim</a> - comment code
