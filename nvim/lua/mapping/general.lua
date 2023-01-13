@@ -17,7 +17,8 @@ return {
   { 'n', 'nzzzv' },
   { 'N', 'Nzzzv' },
 
-  { '<leader>p', [["_dP]], 'x' },
+  { '<leader>p', '"_dP', 'x' },
+  { 'x', '"_x' },
 
   { '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]] },
 
