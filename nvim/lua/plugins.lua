@@ -9,7 +9,7 @@ return {
   },
   {
     'windwp/nvim-ts-autotag',
-    config = function() require 'plugins.config.ts-autotag' end,
+    config = function() require 'plugins.ts-autotag' end,
   },
   {
     'lukas-reineke/indent-blankline.nvim',
@@ -21,23 +21,23 @@ return {
   },
   {
     'uga-rosa/ccc.nvim',
-    config = function() require 'plugins.config.ccc' end,
+    config = function() require 'plugins.ccc' end,
   },
   {
     'numToStr/Comment.nvim',
-    config = function() require 'plugins.config.comment' end,
+    config = function() require 'plugins.comment' end,
   },
   {
     'karb94/neoscroll.nvim',
-    config = function() require 'plugins.config.neoscroll' end,
+    config = function() require 'plugins.neoscroll' end,
   },
   {
     'goolord/alpha-nvim',
-    config = function() require 'plugins.config.alpha' end,
+    config = function() require 'plugins.alpha' end,
   },
   {
     'Shatur/neovim-session-manager',
-    config = function() require 'plugins.config.session-manager' end,
+    config = function() require 'plugins.session-manager' end,
   },
   {
     'kyazdani42/nvim-web-devicons',
@@ -45,32 +45,32 @@ return {
   },
   {
     'kyazdani42/nvim-tree.lua',
-    config = function() require 'plugins.config.nvimtree' end,
+    config = function() require 'plugins.nvimtree' end,
   },
   {
     'shavelskiy/tabline.nvim',
-    config = function() require 'plugins.config.tabline' end,
+    config = function() require 'plugins.tabline' end,
   },
   {
     'shavelskiy/statusline.nvim',
-    config = function() require 'plugins.config.statusline' end,
+    config = function() require 'plugins.statusline' end,
   },
   {
     'stevearc/dressing.nvim',
-    config = function() require 'plugins.config.dressing' end,
+    config = function() require 'plugins.dressing' end,
   },
   {
     'shavelskiy/colorscheme.nvim',
-    config = function() require 'plugins.config.colorscheme' end,
+    config = function() require 'plugins.colorscheme' end,
   },
   { 'iamcco/markdown-preview.nvim', build = 'cd app && npm install' },
   {
     'lewis6991/gitsigns.nvim',
-    config = function() require 'plugins.config.gitsigns' end,
+    config = function() require 'plugins.gitsigns' end,
   },
   {
     'sindrets/diffview.nvim',
-    config = function() require 'plugins.config.diffview' end,
+    config = function() require 'plugins.diffview' end,
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -79,7 +79,7 @@ return {
       'nvim-lua/popup.nvim',
       'nvim-telescope/telescope-dap.nvim',
     },
-    config = function() require 'plugins.config.telescope' end,
+    config = function() require 'plugins.telescope' end,
   },
   {
     'nvim-treesitter/nvim-treesitter',
@@ -87,19 +87,19 @@ return {
       'nvim-treesitter/playground',
     },
     build = ':TSUpdate',
-    config = function() require 'plugins.config.treesitter' end,
+    config = function() require 'plugins.treesitter' end,
   },
   {
     'neovim/nvim-lspconfig',
-    config = function() require 'plugins.config.lspconfig' end,
+    config = function() require 'plugins.lspconfig' end,
   },
   {
     'jose-elias-alvarez/null-ls.nvim',
-    config = function() require 'plugins.config.null-ls' end,
+    config = function() require 'plugins.null-ls' end,
   },
   {
     'RRethy/vim-illuminate',
-    config = function() require 'plugins.config.illuminate' end,
+    config = function() require 'plugins.illuminate' end,
   },
   {
     'williamboman/mason.nvim',
@@ -108,7 +108,7 @@ return {
       'jay-babu/mason-null-ls.nvim',
       'jay-babu/mason-nvim-dap.nvim',
     },
-    config = function() require 'plugins.config.mason' end,
+    config = function() require 'plugins.mason' end,
   },
   {
     'hrsh7th/nvim-cmp',
@@ -120,8 +120,8 @@ return {
       'L3MON4D3/LuaSnip',
     },
     config = function()
-      require 'plugins.config.cmp'
-      require 'plugins.config.luasnip'
+      require 'plugins.cmp'
+      require 'plugins.luasnip'
     end,
   },
   {
@@ -130,6 +130,6 @@ return {
       'theHamsta/nvim-dap-virtual-text',
       'rcarriga/nvim-dap-ui',
     },
-    config = function() require 'plugins.config.debug.init' end,
+    config = function() require 'plugins.debug.init' end,
   },
 }

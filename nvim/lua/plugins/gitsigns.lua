@@ -8,7 +8,7 @@ require('gitsigns').setup {
     untracked = { hl = 'GitSignsDiffAdd', text = '│' },
   },
   on_attach = function(bufnr)
-    for _, map in pairs(require 'mapping.gitsigns') do
+    for _, map in pairs(require 'keymaps.gitsigns') do
       vim.keymap.set('n', map[1], map[2], { buffer = bufnr })
     end
   end,
