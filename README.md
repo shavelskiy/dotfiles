@@ -20,11 +20,8 @@ Nvim config primarily for PHP development
 
 #### UI
 
-- <a href="https://github.com/shavelskiy/colorscheme.nvim">shavelskiy/colorscheme.nvim</a> - Colorscheme
 - <a href="https://github.com/kyazdani42/nvim-web-devicons">kyazdani42/nvim-web-devicons</a> - File icons pack
 - <a href="https://github.com/kyazdani42/nvim-tree.lua">kyazdani42/nvim-tree.lua</a> - File tree
-- <a href="https://github.com/shavelskiy/tabline.nvim">shavelskiy/tabline.nvim</a> - Tabline
-- <a href="https://github.com/shavelskiy/statusline.nvim">shavelskiy/statusline.nvim</a> - Statusline
 - <a href="https://github.com/karb94/neoscroll.nvim">karb94/neoscroll.nvim</a> - Smooth scroll (glitch with open tree)
 - <a href="https://github.com/stevearc/dressing.nvim">stevearc/dressing.nvim</a> - Ui select (i don't use) and change default select menu
 
