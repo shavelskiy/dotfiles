@@ -48,20 +48,8 @@ return {
     config = function() require 'user.plugins.nvimtree' end,
   },
   {
-    'shavelskiy/tabline.nvim',
-    config = function() require 'user.plugins.tabline' end,
-  },
-  {
-    'shavelskiy/statusline.nvim',
-    config = function() require 'user.plugins.statusline' end,
-  },
-  {
     'stevearc/dressing.nvim',
     config = function() require 'user.plugins.dressing' end,
-  },
-  {
-    'shavelskiy/colorscheme.nvim',
-    config = function() require 'user.plugins.colorscheme' end,
   },
   { 'iamcco/markdown-preview.nvim', build = 'cd app && npm install' },
   {

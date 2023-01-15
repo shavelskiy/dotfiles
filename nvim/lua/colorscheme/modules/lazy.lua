@@ -1,0 +1,26 @@
+local colors = require('colorscheme.scheme').get_colors()
+
+return {
+  { 'LazyH1', { bg = colors.base0B, fg = colors.base00 } },
+  { 'LazyButton', { bg = colors.base00, fg = colors.base05 } },
+  { 'LazyH2', { fg = colors.base0D, bold = true } },
+  { 'LazyReasonPlugin', { fg = colors.base08 } },
+  { 'LazyValue', { fg = colors.base0C } },
+  { 'LazyDir', { fg = colors.base05 } },
+  { 'LazyUrl', { fg = colors.base05 } },
+  { 'LazyCommit', { fg = colors.base0B } },
+  { 'LazyNoCond', { fg = colors.base08 } },
+  { 'LazySpecial', { fg = colors.base0D } },
+  { 'LazyReasonFt', { fg = colors.base0E } },
+  { 'LazyOperator', { fg = colors.base07 } },
+  { 'LazyReasonKeys', { fg = colors.base0C } },
+  { 'LazyTaskOutput', { fg = colors.base07 } },
+  { 'LazyCommitIssue', { fg = colors.base0E } },
+  { 'LazyReasonEvent', { fg = colors.base0A } },
+  { 'LazyReasonStart', { fg = colors.base07 } },
+  { 'LazyReasonRuntime', { fg = colors.base0D } },
+  { 'LazyReasonCmd', { fg = colors.base0A } },
+  { 'LazyReasonSource', { fg = colors.base0C } },
+  { 'LazyReasonImport', { fg = colors.base07 } },
+  { 'LazyProgressDone', { fg = colors.base0B } },
+}
