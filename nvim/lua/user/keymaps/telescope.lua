@@ -1,6 +1,6 @@
 local builtin = require 'telescope.builtin'
 local dap = require('telescope').extensions.dap
-local execute = require('utils').finder
+local execute = require('user.utils').finder
 
 return {
   {

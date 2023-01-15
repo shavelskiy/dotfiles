@@ -32,4 +32,4 @@ require('telescope').setup {
   extensions_list = { 'dap' },
 }
 
-require('utils').mapping 'telescope'
+require('user.utils').mapping 'telescope'

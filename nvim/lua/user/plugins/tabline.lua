@@ -2,4 +2,4 @@ require('tabline').setup {
   highlight = false,
 }
 
-require('utils').mapping 'tabline'
+require('user.utils').mapping 'tabline'

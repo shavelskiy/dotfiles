@@ -1,4 +1,4 @@
-require('lazy').setup(require 'plugins', {
+require('lazy').setup(require 'user.plugins', {
   ui = {
     icons = {
       cmd = '',

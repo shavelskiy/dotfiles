@@ -11,7 +11,7 @@ return {
     exec { search_dirs = { node.open == nil and node.parent.absolute_path or node.absolute_path } }
   end,
   mapping = function(name)
-    for _, map in pairs(require('keymaps.' .. name)) do
+    for _, map in pairs(require('user.keymaps.' .. name)) do
       vim.keymap.set(map[3] ~= nil and map[3] or 'n', map[1], map[2], { noremap = true, silent = true })
     end
   end,

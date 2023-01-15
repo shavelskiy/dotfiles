@@ -105,4 +105,4 @@ require('nvim-tree').setup {
   },
 }
 
-require('utils').mapping 'nvimtree'
+require('user.utils').mapping 'nvimtree'

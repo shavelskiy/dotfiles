@@ -21,7 +21,7 @@ require('mason').setup {
 }
 
 require('mason-lspconfig').setup {
-  ensure_installed = require 'servers',
+  ensure_installed = require 'user.servers',
 }
 
 require('mason-null-ls').setup {

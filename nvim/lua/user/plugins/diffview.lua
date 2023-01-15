@@ -7,4 +7,4 @@ require('diffview').setup {
   },
 }
 
-require('utils').mapping 'diffview'
+require('user.utils').mapping 'diffview'
