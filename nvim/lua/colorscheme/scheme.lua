@@ -32,9 +32,7 @@ local hex_to_rgb = function(hex)
     HEX_DIGITS[string.sub(hex, 5, 5)] * 16 + HEX_DIGITS[string.sub(hex, 6, 6)]
 end
 
-local rgb_to_hex = function(r, g, b)
-  return bit.tohex(bit.bor(bit.lshift(r, 16), bit.lshift(g, 8), b), 6)
-end
+local rgb_to_hex = function(r, g, b) return bit.tohex(bit.bor(bit.lshift(r, 16), bit.lshift(g, 8), b), 6) end
 
 local darken = function(hex, pct)
   pct = 1 - pct
@@ -56,10 +54,6 @@ return {
     selected_theme = theme
     colors = update_colors(require('colorscheme.themes.' .. theme))
   end,
-  get_colors = function()
-    return colors
-  end,
-  get_theme = function()
-    return selected_theme
-  end,
+  get_colors = function() return colors end,
+  get_theme = function() return selected_theme end,
 }

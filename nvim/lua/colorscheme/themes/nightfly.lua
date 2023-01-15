@@ -3,7 +3,7 @@ return {
   base01 = '#092236',
   base02 = '#0e293f',
   base03 = '#1d3b53',
-  base04 = "#4b6479",
+  base04 = '#4b6479',
   base05 = '#a1aab8',
   base06 = '#acb4c2',
   base07 = '#d6deeb',

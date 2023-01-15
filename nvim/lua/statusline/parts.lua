@@ -51,9 +51,7 @@ end
 local lsp_progress = function()
   local Lsp = vim.lsp.util.get_progress_messages()[1]
 
-  if vim.o.columns < 120 or not Lsp then
-    return ''
-  end
+  if vim.o.columns < 120 or not Lsp then return '' end
 
   local msg = Lsp.message or ''
   local percentage = Lsp.percentage or 0
@@ -74,25 +72,15 @@ local lsp_diagnostics = function(result)
 
   local data = {}
 
-  if errors and errors > 0 then
-    table.insert(data, '%#StatusLineLspError# ' .. errors)
-  end
+  if errors and errors > 0 then table.insert(data, '%#StatusLineLspError# ' .. errors) end
 
-  if warnings and warnings > 0 then
-    table.insert(data, '%#StatusLineLspWarning# ' .. warnings)
-  end
+  if warnings and warnings > 0 then table.insert(data, '%#StatusLineLspWarning# ' .. warnings) end
 
-  if hints and hints > 0 then
-    table.insert(data, '%#StatusLineLspHints#ﯧ ' .. hints)
-  end
+  if hints and hints > 0 then table.insert(data, '%#StatusLineLspHints#ﯧ ' .. hints) end
 
-  if info and info > 0 then
-    table.insert(data, '%#StatusLineLspInfo# ' .. info)
-  end
+  if info and info > 0 then table.insert(data, '%#StatusLineLspInfo# ' .. info) end
 
-  if #data > 0 then
-    table.insert(result, table.concat(data, ' '))
-  end
+  if #data > 0 then table.insert(result, table.concat(data, ' ')) end
 
   return result
 end
@@ -102,9 +90,7 @@ local lsp_status = function(result)
   local data = {}
   for _, client in ipairs(vim.lsp.get_active_clients()) do
     if client.name ~= 'null-ls' then
-      if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-        table.insert(data, client.name)
-      end
+      if client.attached_buffers[vim.api.nvim_get_current_buf()] then table.insert(data, client.name) end
     end
   end
 
@@ -124,22 +110,16 @@ end
 
 local dap_status = function(result)
   local status, dap = pcall(require, 'dap')
-  if not status then
-    return ''
-  end
+  if not status then return '' end
 
   local session = dap.session()
-  if session ~= nil then
-    table.insert(result, '%#StatusLineDap# DAP ' .. session.config.name)
-  end
+  if session ~= nil then table.insert(result, '%#StatusLineDap# DAP ' .. session.config.name) end
 
   return result
 end
 
 local git = function(result)
-  if not vim.b.gitsigns_head or vim.b.gitsigns_git_status then
-    return result
-  end
+  if not vim.b.gitsigns_head or vim.b.gitsigns_git_status then return result end
 
   local git_status = vim.b.gitsigns_status_dict
 

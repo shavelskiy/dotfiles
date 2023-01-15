@@ -24,9 +24,7 @@ local get_buttons_width = function()
   return result
 end
 
-local cover_nvim_tree = function()
-  return '%#NvimTreeNormal#' .. string.rep(' ', get_offset())
-end
+local cover_nvim_tree = function() return '%#NvimTreeNormal#' .. string.rep(' ', get_offset()) end
 
 local bufferlist = function()
   local available_space = vim.o.columns - get_offset() - get_buttons_width()
@@ -52,6 +50,4 @@ local tablist = function()
   return result
 end
 
-return function()
-  return cover_nvim_tree() .. bufferlist() .. tablist()
-end
+return function() return cover_nvim_tree() .. bufferlist() .. tablist() end

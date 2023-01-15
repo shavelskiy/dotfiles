@@ -16,9 +16,7 @@ local new_hl = function(group1, group2)
 end
 
 local get_icon = function(name, bufnr)
-  if not devicons_present then
-    return ''
-  end
+  if not devicons_present then return '' end
 
   local icon, icon_hl = devicons.get_icon(name, string.match(name, '%a+$'), { default = true })
 
@@ -43,9 +41,7 @@ end
 local get_pick_data = function(bufnr)
   if vim.g.tabline_show_pick == true then
     for i, buffer in ipairs(vim.t.bufs) do
-      if buffer == bufnr then
-        return { hl = '%#TablinePick#', char = utils.number_to_char(i) }
-      end
+      if buffer == bufnr then return { hl = '%#TablinePick#', char = utils.number_to_char(i) } end
     end
   end
 
@@ -53,13 +49,9 @@ local get_pick_data = function(bufnr)
 end
 
 local get_highlight = function(bufnr)
-  if vim.g.tabline_show_pick == true then
-    return '%#TablineBufOff#'
-  end
+  if vim.g.tabline_show_pick == true then return '%#TablineBufOff#' end
 
-  if is_active(bufnr) then
-    return vim.bo[bufnr].modified and '%#TablineBufOnModified#' or '%#TablineBufOn#'
-  end
+  if is_active(bufnr) then return vim.bo[bufnr].modified and '%#TablineBufOnModified#' or '%#TablineBufOn#' end
 
   return vim.bo[bufnr].modified and '%#TablineBufOffModified#' or '%#TablineBufOff#'
 end

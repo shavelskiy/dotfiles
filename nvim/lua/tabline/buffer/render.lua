@@ -21,9 +21,7 @@ return function(parts)
   if parts.forse_size ~= nil then
     local lenght = math.abs(parts.forse_size)
 
-    if parts.forse_size < 0 then
-      groups = reverse(groups)
-    end
+    if parts.forse_size < 0 then groups = reverse(groups) end
 
     for i, group in ipairs(groups) do
       group.text =
@@ -32,9 +30,7 @@ return function(parts)
       groups[i] = group
     end
 
-    if parts.forse_size < 0 then
-      groups = reverse(groups)
-    end
+    if parts.forse_size < 0 then groups = reverse(groups) end
   end
 
   local result = ''
