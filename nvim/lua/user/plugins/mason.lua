@@ -1,5 +1,6 @@
 require('mason').setup {
   ui = {
+    height = 0.8,
     icons = {
       package_pending = ' ',
       package_installed = ' ',
