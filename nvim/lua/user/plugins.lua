@@ -40,11 +40,11 @@ return {
     config = function() require 'user.plugins.session-manager' end,
   },
   {
-    'kyazdani42/nvim-web-devicons',
+    'nvim-tree/nvim-web-devicons',
     config = function() require('nvim-web-devicons').setup {} end,
   },
   {
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
     config = function() require 'user.plugins.nvimtree' end,
   },
   {
