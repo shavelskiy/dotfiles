@@ -1,13 +1,5 @@
 require('dapui').setup {
   icons = { expanded = '▾', collapsed = '▸', current_frame = '▸' },
-  mappings = {
-    expand = { '<CR>' },
-    open = 'o',
-    remove = 'd',
-    edit = 'e',
-    repl = 'r',
-    toggle = 't',
-  },
   expand_lines = true,
   layouts = {
     {
@@ -20,16 +12,7 @@ require('dapui').setup {
       position = 'right',
     },
   },
-  floating = {
-    max_height = nil,
-    max_width = nil,
-    border = 'single',
-    mappings = {
-      close = { 'q', '<Esc>' },
-    },
-  },
-  windows = { indent = 1 },
-  render = {
-    max_type_length = nil,
+  controls = {
+    enable = false,
   },
 }
