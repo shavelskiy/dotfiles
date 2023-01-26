@@ -36,5 +36,5 @@ return {
   { 'DiffviewFolderSign', { fg = colors.base0D } },
 
   { 'DiffviewFilePanelTitle', { fg = colors.base0D } },
-  { 'DiffviewFilePanelCounter', { fg = colors.base06 } },
+  { 'DiffviewFilePanelCounter', { fg = colors.base05 } },
 }

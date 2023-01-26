@@ -46,7 +46,7 @@ return {
   { 'TabLineSel', { fg = colors.base0B, bg = colors.base01 } },
 
   { 'NormalFloat', { fg = colors.base05, bg = colors.darkerbg } },
-  { 'FloatBorder', { fg = colors.base05, bg = colors.darkerbg } },
+  { 'FloatBorder', { fg = colors.base03, bg = colors.darkerbg } },
   { 'NormalNC', { fg = colors.base05, bg = colors.base00 } },
   { 'TermCursor', { fg = colors.base00, bg = colors.base05 } },
   { 'TermCursorNC', { fg = colors.base00, bg = colors.base05 } },
