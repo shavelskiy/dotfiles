@@ -36,8 +36,8 @@ return {
     config = function() require 'user.plugins.alpha' end,
   },
   {
-    'Shatur/neovim-session-manager',
-    config = function() require 'user.plugins.session-manager' end,
+    'rmagatti/auto-session',
+    config = function() require('auto-session').setup {} end,
   },
   {
     'nvim-tree/nvim-web-devicons',
@@ -115,9 +115,8 @@ return {
   {
     'mfussenegger/nvim-dap',
     dependencies = {
-      'theHamsta/nvim-dap-virtual-text',
       'rcarriga/nvim-dap-ui',
     },
-    config = function() require 'user.plugins.debug.init' end,
+    config = function() require 'user.plugins.dap' end,
   },
 }

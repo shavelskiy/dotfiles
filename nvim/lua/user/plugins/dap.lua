@@ -1,3 +1,21 @@
+require('dapui').setup {
+  icons = { expanded = '▾', collapsed = '▸', current_frame = '▸' },
+  layouts = {
+    {
+      elements = {
+        { id = 'scopes', size = 0.5 },
+        { id = 'breakpoints', size = 0.25 },
+        { id = 'stacks', size = 0.25 },
+      },
+      size = 0.25,
+      position = 'right',
+    },
+  },
+  controls = {
+    enabled = false,
+  },
+}
+
 local dap = require 'dap'
 
 dap.adapters.php = {
@@ -16,3 +34,5 @@ dap.configurations.php = {
     localSourceRoot = '${workspaceFolder}',
   },
 }
+
+require('user.utils').mapping 'dap'

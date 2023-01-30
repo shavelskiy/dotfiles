@@ -28,7 +28,7 @@ Nvim config primarily for PHP development
 #### Other
 
 - <a href="https://github.com/goolord/alpha-nvim">goolord/alpha-nvim</a> - Start screen
-- <a href="https://github.com/Shatur/neovim-session-manager">Shatur/neovim-session-manager</a>
+- <a href="https://github.com/rmagatti/auto-session">Shatur/neovim-session-manager</a>
 - <a href="https://github.com/windwp/nvim-autopairs">windwp/nvim-autopairs</a> - Auto paris
 - <a href="https://github.com/windwp/nvim-ts-autotag">nvim-ts-autotag</a> - Auto tags
 - <a href="https://github.com/lukas-reineke/indent-blankline.nvim">lukas-reineke/indent-blankline.nvim</a> - indent lins
