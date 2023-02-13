@@ -1,7 +1,7 @@
 return {
   'intelephense',
   'tsserver',
-  'sumneko_lua',
+  'lua_ls',
   'dockerls',
   'yamlls',
 }
