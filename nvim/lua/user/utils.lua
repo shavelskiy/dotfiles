@@ -1,14 +1,12 @@
 return {
   finder = function(exec)
-    local lib = require 'nvim-tree.lib'
     if vim.bo[vim.api.nvim_win_get_buf(0)].ft ~= 'NvimTree' then
       exec()
-      return
+    else
+      local node = require('nvim-tree.lib').get_node_at_cursor()
+      if not node then return end
+      exec { search_dirs = { node.open == nil and node.parent.absolute_path or node.absolute_path } }
     end
-
-    local node = lib.get_node_at_cursor()
-    if not node then return end
-    exec { search_dirs = { node.open == nil and node.parent.absolute_path or node.absolute_path } }
   end,
   mapping = function(name)
     for _, map in pairs(require('user.keymaps.' .. name)) do
