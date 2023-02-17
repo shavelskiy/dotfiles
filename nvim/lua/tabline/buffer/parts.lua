@@ -19,10 +19,12 @@ local get_icon = function(name, bufnr)
   if not devicons_present then return '' end
 
   local icon, icon_hl = devicons.get_icon(name, string.match(name, '%a+$'), { default = true })
-  print('kekekekekekekeekekekekeke-------------------' .. icon_hl .. '-----------------------------------------------ekekkeek')
+
+  local success, hl = pcall(new_hl, icon_hl, (is_active(bufnr) and vim.g.tabline_show_pick ~= true) and 'TablineBufOn' or 'TablineBufOff')
+  if not success then return '' end
 
   return {
-    hl = new_hl(icon_hl, (is_active(bufnr) and vim.g.tabline_show_pick ~= true) and 'TablineBufOn' or 'TablineBufOff'),
+    hl = hl,
     icon = icon,
   }
 end
