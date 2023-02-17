@@ -21,9 +21,9 @@ require('mason').setup {
   max_concurrent_installers = 10,
 }
 
--- require('mason-lspconfig').setup {
---   ensure_installed = require 'user.servers',
--- }
+require('mason-lspconfig').setup {
+  ensure_installed = require 'user.servers',
+}
 
 require('mason-null-ls').setup {
   ensure_installed = { 'prettier', 'stylua', 'twigcs', 'jsonlint' },
