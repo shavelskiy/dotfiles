@@ -31,12 +31,12 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
--- local override = { 'php', 'phpdoc' }
---
--- local content = ''
--- for _, name in pairs(override) do
---   local f = assert(io.open(os.getenv 'HOME' .. '/.config/nvim/queries/' .. name .. '.scm', 'rb'))
---   content = f:read '*all'
---   f:close()
---   require('vim.treesitter.query').set_query(name, 'highlights', content)
--- end
+local override = { 'php', 'phpdoc' }
+
+local content = ''
+for _, name in pairs(override) do
+  local f = assert(io.open(os.getenv 'HOME' .. '/.config/nvim/queries/' .. name .. '.scm', 'rb'))
+  content = f:read '*all'
+  f:close()
+  require('vim.treesitter.query').set_query(name, 'highlights', content)
+end

@@ -31,6 +31,13 @@ RUN ln -s ~/dotfiles/fish ~/.config/fish
 RUN ln -s ~/dotfiles/tmux ~/.config/tmux
 RUN ln -s ~/dotfiles/.prettierrc.json ~/.prettierrc.json
 
-# RUN nvim --headless -c 'Lazy sync'
+# RUN curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+# RUN cd dotfiles && git reset --hard
+# RUN fisher update
+
+RUN nvim --headless "+Lazy! sync" +qa
+
+# cd ~/.local/share/nvim/mason/packages/prettier
+# npm install --save-dev @prettier/plugin-xml prettier-plugin-twig-melody
 
 WORKDIR /root
