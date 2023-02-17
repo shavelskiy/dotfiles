@@ -8,10 +8,10 @@ end
 
 local new_hl = function(group1, group2)
   local new_group = 'Tabline' .. group1 .. group2
-  vim.api.nvim_set_hl(0, new_group, {
-    fg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(group1)), 'fg#'),
-    bg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(group2)), 'bg#'),
-  })
+  -- vim.api.nvim_set_hl(0, new_group, {
+  --   fg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(group1)), 'fg#'),
+  --   bg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID(group2)), 'bg#'),
+  -- })
   return '%#' .. new_group .. '#'
 end
 

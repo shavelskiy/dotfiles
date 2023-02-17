@@ -1,10 +1,21 @@
 FROM alpine:3.17 AS base
 
 RUN apk --no-cache add \
+  autoconf \
+  automake \
+  build-base \
+  cmake \
+  ninja \
+  coreutils \
+  curl \
+  gettext-tiny-dev \
+  git \
+  libtool \
+  pkgconf \
+  unzip \
   git \
   nodejs \
   npm \
-  make \
   neovim \
   ripgrep \
   tree-sitter-cli \
