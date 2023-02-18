@@ -1,31 +1,40 @@
-require('nvim-treesitter.configs').setup {
-  highlight = {
-    enable = true,
-    use_languagetree = true,
+return {
+  'nvim-treesitter/nvim-treesitter',
+  dependencies = {
+    'nvim-treesitter/playground',
   },
-  indent = {
-    enable = true,
-  },
-  ensure_installed = {
-    'bash',
-    'tsx',
-    'javascript',
-    'typescript',
-    'php',
-    'phpdoc',
-    'json',
-    'yaml',
-    'html',
-    'scss',
-    'go',
-    'dockerfile',
-    'vim',
-    'lua',
-    'markdown',
-    'make',
-    'query',
-    'sql',
-    'twig',
-    'fish',
-  },
+  build = ':TSUpdate',
+  config = function()
+    require('nvim-treesitter.configs').setup {
+      highlight = {
+        enable = true,
+        use_languagetree = true,
+      },
+      indent = {
+        enable = true,
+      },
+      ensure_installed = {
+        'bash',
+        'tsx',
+        'javascript',
+        'typescript',
+        'php',
+        'phpdoc',
+        'json',
+        'yaml',
+        'html',
+        'scss',
+        'go',
+        'dockerfile',
+        'vim',
+        'lua',
+        'markdown',
+        'make',
+        'query',
+        'sql',
+        'twig',
+        'fish',
+      },
+    }
+  end,
 }

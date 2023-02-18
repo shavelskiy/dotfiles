@@ -13,4 +13,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.runtimepath:prepend(lazypath)
 
-require 'user.plugins.lazy'
+require('lazy').setup('user.plugins', {
+  ui = {
+    icons = {
+      cmd = '',
+      event = '➜',
+      start = '➜',
+    },
+  },
+})

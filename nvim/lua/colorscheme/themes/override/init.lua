@@ -7,8 +7,8 @@ return {
 
   { 'PMenuSel', { fg = colors.base01, bg = colors.base0D } },
 
-  { '@tag.twig', { fg = colors.base0E }},
+  { '@tag.twig', { fg = colors.base0E } },
 
-  { '@tag.html', { fg = colors.base0D }},
-  { '@tag.delimiter.html', { fg = colors.base0D }},
+  { '@tag.html', { fg = colors.base0D } },
+  { '@tag.delimiter.html', { fg = colors.base0D } },
 }

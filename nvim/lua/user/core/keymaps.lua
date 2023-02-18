@@ -1,4 +1,4 @@
-return {
+local keymaps = {
   { '<ESC>', ':noh <cr>' },
 
   { 'te', ':tabedit <cr>' },
@@ -24,3 +24,7 @@ return {
 
   { '<leader>d', [["_d]], { 'n', 'v' } },
 }
+
+for _, map in pairs(keymaps) do
+  vim.keymap.set(map[3] ~= nil and map[3] or 'n', map[1], map[2], { noremap = true, silent = true })
+end

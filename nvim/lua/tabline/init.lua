@@ -1,4 +1,4 @@
-local is_buf_valid = require('tabline.api').is_buf_valid
+local api = require 'tabline.api'
 
 -- store listed buffers in tab local var
 vim.t.bufs = vim.api.nvim_list_bufs()
@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd({ 'BufAdd', 'BufEnter', 'tabnew' }, {
         not vim.tbl_contains(bufs, args.buf)
         and (args.event == 'BufEnter' or vim.bo[args.buf].buflisted)
         and (args.event == 'BufEnter' or args.buf ~= vim.api.nvim_get_current_buf())
-        and is_buf_valid(args.buf)
+        and api.is_buf_valid(args.buf)
       then
         table.insert(bufs, args.buf)
         vim.t.bufs = bufs
@@ -47,4 +47,11 @@ vim.api.nvim_create_autocmd('BufDelete', {
 vim.opt.showtabline = 2
 vim.opt.tabline = "%!v:lua.require('tabline.render')()"
 
-require('user.utils').mapping 'tabline'
+local options = { noremap = true, silent = true }
+
+vim.keymap.set('n', '<S-Tab>', api.prev_tab, options)
+vim.keymap.set('n', '<Tab>', api.next_tab, options)
+vim.keymap.set('n', '<leader>dj', function() api.move_buf(-1) end, options)
+vim.keymap.set('n', '<leader>dl', function() api.move_buf(1) end, options)
+vim.keymap.set('n', '<Bslash>', api.pick, options)
+vim.keymap.set('n', '<leader>x', api.close_buffer, options)
