@@ -1,8 +1,6 @@
 local colors = require('colorscheme.scheme').get_colors()
 
-local function createSymbol(name, link, icon)
-  vim.fn.sign_define(name, { text = icon, texthl = link, linehl = link, numhl = link })
-end
+local function createSymbol(name, link, icon) vim.fn.sign_define(name, { text = icon, texthl = link, linehl = link, numhl = link }) end
 
 createSymbol('DapBreakpoint', 'DapBreakpoint', '')
 createSymbol('DapBreakpointCondition', 'DapBreakpoint', 'ﳁ')

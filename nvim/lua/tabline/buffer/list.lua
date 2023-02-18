@@ -20,9 +20,7 @@ local fix_offset = function()
   local current_buf = vim.api.nvim_get_current_buf()
 
   for i, bufnr in ipairs(vim.t.bufs) do
-    if is_buf_valid(bufnr) and (bufnr == current_buf) and vim.g.tabline_offset >= i then
-      vim.g.tabline_offset = i - 1
-    end
+    if is_buf_valid(bufnr) and (bufnr == current_buf) and vim.g.tabline_offset >= i then vim.g.tabline_offset = i - 1 end
   end
 end
 
@@ -46,19 +44,13 @@ return function(available_space)
             break
           end
 
-          while
-            (get_buffer_width(buffers_parts) - get_length(buffers_parts[1]) + get_length(current_parts))
-            > available_space
-          do
+          while (get_buffer_width(buffers_parts) - get_length(buffers_parts[1]) + get_length(current_parts)) > available_space do
             vim.g.tabline_offset = vim.g.tabline_offset + 1
             table.remove(buffers_parts, 1)
           end
 
           tmp = buffers_parts[1]
-          tmp.forse_size = get_buffer_width(buffers_parts)
-            - get_length(tmp)
-            + get_length(current_parts)
-            - available_space
+          tmp.forse_size = get_buffer_width(buffers_parts) - get_length(tmp) + get_length(current_parts) - available_space
           buffers_parts[1] = tmp
         end
 

@@ -29,9 +29,7 @@ local modes = {
 local cover_nvim_tree = function()
   for _, win in pairs(vim.api.nvim_tabpage_list_wins(0)) do
     local filetype = vim.bo[vim.api.nvim_win_get_buf(win)].ft
-    if filetype == 'NvimTree' or filetype == 'DiffviewFiles' then
-      return '%#NvimTreeNormal#' .. string.rep(' ', vim.api.nvim_win_get_width(win) + 1)
-    end
+    if filetype == 'NvimTree' or filetype == 'DiffviewFiles' then return '%#NvimTreeNormal#' .. string.rep(' ', vim.api.nvim_win_get_width(win) + 1) end
   end
   return ''
 end
@@ -125,17 +123,11 @@ local git = function(result)
 
   local data = { '%#StatusLineText# ' .. git_status.head }
 
-  if git_status.added and git_status.added ~= 0 then
-    table.insert(data, '%#StatusLineGitAdded# ' .. git_status.added)
-  end
+  if git_status.added and git_status.added ~= 0 then table.insert(data, '%#StatusLineGitAdded# ' .. git_status.added) end
 
-  if git_status.changed and git_status.changed ~= 0 then
-    table.insert(data, '%#StatusLineGitChanged# ' .. git_status.changed)
-  end
+  if git_status.changed and git_status.changed ~= 0 then table.insert(data, '%#StatusLineGitChanged# ' .. git_status.changed) end
 
-  if git_status.removed and git_status.removed ~= 0 then
-    table.insert(data, '%#StatusLineGitRemoved# ' .. git_status.removed)
-  end
+  if git_status.removed and git_status.removed ~= 0 then table.insert(data, '%#StatusLineGitRemoved# ' .. git_status.removed) end
 
   table.insert(result, table.concat(data, ' '))
   return result

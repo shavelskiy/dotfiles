@@ -5,9 +5,7 @@ local get_offset = function()
   local result, filetype = 0, nil
   for _, win in pairs(vim.api.nvim_tabpage_list_wins(0)) do
     filetype = vim.bo[vim.api.nvim_win_get_buf(win)].ft
-    if filetype == 'NvimTree' or filetype == 'DiffviewFiles' then
-      result = result + vim.api.nvim_win_get_width(win) + 1
-    end
+    if filetype == 'NvimTree' or filetype == 'DiffviewFiles' then result = result + vim.api.nvim_win_get_width(win) + 1 end
   end
   return result
 end

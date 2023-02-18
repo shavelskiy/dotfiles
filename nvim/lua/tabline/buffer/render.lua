@@ -24,8 +24,7 @@ return function(parts)
     if parts.forse_size < 0 then groups = reverse(groups) end
 
     for i, group in ipairs(groups) do
-      group.text =
-        vim.fn.strcharpart(group.text, parts.forse_size < 0 and vim.api.nvim_strwidth(group.text) - lenght or 0, lenght)
+      group.text = vim.fn.strcharpart(group.text, parts.forse_size < 0 and vim.api.nvim_strwidth(group.text) - lenght or 0, lenght)
       lenght = lenght - vim.api.nvim_strwidth(group.text)
       groups[i] = group
     end

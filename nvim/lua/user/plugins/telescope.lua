@@ -51,9 +51,9 @@ return {
     }
   end,
   keys = {
-    { '<leader>ff', function() execute(require('telescope.builtin').find_files) end, },
+    { '<leader>ff', function() execute(require('telescope.builtin').find_files) end },
     { '<leader>fa', function() require('telescope.builtin').find_files { follow = true, no_ignore = true, hidden = true } end },
-    { '<leader>fw', function() execute(require('telescope.builtin').live_grep) end, },
+    { '<leader>fw', function() execute(require('telescope.builtin').live_grep) end },
     { '<leader>fe', function() require('telescope.builtin').grep_string() end },
 
     { '<leader>fb', function() require('telescope.builtin').buffers() end },

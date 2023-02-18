@@ -2,9 +2,7 @@ local devicons_present, devicons = pcall(require, 'nvim-web-devicons')
 local is_buf_valid = require('tabline.api').is_buf_valid
 local utils = require 'tabline.utils'
 
-local is_active = function(bufnr)
-  return bufnr == vim.api.nvim_get_current_buf() or vim.fn.bufwinnr(bufnr) ~= -1 and utils.is_from_offset()
-end
+local is_active = function(bufnr) return bufnr == vim.api.nvim_get_current_buf() or vim.fn.bufwinnr(bufnr) ~= -1 and utils.is_from_offset() end
 
 local new_hl = function(group1, group2)
   local new_group = 'Tabline' .. group1 .. group2
@@ -20,8 +18,7 @@ local get_icon = function(name, bufnr)
 
   local icon, icon_hl = devicons.get_icon(name, string.match(name, '%a+$'), { default = true })
 
-  local success, hl =
-    pcall(new_hl, icon_hl, (is_active(bufnr) and vim.g.tabline_show_pick ~= true) and 'TablineBufOn' or 'TablineBufOff')
+  local success, hl = pcall(new_hl, icon_hl, (is_active(bufnr) and vim.g.tabline_show_pick ~= true) and 'TablineBufOn' or 'TablineBufOff')
   if not success then return '' end
 
   return {
@@ -33,9 +30,7 @@ end
 local update_name = function(name, bufnr)
   for _, value in ipairs(vim.t.bufs) do
     if is_buf_valid(value) then
-      if name == vim.fn.fnamemodify(vim.api.nvim_buf_get_name(value), ':t') and value ~= bufnr then
-        name = utils.get_unique_name(bufnr, value)
-      end
+      if name == vim.fn.fnamemodify(vim.api.nvim_buf_get_name(value), ':t') and value ~= bufnr then name = utils.get_unique_name(bufnr, value) end
     end
   end
 
@@ -61,8 +56,7 @@ local get_highlight = function(bufnr)
 end
 
 return function(bufnr)
-  local name = (#vim.api.nvim_buf_get_name(bufnr) ~= 0) and vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufnr), ':t')
-    or ' No Name '
+  local name = (#vim.api.nvim_buf_get_name(bufnr) ~= 0) and vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufnr), ':t') or ' No Name '
 
   local icon_data = get_icon(name, bufnr)
 

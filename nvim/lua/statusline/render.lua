@@ -10,9 +10,7 @@ end
 
 local center = function()
   local lsp_progress = parts.lsp_progress()
-  local content = lsp_progress ~= ''
-      and '%#StatusLineSeparator#' .. lsp_progress .. '%#StatusLineSeparator#%#StatusLineNone#'
-    or ''
+  local content = lsp_progress ~= '' and '%#StatusLineSeparator#' .. lsp_progress .. '%#StatusLineSeparator#%#StatusLineNone#' or ''
   return '%=' .. content .. '%='
 end
 
