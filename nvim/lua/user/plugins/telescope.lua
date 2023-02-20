@@ -46,7 +46,6 @@ return {
           },
         },
       },
-
       extensions_list = { 'dap' },
     }
   end,
