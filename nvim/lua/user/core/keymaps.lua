@@ -1,30 +1,45 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 local keymaps = {
-  { '<ESC>', ':noh <cr>' },
+  { 'n', 'i', function() return vim.fn.getline('.'):match '^%s*$' and 'cc' or 'i' end, { expr = true } },
+  { 'n', '<CR>', 'o<ESC>' },
+  { 'n', '<S-CR>', 'O<ESC>' },
 
-  { 'te', ':tabedit <cr>' },
-  { 'tq', ':tabclose <cr>' },
+  { 'n', '<ESC>', ':noh <cr>' },
 
-  { '<C-h>', '<C-w>h' },
-  { '<C-k>', '<C-w>k' },
-  { '<C-j>', '<C-w>j' },
-  { '<C-l>', '<C-w>l' },
+  { 'n', 'te', ':tabedit %<cr>' },
+  { 'n', 'tq', ':tabclose <cr>' },
 
-  { 'J', ":m '>+1<CR>gv=gv", 'v' },
-  { 'K', ":m '<-2<CR>gv=gv", 'v' },
+  { 'n', '<C-h>', '<C-w>h' },
+  { 'n', '<C-k>', '<C-w>k' },
+  { 'n', '<C-j>', '<C-w>j' },
+  { 'n', '<C-l>', '<C-w>l' },
 
-  { 'J', 'mzJ`z' },
+  { 'n', '<Up>', '<C-w>1+' },
+  { 'n', '<Down>', '<C-w>1-' },
+  { 'n', '<Left>', '<C-w>5>' },
+  { 'n', '<Right>', '<C-w>5<' },
 
-  { 'n', 'nzzzv' },
-  { 'N', 'Nzzzv' },
+  { 'n', 'J', 'mzJ`z' },
 
-  { '<leader>p', '"_dP', 'x' },
-  { 'x', '"_x' },
+  { 'n', 'n', 'nzzzv' },
+  { 'n', 'N', 'Nzzzv' },
 
-  { '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]] },
+  { 'x', '<leader>p', '"_dP' },
+  { 'n', 'x', '"_x' },
 
-  { '<leader>d', [["_d]], { 'n', 'v' } },
+  { 'n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]] },
+  { { 'n', 'v' }, '<leader>d', [["_d]] },
+
+  { 'i', '<C-j>', '<Esc>:m .+1<CR>==gi' },
+  { 'i', '<C-k>', '<Esc>:m .-2<CR>==gi' },
+  { 'x', '<C-j>', ":move '>+1<CR>gv=gv" },
+  { 'x', '<C-k>', ":move '<-2<CR>gv=gv" },
 }
 
 for _, map in pairs(keymaps) do
-  vim.keymap.set(map[3] ~= nil and map[3] or 'n', map[1], map[2], { noremap = true, silent = true })
+  local default_options = { silent = true, noremap = true }
+  local options = map[4] and vim.tbl_extend('keep', map[4], default_options) or default_options
+  vim.keymap.set(map[1], map[2], map[3], options)
 end
