@@ -1,3 +1,56 @@
+local icons = {
+  Namespace = '',
+  Text = ' ',
+  Method = ' ',
+  Function = ' ',
+  Constructor = ' ',
+  Field = 'ﰠ ',
+  Variable = ' ',
+  Class = 'ﴯ ',
+  Interface = ' ',
+  Module = ' ',
+  Property = 'ﰠ ',
+  Unit = '塞 ',
+  Value = ' ',
+  Enum = ' ',
+  Keyword = ' ',
+  Snippet = ' ',
+  Color = ' ',
+  File = ' ',
+  Reference = ' ',
+  Folder = ' ',
+  EnumMember = ' ',
+  Constant = ' ',
+  Struct = 'פּ ',
+  Event = ' ',
+  Operator = ' ',
+  TypeParameter = ' ',
+  Table = '',
+  Object = ' ',
+  Tag = '',
+  Array = '[]',
+  Boolean = ' ',
+  Number = ' ',
+  Null = 'ﳠ',
+  String = ' ',
+  Calendar = '',
+  Watch = ' ',
+  Package = '',
+}
+
+local function border(hl_name)
+  return {
+    { '╭', hl_name },
+    { '─', hl_name },
+    { '╮', hl_name },
+    { '│', hl_name },
+    { '╯', hl_name },
+    { '─', hl_name },
+    { '╰', hl_name },
+    { '│', hl_name },
+  }
+end
+
 return {
   'hrsh7th/nvim-cmp',
   dependencies = {
@@ -11,19 +64,6 @@ return {
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     local cmp_window = require 'cmp.utils.window'
-
-    local function border(hl_name)
-      return {
-        { '╭', hl_name },
-        { '─', hl_name },
-        { '╮', hl_name },
-        { '│', hl_name },
-        { '╯', hl_name },
-        { '─', hl_name },
-        { '╰', hl_name },
-        { '│', hl_name },
-      }
-    end
 
     cmp_window.info_ = cmp_window.info
     cmp_window.info = function(self)
@@ -47,45 +87,6 @@ return {
       },
       formatting = {
         format = function(_, vim_item)
-          local icons = {
-            Namespace = '',
-            Text = ' ',
-            Method = ' ',
-            Function = ' ',
-            Constructor = ' ',
-            Field = 'ﰠ ',
-            Variable = ' ',
-            Class = 'ﴯ ',
-            Interface = ' ',
-            Module = ' ',
-            Property = 'ﰠ ',
-            Unit = '塞 ',
-            Value = ' ',
-            Enum = ' ',
-            Keyword = ' ',
-            Snippet = ' ',
-            Color = ' ',
-            File = ' ',
-            Reference = ' ',
-            Folder = ' ',
-            EnumMember = ' ',
-            Constant = ' ',
-            Struct = 'פּ ',
-            Event = ' ',
-            Operator = ' ',
-            TypeParameter = ' ',
-            Table = '',
-            Object = ' ',
-            Tag = '',
-            Array = '[]',
-            Boolean = ' ',
-            Number = ' ',
-            Null = 'ﳠ',
-            String = ' ',
-            Calendar = '',
-            Watch = ' ',
-            Package = '',
-          }
           vim_item.kind = string.format('%s %s', icons[vim_item.kind], vim_item.kind)
           return vim_item
         end,
@@ -109,10 +110,7 @@ return {
           else
             fallback()
           end
-        end, {
-          'i',
-          's',
-        }),
+        end, { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
@@ -121,10 +119,7 @@ return {
           else
             fallback()
           end
-        end, {
-          'i',
-          's',
-        }),
+        end, { 'i', 's' }),
       },
       sources = {
         { name = 'luasnip' },

@@ -1,28 +1,28 @@
+local moveAction = function(left)
+  local lib = require 'nvim-tree.lib'
+  local api = require 'nvim-tree.api'
+
+  local node = lib.get_node_at_cursor()
+
+  if not node then return end
+
+  if left then
+    if node.open == true then
+      api.node.open.edit()
+    else
+      api.node.navigate.parent()
+    end
+  else
+    if node.open == false then api.node.open.edit() end
+  end
+end
+
 return {
   'nvim-tree/nvim-tree.lua',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    local moveAction = function(left)
-      local lib = require 'nvim-tree.lib'
-      local api = require 'nvim-tree.api'
-
-      local node = lib.get_node_at_cursor()
-
-      if not node then return end
-
-      if left then
-        if node.open == true then
-          api.node.open.edit()
-        else
-          api.node.navigate.parent()
-        end
-      else
-        if node.open == false then api.node.open.edit() end
-      end
-    end
-
     require('nvim-tree').setup {
       open_on_setup = true,
       view = {
