@@ -3,6 +3,9 @@ local colors = require('colorscheme.scheme').get_colors()
 return {
   { 'PMenuSel', { fg = colors.base01, bg = colors.base0D } },
 
+  { '@variable.sql', { fg = colors.base07 } },
+  { '@field.sql', { fg = colors.base07 } },
+
   { '@tag', { fg = colors.base0D } },
   { '@tag.delimiter', { fg = colors.base0D } },
 
