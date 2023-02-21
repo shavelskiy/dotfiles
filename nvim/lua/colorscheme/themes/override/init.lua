@@ -5,7 +5,6 @@ return {
 
   { '@tag', { fg = colors.base0D } },
   { '@tag.delimiter', { fg = colors.base0D } },
-  { '@type', { fg = colors.base07 } },
 
   { '@field.yaml', { fg = colors.base08 } },
   { '@constant.bash', { fg = colors.base08 } },
@@ -20,6 +19,7 @@ return {
   { '@function.call.tsx', { fg = colors.base0B } },
   { '@property.tsx', { fg = colors.base07 } },
   { '@parameter.tsx', { fg = colors.base08 } },
+  { '@type.tsx', { fg = colors.base07 } },
 
   { '@string.php', { fg = colors.base0A } },
   { '@property.php', { fg = colors.base07 } },
@@ -30,6 +30,7 @@ return {
   { '@constant.builtin.php', { fg = colors.base08 } },
   { '@number.php', { fg = colors.base08 } },
   { '@boolean.php', { fg = colors.base08 } },
+  { '@type.php', { fg = colors.base07 } },
   { '@type.builtin.php', { fg = colors.base0E } },
   { '@include.php', { fg = colors.base0E } },
   { '@namespace.php', { fg = colors.base07 } },
