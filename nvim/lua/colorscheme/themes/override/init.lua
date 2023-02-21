@@ -3,6 +3,10 @@ local colors = require('colorscheme.scheme').get_colors()
 return {
   { 'PMenuSel', { fg = colors.base01, bg = colors.base0D } },
 
+  { '@tag', { fg = colors.base0D } },
+  { '@tag.delimiter', { fg = colors.base0D } },
+  { '@type', { fg = colors.base07 } },
+
   { '@field.yaml', { fg = colors.base08 } },
   { '@constant.bash', { fg = colors.base08 } },
   { '@label.json', { fg = colors.base08 } },
@@ -11,15 +15,16 @@ return {
 
   { '@tag.twig', { fg = colors.base0E } },
 
-  { '@tag.html', { fg = colors.base0D } },
-  { '@tag.delimiter.html', { fg = colors.base0D } },
+  { '@include.tsx', { fg = colors.base0E } },
+  { '@punctuation.bracket.tsx', { fg = colors.base0C } },
+  { '@function.call.tsx', { fg = colors.base0B } },
+  { '@property.tsx', { fg = colors.base07 } },
+  { '@parameter.tsx', { fg = colors.base08 } },
 
-  -- php
   { '@string.php', { fg = colors.base0A } },
   { '@property.php', { fg = colors.base07 } },
   { '@variable.php', { fg = colors.base0C } },
   { '@function.php', { fg = colors.base0B } },
-  { '@type.php', { fg = colors.base07 } },
   { '@constructor.php', { fg = colors.base07 } },
   { '@constant.php', { fg = colors.base08 } },
   { '@constant.builtin.php', { fg = colors.base08 } },
