@@ -66,7 +66,6 @@ return function(bufnr)
     icon = {
       hl = icon_data.hl,
       icon = icon_data.icon,
-      close_icon = vim.bo[bufnr].modified and '' or '',
     },
     pick = get_pick_data(bufnr),
     hl = get_highlight(bufnr),

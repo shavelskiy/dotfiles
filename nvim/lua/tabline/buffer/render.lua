@@ -7,16 +7,15 @@ local reverse = function(list)
 end
 
 return function(parts)
-  local groups = {
-    { hl = parts.icon.hl, text = '   ' .. parts.icon.icon },
-    { hl = parts.hl, text = ' ' .. parts.name .. '   ' },
-  }
+  local groups = {}
 
   if parts.pick ~= nil then
-    table.insert(groups, { hl = parts.pick.hl, text = parts.pick.char .. ' ' })
+    table.insert(groups, { hl = parts.pick.hl, text = '   ' .. parts.pick.char })
   else
-    table.insert(groups, { hl = parts.hl, text = parts.icon.close_icon .. ' ' })
+    table.insert(groups, { hl = parts.icon.hl, text = '   ' .. parts.icon.icon })
   end
+
+  table.insert(groups, { hl = parts.hl, text = ' ' .. parts.name .. '   ' })
 
   if parts.forse_size ~= nil then
     local lenght = math.abs(parts.forse_size)
