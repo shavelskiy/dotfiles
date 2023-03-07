@@ -21,6 +21,7 @@ RUN ln -s ~/dotfiles/fish ~/.config/fish
 RUN ln -s ~/dotfiles/tmux ~/.config/tmux
 RUN ln -s ~/dotfiles/.prettierrc.json ~/.prettierrc.json
 RUN ln -s ~/dotfiles/.gitignore ~/.gitignore
+RUN ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
 RUN nvim --headless "+Lazy! sync" +qa
 

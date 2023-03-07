@@ -1,0 +1,22 @@
+[user]
+  name = Vladislav Shavelskiy
+  email = v.shavelsky@gmail.com
+[alias]
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+
+[diff]
+  tool = vimrdiff
+[difftool "vimrdiff"]
+  cmd = vimr --nvim --wait -d $LOCAL $REMOTE
+[merge]
+  tool = vimrdiff
+[mergetool "vimrdiff"]
+  cmd = vimr --nvim --wait -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[core]
+  editor = nvim

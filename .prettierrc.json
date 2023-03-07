@@ -16,7 +16,7 @@
       "files": "*.twig",
       "options": {
         "twigPrintWidth": 120,
-        "tabWidth": 4
+        "tabWidth": 2
       }
     }
   ]
