@@ -2,7 +2,7 @@ local buffer_parts = require 'tabline.buffer.parts'
 local utils = require 'tabline.utils'
 local is_buf_valid = require('tabline.api').is_buf_valid
 
-local get_length = function(parts) return parts.forse_size == nil and 10 + #parts.name or math.abs(parts.forse_size) end
+local get_length = function(parts) return parts.forse_size == nil and 7 + #parts.name or math.abs(parts.forse_size) end
 
 local get_buffer_width = function(buffers_parts)
   local result = 0
