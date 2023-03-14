@@ -1,8 +1,8 @@
 return {
   'rmagatti/auto-session',
   config = function()
-    local function close_nvim_tree() require('nvim-tree.view').close() end
-    local function open_nvim_tree() require('nvim-tree').open() end
+    local function close_nvim_tree() require('nvim-tree.api').tree.close() end
+    local function open_nvim_tree() require('nvim-tree.api').tree.open() end
 
     require('auto-session').setup {
       pre_save_cmds = { close_nvim_tree },
