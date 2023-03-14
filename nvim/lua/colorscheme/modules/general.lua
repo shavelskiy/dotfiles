@@ -44,15 +44,12 @@ return {
   { 'TabLine', { fg = colors.base03, bg = colors.base01 } },
   { 'TabLineFill', { fg = colors.base03, bg = colors.base01 } },
   { 'TabLineSel', { fg = colors.base0B, bg = colors.base01 } },
-
   { 'NormalFloat', { fg = colors.base05, bg = colors.darkerbg } },
   { 'FloatBorder', { fg = colors.base03, bg = colors.darkerbg } },
   { 'NormalNC', { fg = colors.base05, bg = colors.base00 } },
   { 'TermCursor', { fg = colors.base00, bg = colors.base05 } },
   { 'TermCursorNC', { fg = colors.base00, bg = colors.base05 } },
-
   { 'NvimInternalError', { fg = colors.base00, bg = colors.base08l } },
-
   { 'SpellBad', { undercurl = true, sp = colors.base08 } },
   { 'SpellLocal', { undercurl = true, sp = colors.base0C } },
   { 'SpellCap', { undercurl = true, sp = colors.base0D } },

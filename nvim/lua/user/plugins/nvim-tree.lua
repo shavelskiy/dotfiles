@@ -24,7 +24,6 @@ return {
   },
   config = function()
     require('nvim-tree').setup {
-      open_on_setup = true,
       view = {
         hide_root_folder = true,
         adaptive_size = true,

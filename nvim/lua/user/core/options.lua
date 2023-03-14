@@ -39,3 +39,6 @@ opt.timeoutlen = 400
 opt.undofile = true
 
 opt.updatetime = 250
+
+opt.spell = false
+opt.spelllang = 'en_us,ru'

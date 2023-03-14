@@ -45,7 +45,6 @@ return {
   { '@decorator', { link = '@variable' } },
 
   { 'TreesitterContext', { bg = colors.base01, italic = true } },
-
   { '@comment', { fg = colors.base03, italic = true } },
   { '@error', { fg = colors.base08 } },
   { '@none', { fg = colors.base05 } },
