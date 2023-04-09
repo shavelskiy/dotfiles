@@ -1,6 +1,3 @@
-local colors = {}
-local selected_theme = ''
-
 local HEX_DIGITS = {
   ['0'] = 0,
   ['1'] = 1,
@@ -43,17 +40,25 @@ local darken = function(hex, pct)
   return string.format('#%s', rgb_to_hex(r, g, b))
 end
 
-local update_colors = function(data)
-  data.darkerbg = darken(data.base00, 0.1)
-
-  return data
-end
-
-return {
-  set_theme = function(theme)
-    selected_theme = theme
-    colors = update_colors(require('colorscheme.themes.' .. theme))
-  end,
-  get_colors = function() return colors end,
-  get_theme = function() return selected_theme end,
+local colors = {
+  base00 = '#081e2f',
+  base01 = '#092236',
+  base02 = '#0e293f',
+  base03 = '#1d3b53',
+  base04 = '#4b6479',
+  base05 = '#a1aab8',
+  base06 = '#acb4c2',
+  base07 = '#d6deeb',
+  base08 = '#ff5874',
+  base09 = '#f78c6c',
+  base0A = '#ffcb8b',
+  base0B = '#a1cd5e',
+  base0C = '#7fdbca',
+  base0D = '#82aaff',
+  base0E = '#c792ea',
+  base0F = '#fc514e',
 }
+
+colors.darkerbg = darken(colors.base00, 0.1)
+
+return colors

@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 return {
   { 'TablineFill', { bg = colors.base01 } },

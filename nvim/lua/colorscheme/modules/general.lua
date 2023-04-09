@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 return {
   { 'Normal', { fg = colors.base05, bg = colors.base00 } },

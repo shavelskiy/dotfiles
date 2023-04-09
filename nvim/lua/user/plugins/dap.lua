@@ -36,7 +36,7 @@ return {
         request = 'launch',
         name = 'listen for xdeubg',
         port = 9003,
-        serverSourceRoot = '/application',
+        serverSourceRoot = '/service',
         localSourceRoot = '${workspaceFolder}',
       },
     }

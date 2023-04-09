@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 return {
   { 'LazyH1', { bg = colors.base0B, fg = colors.base00 } },

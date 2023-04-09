@@ -1,8 +1,31 @@
 if vim.fn.exists 'syntax_on' then vim.cmd 'syntax reset' end
 
--- local theme = 'ayu-dark'
--- local theme = 'gruvbox'
-local theme = 'nightfly'
+local modules = {
+  'alpha',
+  'cmp',
+  'dap',
+  'diffview',
+  'general',
+  'gitsigns',
+  'illuminate',
+  'indentline',
+  'lazy',
+  'lsp',
+  'mason',
+  'nvimtree',
+  'statusline',
+  'tabline',
+  'telescope',
+  'treesitter',
+  'override',
+}
 
-require('colorscheme.scheme').set_theme(theme)
-require 'colorscheme.modules.init'
+local hl = function(groups)
+  for _, data in pairs(groups) do
+    vim.api.nvim_set_hl(0, data[1], data[2])
+  end
+end
+
+for _, name in ipairs(modules) do
+  hl(require('colorscheme.modules.' .. name))
+end

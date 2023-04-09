@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 return {
   { 'TelescopeBorder', { fg = colors.darkerbg, bg = colors.darkerbg } },

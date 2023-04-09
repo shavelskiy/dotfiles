@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 return {
   { 'PMenuSel', { fg = colors.base01, bg = colors.base0D } },

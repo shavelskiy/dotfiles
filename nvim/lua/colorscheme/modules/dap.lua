@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 local function createSymbol(name, link, icon) vim.fn.sign_define(name, { text = icon, texthl = link, linehl = link, numhl = link }) end
 

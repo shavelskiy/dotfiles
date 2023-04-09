@@ -1,4 +1,4 @@
-local colors = require('colorscheme.scheme').get_colors()
+local colors = require 'colorscheme.colors'
 
 local function createSymbol(name, icon)
   local hl = 'DiagnosticSign' .. name
