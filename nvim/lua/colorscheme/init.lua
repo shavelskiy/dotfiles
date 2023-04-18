@@ -1,7 +1,6 @@
 if vim.fn.exists 'syntax_on' then vim.cmd 'syntax reset' end
 
 local modules = {
-  'alpha',
   'cmp',
   'dap',
   'diffview',

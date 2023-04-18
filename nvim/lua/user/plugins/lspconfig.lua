@@ -1,12 +1,6 @@
 return {
   'neovim/nvim-lspconfig',
-  config = function()
-    local nvim_lsp = require 'lspconfig'
-
-    for _, server in pairs(require 'user.servers') do
-      nvim_lsp[server].setup(require('user.servers.' .. server))
-    end
-  end,
+  config = function() require 'user.servers.config' end,
   keys = {
     { 'gD', vim.lsp.buf.declaration },
     { 'K', vim.lsp.buf.hover },
