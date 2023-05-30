@@ -6,7 +6,7 @@ local on_attach = function(client, bufnr)
     client.server_capabilities.documentRangeFormattingProvider = false
   end
 
-  client.server_capabilities.semanticTokensProvider = nil
+  client.server_capabilities.semanticTokensProvider = false
 end
 
 local getConfig = function(server)
