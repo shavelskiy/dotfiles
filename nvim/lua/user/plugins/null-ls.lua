@@ -5,8 +5,11 @@ return {
 
     null_ls.setup {
       sources = {
-        null_ls.builtins.formatting.prettier.with { filetypes = { 'xml', 'html', 'yaml', 'twig', 'json', 'markdown', 'typescript', 'typescriptreact' } },
+        null_ls.builtins.formatting.prettier.with {
+          filetypes = { 'xml', 'html', 'yaml', 'twig', 'json', 'jsonc', 'markdown', 'javascript', 'typescript', 'typescriptreact' },
+        },
         null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.gofmt,
         null_ls.builtins.diagnostics.twigcs,
         null_ls.builtins.diagnostics.jsonlint,
         null_ls.builtins.diagnostics.sqlfluff.with {

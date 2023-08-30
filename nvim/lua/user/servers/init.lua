@@ -4,4 +4,5 @@ return {
   'lua_ls',
   'dockerls',
   'yamlls',
+  'gopls',
 }

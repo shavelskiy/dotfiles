@@ -111,7 +111,8 @@ local dap_status = function(result)
   if not status then return '' end
 
   local session = dap.session()
-  if session ~= nil then table.insert(result, '%#StatusLineDap# DAP ' .. session.config.name) end
+
+  if session ~= nil and type(session.config) == 'table' then table.insert(result, '%#StatusLineDap# DAP ' .. session.config.name) end
 
   return result
 end

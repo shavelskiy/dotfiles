@@ -8,10 +8,10 @@ set -g fish_autosuggestion_enabled 0
 
 set -gx EDITOR nvim
 
-# set -gx PATH bin $PATH
-# set -gx PATH ~/bin $PATH
-# set -gx PATH ~/.local/bin $PATH
-# set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH bin $PATH
+set -gx PATH ~/bin $PATH
+set -gx PATH ~/.local/bin $PATH
+set -gx PATH /opt/homebrew/bin $PATH
 
 set -gx EXA_COLORS "\
 pi=38;5;14:\

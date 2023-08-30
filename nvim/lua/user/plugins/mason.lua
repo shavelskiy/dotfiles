@@ -38,7 +38,7 @@ return {
     }
 
     require('mason-nvim-dap').setup {
-      ensure_installed = { 'php' },
+      ensure_installed = { 'php', 'delve' },
     }
   end,
 }
