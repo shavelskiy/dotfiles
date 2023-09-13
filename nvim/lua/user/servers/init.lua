@@ -5,4 +5,5 @@ return {
   'dockerls',
   'yamlls',
   'gopls',
+  'cssls',
 }

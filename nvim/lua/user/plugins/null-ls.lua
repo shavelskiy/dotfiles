@@ -6,7 +6,7 @@ return {
     null_ls.setup {
       sources = {
         null_ls.builtins.formatting.prettier.with {
-          filetypes = { 'xml', 'html', 'yaml', 'twig', 'json', 'jsonc', 'markdown', 'javascript', 'typescript', 'typescriptreact' },
+          filetypes = { 'xml', 'html', 'yaml', 'twig', 'json', 'jsonc', 'markdown', 'javascript', 'typescript', 'typescriptreact', 'css', 'scss' },
         },
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.gofmt,

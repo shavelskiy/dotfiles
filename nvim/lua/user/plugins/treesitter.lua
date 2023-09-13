@@ -20,6 +20,7 @@ return {
         'json',
         'yaml',
         'html',
+        'css',
         'scss',
         'go',
         'dockerfile',
