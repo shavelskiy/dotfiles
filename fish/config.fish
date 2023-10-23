@@ -1,6 +1,6 @@
 set fish_greeting ""
 
-alias ll "exa -l -g --icons"
+alias ll "eza -l -g --icons"
 alias lla "ll -a"
 command -qv nvim && alias vim nvim
 

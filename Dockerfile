@@ -8,7 +8,7 @@ RUN apk --no-cache add \
   ripgrep \
   tree-sitter-cli \
   fish \
-  exa \
+  eza \
   tmux
 
 RUN git clone https://github.com/shavelskiy/dotfiles.git ~/dotfiles
