@@ -21,7 +21,6 @@ return {
         'yaml',
         'html',
         'css',
-        'scss',
         'go',
         'dockerfile',
         'vim',

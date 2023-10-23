@@ -60,6 +60,7 @@ return {
 
     { '<leader>cm', function() require('telescope.builtin').git_commits() end },
     { '<leader>gt', function() require('telescope.builtin').git_status() end },
+    { '<leader>sa', function() require('telescope.builtin').highlights() end },
 
     { 'gd', function() require('telescope.builtin').lsp_definitions() end },
     { 'gr', function() require('telescope.builtin').lsp_references() end },
