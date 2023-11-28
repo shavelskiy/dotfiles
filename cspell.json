@@ -2,6 +2,9 @@
   "language": ["en", "ru"],
   "flagWords": [],
   "words": [
+    "nvim",
+    "karabiner",
+    "iterm",
     "Promocode",
     "Nelmio",
     "PREPROMO",
@@ -13,27 +16,7 @@
     "Nyholm",
     "redoc",
     "десериализации",
-    "Pharmamed",
-    "assortmentunit",
-    "Радника",
-    "ОГРН",
-    "ECEY",
-    "Эвалар",
-    "Glenmark",
-    "Сервье",
-    "Galderma",
-    "Binopharm",
-    "Конунникова",
-    "Цымбал",
-    "Зубинская",
-    "Зыкова",
-    "Мудрак",
-    "Бурьяновкая",
-    "Монастырёв",
-    "Кулакова",
-    "Чурин",
-    "Скомрова",
-    "Хабло"
+    "ОГРН"
   ],
   "version": "0.2"
 }
