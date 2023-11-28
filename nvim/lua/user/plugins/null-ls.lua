@@ -29,12 +29,8 @@ return {
         },
         null_ls.builtins.diagnostics.twigcs,
         null_ls.builtins.diagnostics.jsonlint,
-        -- null_ls.builtins.diagnostics.sqlfluff.with {
-          -- extra_args = { '--dialect', 'postgres' },
-        -- },
-        null_ls.builtins.formatting.sqlfluff.with {
-          extra_args = { '--dialect', 'postgres' },
-        },
+        null_ls.builtins.diagnostics.cspell,
+        null_ls.builtins.code_actions.cspell,
       },
     }
   end,
