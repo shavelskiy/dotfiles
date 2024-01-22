@@ -15,12 +15,4 @@ dap.configurations.php = {
     serverSourceRoot = '/application',
     localSourceRoot = '${workspaceFolder}',
   },
-  {
-    type = 'php',
-    request = 'launch',
-    name = 'xdeubg (9003) | service',
-    port = 9003,
-    serverSourceRoot = '/service',
-    localSourceRoot = '${workspaceFolder}',
-  },
 }
