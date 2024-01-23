@@ -9,9 +9,9 @@ return {
   { '@tag', { fg = colors.base0D } },
   { '@tag.delimiter', { fg = colors.base0D } },
 
-  { '@field.yaml', { fg = colors.base08 } },
+  { '@property.yaml', { fg = colors.base08 } },
   { '@constant.bash', { fg = colors.base08 } },
-  { '@label.json', { fg = colors.base08 } },
+  { '@property.json', { fg = colors.base08 } },
 
   { '@punctuation.delimiter', { fg = colors.base0C } },
 

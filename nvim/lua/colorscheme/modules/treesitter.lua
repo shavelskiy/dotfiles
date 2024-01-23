@@ -139,9 +139,6 @@ return {
 
   { '@conceal', { bg = 'none' } },
 
-  -- { '@spell', { underline = true } },
-  -- { '@nospell', { underline = false } },
-
   { '@definition', { sp = colors.base04, underline = true } },
   { '@definition.constant', { sp = colors.base0F } },
   { '@definition.function', { sp = colors.base0F } },
