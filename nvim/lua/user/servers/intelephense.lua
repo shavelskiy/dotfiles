@@ -2,7 +2,7 @@ return {
   settings = {
     intelephense = {
       environment = {
-        phpVersion = '8.2',
+        phpVersion = '8.3',
       },
       files = {
         exclude = {
