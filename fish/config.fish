@@ -3,6 +3,7 @@ set fish_greeting ""
 alias ll "eza -l -g --icons"
 alias lla "ll -a"
 alias cspell "~/.local/share/nvim/mason/bin/cspell"
+alias work-clear "git branch | grep -v "main" | xargs git branch -D"
 command -qv nvim && alias vim nvim
 
 set -g fish_autosuggestion_enabled 0
