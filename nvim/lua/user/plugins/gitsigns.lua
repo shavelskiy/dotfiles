@@ -3,12 +3,12 @@ return {
   config = function()
     require('gitsigns').setup {
       signs = {
-        add = { hl = 'GitSignsDiffAdd', text = '│' },
-        change = { hl = 'GitSignsDiffChange', text = '│' },
-        delete = { hl = 'GitSignsDiffDelete', text = '│' },
-        topdelete = { hl = 'GitSignsDiffDelete', text = '‾' },
-        changedelete = { hl = 'GitSignsDiffChangeDelete', text = '~' },
-        untracked = { hl = 'GitSignsDiffAdd', text = '│' },
+        add = { text = '│' },
+        change = { text = '│' },
+        delete = { text = '│' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+        untracked = { text = '│' },
       },
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns

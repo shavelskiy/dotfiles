@@ -1,6 +1,13 @@
 local colors = require 'colorscheme.colors'
 
 return {
+  { 'GitSignsAdd', { link = 'GitSignsDiffAdd' } },
+  { 'GitSignsChange', { link = 'GitSignsDiffChange' } },
+  { 'GitSignsChangedelete', { link = 'GitSignsDiffDelete' } },
+  { 'GitSignsDelete', { link = 'GitSignsDiffDelete' } },
+  { 'GitSignsTopdelete', { link = 'GitSignsDiffChangeDelete' } },
+  { 'GitSignsUntracked', { link = 'GitSignsDiffAdd' } },
+
   { 'GitSignsDiffAdd', { fg = colors.base0D } },
   { 'GitSignsDiffAdded', { fg = colors.base0B } },
   { 'GitSignsDiffChange', { fg = colors.base03 } },

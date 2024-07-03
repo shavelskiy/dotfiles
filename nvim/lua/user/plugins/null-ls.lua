@@ -34,7 +34,6 @@ return {
           filetypes = { 'twig' },
           extra_args = {'--indent', '2', '--blank-line-before-tag', 'load,extends,include,block', '--blank-line-after-tag', 'set'},
         },
-        null_ls.builtins.diagnostics.twigcs,
         -- null_ls.builtins.diagnostics.jsonlint,
       },
     }
