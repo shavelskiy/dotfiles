@@ -20,3 +20,9 @@
   cmd = vimr --nvim --wait -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [core]
   editor = nvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true

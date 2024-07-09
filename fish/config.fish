@@ -1,6 +1,6 @@
 set fish_greeting ""
 
-alias ll "eza -l -g --icons"
+alias ll "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lla "ll -a"
 alias cspell "~/.local/share/nvim/mason/bin/cspell"
 alias work-clear "git branch | grep -v "main" | xargs git branch -D"
