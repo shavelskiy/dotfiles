@@ -30,7 +30,17 @@ return {
     }
 
     require('mason-lspconfig').setup {
-      ensure_installed = require 'user.servers',
+      -- ensure_installed = require 'user.servers', todo
+      ensure_installed = {
+        'intelephense',
+        'tsserver',
+        'lua_ls',
+        'dockerls',
+        'twiggy_language_server',
+        'yamlls',
+        'gopls',
+        'cssls',
+      },
     }
 
     require('mason-null-ls').setup {

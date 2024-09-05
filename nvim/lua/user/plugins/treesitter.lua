@@ -1,7 +1,9 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
+  commit = '24ddf60',
   config = function()
+
     require('nvim-treesitter.configs').setup {
       highlight = {
         enable = true,
@@ -31,6 +33,7 @@ return {
         'sql',
         'twig',
         'fish',
+        'vue',
       },
     }
   end,
