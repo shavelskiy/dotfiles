@@ -34,6 +34,7 @@ return {
         'twig',
         'fish',
         'vue',
+        'svelte',
       },
     }
   end,

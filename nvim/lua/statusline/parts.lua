@@ -98,7 +98,7 @@ local lsp_status = function(result)
   local sources = require 'null-ls.sources'
 
   for _, source in ipairs(sources.get_available(filetype)) do
-    table.insert(data, source.name .. '*')
+    if source.name ~= 'cspell' then table.insert(data, source.name .. '*') end
   end
 
   if next(data) ~= nil then

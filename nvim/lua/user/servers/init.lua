@@ -7,4 +7,6 @@ return {
   'yamlls',
   'gopls',
   'cssls',
+  'vuels',
+  'svelte',
 }
