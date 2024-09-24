@@ -9,4 +9,5 @@ return {
   'cssls',
   'vuels',
   'svelte',
+  'tailwindcss',
 }
