@@ -1,8 +1,8 @@
 local moveAction = function(left)
-  local lib = require 'nvim-tree.lib'
+  local core = require 'nvim-tree.core'
   local api = require 'nvim-tree.api'
 
-  local node = lib.get_node_at_cursor()
+  local node = core.get_explorer():get_node_at_cursor()
 
   if not node then return end
 

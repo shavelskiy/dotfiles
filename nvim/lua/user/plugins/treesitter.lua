@@ -35,6 +35,7 @@ return {
         'fish',
         'vue',
         'svelte',
+        'prisma',
       },
     }
   end,

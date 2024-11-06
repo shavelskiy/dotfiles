@@ -34,7 +34,7 @@ return {
     }
 
     require('mason-null-ls').setup {
-      ensure_installed = { 'prettier', 'stylua', 'twigcs', 'jsonlint', 'sqlfluff' },
+      ensure_installed = { 'prettier', 'stylua', 'twigcs', 'sqlfluff' },
     }
 
     require('mason-nvim-dap').setup {
