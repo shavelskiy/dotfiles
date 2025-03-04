@@ -26,3 +26,5 @@
 
 [delta]
   navigate = true
+[pull]
+  rebase = false
