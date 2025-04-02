@@ -10,8 +10,8 @@ return {
     null_ls.setup {
       default_timeout = 10000,
       sources = {
-        cspell.diagnostics.with { config = config },
-        cspell.code_actions.with { config = config },
+        cspell.diagnostics,
+        cspell.code_actions,
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.gofmt,
