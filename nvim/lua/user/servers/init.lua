@@ -3,11 +3,10 @@ return {
   'ts_ls',
   'lua_ls',
   'dockerls',
-  'twiggy_language_server',
-  'yamlls',
+  -- 'twiggy_language_server',
+  -- 'yamlls',
   'gopls',
   'cssls',
   'vuels',
-  'svelte',
   'tailwindcss',
 }

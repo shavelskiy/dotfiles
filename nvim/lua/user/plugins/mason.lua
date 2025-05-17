@@ -30,7 +30,7 @@ return {
     }
 
     require('mason-lspconfig').setup {
-      ensure_installed = require 'user.servers', todo
+      ensure_installed = require 'user.servers'
     }
 
     require('mason-null-ls').setup {

@@ -15,6 +15,7 @@ return {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.gofmt,
+        null_ls.builtins.formatting.sqlfluff,
         null_ls.builtins.formatting.djlint.with {
           filetypes = { 'twig' },
           extra_args = { '--indent', '2', '--blank-line-before-tag', 'load,extends,include,block', '--blank-line-after-tag', 'set' },
