@@ -3,8 +3,8 @@ set fish_greeting ""
 alias ll "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lla "ll -a"
 alias cspell "~/.local/share/nvim/mason/bin/cspell"
+alias vim "~/.local/share/bob/nvim-bin/nvim"
 alias work-clear "git branch | grep -v "main" | xargs git branch -D"
-command -qv nvim && alias vim nvim
 
 set -g fish_autosuggestion_enabled 0
 
@@ -13,6 +13,7 @@ set -gx EDITOR nvim
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/go/bin $PATH
 set -gx PATH /opt/homebrew/bin $PATH
 
 set -gx EXA_COLORS "\
