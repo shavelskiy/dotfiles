@@ -12,8 +12,8 @@ return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-lua/popup.nvim',
     'nvim-telescope/telescope-dap.nvim',
+    'nvim-telescope/telescope-ui-select.nvim',
   },
   config = function()
     local actions = require 'telescope.actions'
@@ -47,7 +47,14 @@ return {
         },
       },
       extensions_list = { 'dap' },
+      extensions = {
+        ['ui-select'] = {
+          require('telescope.themes').get_dropdown {},
+        },
+      },
     }
+
+    require('telescope').load_extension 'ui-select'
   end,
   keys = {
     { '<leader>ff', function() execute(require('telescope.builtin').find_files) end },
