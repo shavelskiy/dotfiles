@@ -1,7 +1,7 @@
 local colors = require 'colorscheme.colors'
 
 return {
-  { 'PMenuSel', { fg = colors.base01, bg = colors.base0D } },
+  { 'PMenuSel', { fg = colors.base02, bg = colors.base0D } },
 
   { '@variable.sql', { fg = colors.base07 } },
   { '@field.sql', { fg = colors.base07 } },
@@ -87,7 +87,7 @@ return {
   { '@operator.php', { fg = colors.base0C } },
   { '@punctuation.delimiter.php', { fg = colors.base0C } },
   { '@punctuation.bracket.php', { fg = colors.base0C } },
-  { '@error.php', { fg = colors.base05 } },
+  { '@error.php', { fg = colors.base06 } },
   { '@parameter.php', { fg = colors.base0D } },
   { '@attribute.php', { fg = colors.base0D } },
   { '@type.phpdoc', { fg = colors.base07 } },

@@ -44,17 +44,17 @@ return {
   { '@typeParameter', { link = '@type' } },
   { '@decorator', { link = '@variable' } },
 
-  { 'TreesitterContext', { bg = colors.base01, italic = true } },
-  { '@comment', { fg = colors.base03, italic = true } },
+  { 'TreesitterContext', { bg = colors.base02, italic = true } },
+  { '@comment', { fg = colors.base04, italic = true } },
   { '@error', { fg = colors.base08 } },
-  { '@none', { fg = colors.base05 } },
+  { '@none', { fg = colors.base06 } },
   { '@preproc', { fg = colors.base0A } },
   { '@define', { fg = colors.base0E } },
-  { '@operator', { fg = colors.base05 } },
+  { '@operator', { fg = colors.base06 } },
 
   { '@punctuation.delimiter', { fg = colors.base0F } },
-  { '@punctuation.bracket', { fg = colors.base05 } },
-  { '@punctuation.special', { fg = colors.base05 } },
+  { '@punctuation.bracket', { fg = colors.base06 } },
+  { '@punctuation.special', { fg = colors.base06 } },
 
   { '@string', { fg = colors.base0B } },
   { '@string.regex', { fg = colors.base0C } },
@@ -77,7 +77,7 @@ return {
   { '@method.call', { fg = colors.base0D } },
 
   { '@constructor', { fg = colors.base0D } },
-  { '@parameter', { fg = colors.base05 } },
+  { '@parameter', { fg = colors.base06 } },
 
   { '@keyword', { fg = colors.base0E } },
   { '@keyword.function', { fg = colors.base0E } },
@@ -99,8 +99,8 @@ return {
 
   { '@storageclass', { fg = colors.base0A } },
   { '@attribute', { fg = colors.base0A } },
-  { '@field', { fg = colors.base05 } },
-  { '@property', { fg = colors.base05 } },
+  { '@field', { fg = colors.base06 } },
+  { '@property', { fg = colors.base06 } },
 
   { '@variable', { fg = colors.base08 } },
   { '@variable.builtin', { fg = colors.base08, italic = true } },
@@ -112,20 +112,20 @@ return {
   { '@namespace', { fg = colors.base08 } },
   { '@symbol', { fg = colors.base0B } },
 
-  { '@text', { fg = colors.base05 } },
+  { '@text', { fg = colors.base06 } },
   { '@text.strong', { bold = true } },
   { '@text.emphasis', { fg = colors.base09, italic = true } },
-  { '@text.underline', { fg = colors.base00, underline = true } },
-  { '@text.strike', { fg = colors.base00, strikethrough = true } },
+  { '@text.underline', { fg = colors.base01, underline = true } },
+  { '@text.strike', { fg = colors.base01, strikethrough = true } },
   { '@text.title', { fg = colors.base0D } },
   { '@text.literal', { fg = colors.base09 } },
   { '@text.uri', { fg = colors.base09, underline = true } },
   { '@text.math', { fg = colors.base09 } },
   { '@text.environment', { fg = colors.base08 } },
   { '@text.environment.name', { fg = colors.base0A } },
-  { '@text.reference', { fg = colors.base05 } },
+  { '@text.reference', { fg = colors.base06 } },
 
-  { '@text.todo', { fg = colors.base0A, bg = colors.base01 } },
+  { '@text.todo', { fg = colors.base0A, bg = colors.base02 } },
   { '@text.note', { fg = colors.base0A } },
   { '@text.warning', { fg = colors.base0E } },
   { '@text.danger', { fg = colors.base08 } },
@@ -139,7 +139,7 @@ return {
 
   { '@conceal', { bg = 'none' } },
 
-  { '@definition', { sp = colors.base04, underline = true } },
+  { '@definition', { sp = colors.base05, underline = true } },
   { '@definition.constant', { sp = colors.base0F } },
   { '@definition.function', { sp = colors.base0F } },
   { '@definition.method', { sp = colors.base0F } },

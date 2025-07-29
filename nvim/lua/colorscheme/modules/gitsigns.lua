@@ -10,7 +10,7 @@ return {
 
   { 'GitSignsDiffAdd', { fg = colors.base0D } },
   { 'GitSignsDiffAdded', { fg = colors.base0B } },
-  { 'GitSignsDiffChange', { fg = colors.base03 } },
+  { 'GitSignsDiffChange', { fg = colors.base04 } },
   { 'GitSignsDiffChangeDelete', { fg = colors.base0F } },
   { 'GitSignsDiffModified', { fg = colors.base08 } },
   { 'GitSignsDiffDelete', { fg = colors.base0F } },
@@ -18,10 +18,10 @@ return {
 
   { 'gitcommitOverflow', { fg = colors.base08 } },
   { 'gitcommitSummary', { fg = colors.base0B } },
-  { 'gitcommitComment', { fg = colors.base03 } },
-  { 'gitcommitUntracked', { fg = colors.base03 } },
-  { 'gitcommitDiscarded', { fg = colors.base03 } },
-  { 'gitcommitSelected', { fg = colors.base03 } },
+  { 'gitcommitComment', { fg = colors.base04 } },
+  { 'gitcommitUntracked', { fg = colors.base04 } },
+  { 'gitcommitDiscarded', { fg = colors.base04 } },
+  { 'gitcommitSelected', { fg = colors.base04 } },
   { 'gitcommitHeader', { fg = colors.base0E } },
   { 'gitcommitSelectedType', { fg = colors.base0D } },
   { 'gitcommitUnmergedType', { fg = colors.base0D } },

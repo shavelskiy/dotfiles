@@ -2,12 +2,12 @@ local colors = require 'colorscheme.colors'
 
 return {
   { 'LazyH1', { bg = colors.base0B, fg = colors.base00 } },
-  { 'LazyButton', { bg = colors.base00, fg = colors.base05 } },
+  { 'LazyButton', { bg = colors.base00, fg = colors.base06 } },
   { 'LazyH2', { fg = colors.base0D, bold = true } },
   { 'LazyReasonPlugin', { fg = colors.base08 } },
   { 'LazyValue', { fg = colors.base0C } },
-  { 'LazyDir', { fg = colors.base05 } },
-  { 'LazyUrl', { fg = colors.base05 } },
+  { 'LazyDir', { fg = colors.base06 } },
+  { 'LazyUrl', { fg = colors.base06 } },
   { 'LazyCommit', { fg = colors.base0B } },
   { 'LazyNoCond', { fg = colors.base08 } },
   { 'LazySpecial', { fg = colors.base0D } },

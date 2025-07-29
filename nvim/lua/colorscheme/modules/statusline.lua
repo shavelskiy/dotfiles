@@ -1,21 +1,21 @@
 local colors = require 'colorscheme.colors'
 
-local bubleBackgroud = colors.base01
+local bubleBackgroud = colors.base02
 
 return {
   { 'StatusLine', { bg = 'none' } },
-  { 'StatusLineText', { fg = colors.base04, bg = bubleBackgroud } },
+  { 'StatusLineText', { fg = colors.base05, bg = bubleBackgroud } },
   { 'StatusLineSeparator', { fg = bubleBackgroud, bg = 'none' } },
 
-  { 'StatusLineNormalMode', { bg = colors.base0D, fg = colors.base00, bold = true } },
-  { 'StatusLineInsertMode', { bg = colors.base0E, fg = colors.base00, bold = true } },
-  { 'StatusLineTerminalMode', { bg = colors.base0B, fg = colors.base00, bold = true } },
-  { 'StatusLineNTerminalMode', { bg = colors.base0A, fg = colors.base00, bold = true } },
-  { 'StatusLineVisualMode', { bg = colors.base0C, fg = colors.base00, bold = true } },
-  { 'StatusLineReplaceMode', { bg = colors.base08, fg = colors.base00, bold = true } },
-  { 'StatusLineConfirmMode', { bg = colors.base09, fg = colors.base00, bold = true } },
-  { 'StatusLineCommandMode', { bg = colors.base0B, fg = colors.base00, bold = true } },
-  { 'StatusLineSelectMode', { bg = colors.base0D, fg = colors.base00, bold = true } },
+  { 'StatusLineNormalMode', { bg = colors.base0D, fg = colors.base01, bold = true } },
+  { 'StatusLineInsertMode', { bg = colors.base0E, fg = colors.base01, bold = true } },
+  { 'StatusLineTerminalMode', { bg = colors.base0B, fg = colors.base01, bold = true } },
+  { 'StatusLineNTerminalMode', { bg = colors.base0A, fg = colors.base01, bold = true } },
+  { 'StatusLineVisualMode', { bg = colors.base0C, fg = colors.base01, bold = true } },
+  { 'StatusLineReplaceMode', { bg = colors.base08, fg = colors.base01, bold = true } },
+  { 'StatusLineConfirmMode', { bg = colors.base09, fg = colors.base01, bold = true } },
+  { 'StatusLineCommandMode', { bg = colors.base0B, fg = colors.base01, bold = true } },
+  { 'StatusLineSelectMode', { bg = colors.base0D, fg = colors.base01, bold = true } },
 
   { 'StatusLineNormalModeSep', { fg = colors.base0D, bg = 'none' } },
   { 'StatusLineInsertModeSep', { fg = colors.base0E, bg = 'none' } },
