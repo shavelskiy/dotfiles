@@ -8,17 +8,12 @@ return {
   base06 = '#a1aab8',
   base07 = '#d6deeb',
 
-  base08 = '#ff6b7f',
+  base08 = '#ff5874',
   base09 = '#f78c6c',
-  base0A = '#ffdf8b',
+  base0A = '#ffcb8b',
   base0B = '#a1cd5e',
-  base0C = '#5fd7a7',
-  base0D = '#6bb9ff',
+  base0C = '#7fdbca',
+  base0D = '#82aaff',
   base0E = '#c792ea',
   base0F = '#fc514e',
-
-  -- base08 = '#ff5874',
-  -- base0A = '#ffcb8b',
-  -- base0C = '#7fdbca',
-  -- base0D = '#82aaff',
 }
