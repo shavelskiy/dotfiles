@@ -11,8 +11,8 @@ return {
 
   { 'CmpItemAbbr', { fg = colors.base06, bg = colors.base01 } },
   { 'CmpItemAbbrDeprecated', { fg = colors.base04, strikethrough = true } },
-  { 'CmpItemAbbrMatch', { fg = colors.base01 } },
-  { 'CmpItemAbbrMatchFuzzy', { fg = colors.base01 } },
+  { 'CmpItemAbbrMatch', { fg = colors.base0D } },
+  { 'CmpItemAbbrMatchFuzzy', { fg = colors.base0D } },
   { 'CmpItemKindDefault', { fg = colors.base06 } },
   { 'CmpItemMenu', { fg = colors.base05 } },
   { 'CmpItemKindKeyword', { fg = colors.base0E } },

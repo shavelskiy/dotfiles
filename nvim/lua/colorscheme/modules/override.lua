@@ -91,4 +91,6 @@ return {
   { '@parameter.php', { fg = colors.base0D } },
   { '@attribute.php', { fg = colors.base0D } },
   { '@type.phpdoc', { fg = colors.base07 } },
+
+  { '@module.go', { fg = colors.base06 } },
 }
