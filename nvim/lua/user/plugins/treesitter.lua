@@ -1,45 +1,44 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
   build = ':TSUpdate',
-  commit = '24ddf60',
   config = function()
-    require('nvim-treesitter.configs').setup {
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-      },
-      ensure_installed = {
-        'bash',
-        'tsx',
-        'javascript',
-        'typescript',
-        'php',
-        'phpdoc',
-        'json',
-        'yaml',
-        'html',
-        'css',
-        'go',
-        'dockerfile',
-        'vim',
-        'lua',
-        'markdown',
-        'make',
-        'query',
-        'sql',
-        'twig',
-        'fish',
-        'vue',
-        'prisma',
-        'proto',
-      },
-      disable = function(_, buf)
-        local max_filesize = 100 * 1024 -- 100 KB
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        if ok and stats and stats.size > max_filesize then return true end
-      end,
+    require('nvim-treesitter').setup {}
+
+    local langs = {
+      'bash',
+      'tsx',
+      'javascript',
+      'typescript',
+      'php',
+      'phpdoc',
+      'json',
+      'yaml',
+      'html',
+      'css',
+      'go',
+      'dockerfile',
+      'vim',
+      'lua',
+      'markdown',
+      'make',
+      'query',
+      'sql',
+      'twig',
+      'fish',
+      'vue',
+      'prisma',
+      'proto',
     }
+
+    require('nvim-treesitter').install(langs)
+
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = langs,
+      callback = function()
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        vim.treesitter.start()
+      end,
+    })
   end,
 }

@@ -6,8 +6,8 @@ return {
   { 'CmpBorder', { fg = colors.base04 } },
   { 'CmPmenu', { bg = colors.base01 } },
 
-  { 'CmpDocumentationBorder', { fg = colors.base06, bg = colors.base01 } },
-  { 'CmpDocumentation', { fg = colors.base06, bg = colors.base01 } },
+  { 'CmpDocBorder', { fg = colors.base04, bg = colors.base01 } },
+  { 'CmpDoc', { fg = colors.base05, bg = colors.base01 } },
 
   { 'CmpItemAbbr', { fg = colors.base06, bg = colors.base01 } },
   { 'CmpItemAbbrDeprecated', { fg = colors.base04, strikethrough = true } },

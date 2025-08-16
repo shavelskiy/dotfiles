@@ -95,10 +95,15 @@ return {
             git = false,
           },
           glyphs = {
+            default = '󰈚',
             folder = {
-              empty = '',
-              empty_open = '',
+              default = '',
+              empty = '',
+              empty_open = '',
+              open = '',
+              symlink = '',
             },
+            git = { unmerged = '' },
           },
         },
       },

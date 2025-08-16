@@ -6,9 +6,9 @@ return {
         ui = {
           height = 0.8,
           icons = {
-            package_pending = ' ',
-            package_installed = ' ',
-            package_uninstalled = ' ﮊ',
+            package_pending = ' ',
+            package_installed = ' ',
+            package_uninstalled = ' ',
           },
           keymaps = {
             toggle_server_expand = '<CR>',

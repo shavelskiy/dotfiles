@@ -1,55 +1,47 @@
 local icons = {
-  Namespace = '',
-  Text = ' ',
-  Method = ' ',
-  Function = ' ',
-  Constructor = ' ',
-  Field = 'ﰠ ',
-  Variable = ' ',
-  Class = 'ﴯ ',
-  Interface = ' ',
-  Module = ' ',
-  Property = 'ﰠ ',
-  Unit = '塞 ',
-  Value = ' ',
-  Enum = ' ',
-  Keyword = ' ',
-  Snippet = ' ',
-  Color = ' ',
-  File = ' ',
-  Reference = ' ',
-  Folder = ' ',
-  EnumMember = ' ',
-  Constant = ' ',
-  Struct = 'פּ ',
-  Event = ' ',
-  Operator = ' ',
-  TypeParameter = ' ',
+  Namespace = '󰌗',
+  Text = '󰉿',
+  Method = '󰆧',
+  Function = '󰆧',
+  Constructor = '',
+  Field = '󰜢',
+  Variable = '󰀫',
+  Class = '󰠱',
+  Interface = '',
+  Module = '',
+  Property = '󰜢',
+  Unit = '󰑭',
+  Value = '󰎠',
+  Enum = '',
+  Keyword = '󰌋',
+  Snippet = '',
+  Color = '󱓻',
+  File = '󰈚',
+  Reference = '󰈇',
+  Folder = '󰉋',
+  EnumMember = '',
+  Constant = '󰏿',
+  Struct = '󰙅',
+  Event = '',
+  Operator = '󰆕',
+  TypeParameter = '󰊄',
   Table = '',
-  Object = ' ',
+  Object = '󰅩',
   Tag = '',
   Array = '[]',
-  Boolean = ' ',
-  Number = ' ',
-  Null = 'ﳠ',
-  String = ' ',
+  Boolean = '',
+  Number = '',
+  Null = '󰟢',
+  Supermaven = '',
+  String = '󰉿',
   Calendar = '',
-  Watch = ' ',
+  Watch = '󰥔',
   Package = '',
+  Copilot = '',
+  Codeium = '',
+  TabNine = '',
+  BladeNav = '',
 }
-
-local function border(hl_name)
-  return {
-    { '╭', hl_name },
-    { '─', hl_name },
-    { '╮', hl_name },
-    { '│', hl_name },
-    { '╯', hl_name },
-    { '─', hl_name },
-    { '╰', hl_name },
-    { '│', hl_name },
-  }
-end
 
 return {
   'hrsh7th/nvim-cmp',
@@ -63,23 +55,18 @@ return {
   config = function()
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
-    local cmp_window = require 'cmp.utils.window'
-
-    cmp_window.info_ = cmp_window.info
-    cmp_window.info = function(self)
-      local info = self:info_()
-      info.scrollable = false
-      return info
-    end
 
     cmp.setup {
       window = {
         completion = {
-          border = border 'CmpBorder',
-          winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None',
+          scrollbar = false,
+          side_padding = 1,
+          winhighlight = 'Normal:CmpPmenu,CursorLine:PMenuSel,Search:None,FloatBorder:CmpBorder',
+          border = 'single',
         },
         documentation = {
-          border = border 'CmpBorder',
+          border = 'single',
+          winhighlight = 'Normal:CmpDoc,FloatBorder:CmpDocBorder',
         },
       },
       preselect = cmp.PreselectMode.None,

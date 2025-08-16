@@ -77,9 +77,9 @@ local lsp_diagnostics = function(result)
 
   if warnings and warnings > 0 then table.insert(data, '%#StatusLineLspWarning# ' .. warnings) end
 
-  if hints and hints > 0 then table.insert(data, '%#StatusLineLspHints#ﯧ ' .. hints) end
+  if hints and hints > 0 then table.insert(data, '%#StatusLineLspHints#󰌵 ' .. hints) end
 
-  if info and info > 0 then table.insert(data, '%#StatusLineLspInfo# ' .. info) end
+  if info and info > 0 then table.insert(data, '%#StatusLineLspInfo#󰋼 ' .. info) end
 
   if #data > 0 then table.insert(result, table.concat(data, ' ')) end
 
@@ -138,7 +138,7 @@ local git = function(result)
 end
 
 local project = function(result)
-  table.insert(result, '%#StatusLineText# ' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':t'))
+  table.insert(result, '%#StatusLineText# ' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':t'))
   return result
 end
 

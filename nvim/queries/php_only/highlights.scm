@@ -1,3 +1,171 @@
+; ; Keywords
+[
+  "and"
+  "as"
+  "instanceof"
+  "or"
+  "xor"
+] @keyword.operator
+
+[
+  "fn"
+  "function"
+] @keyword.function
+
+[
+  (php_tag)
+  (php_end_tag)
+  "clone"
+  "declare"
+  "default"
+  "echo"
+  "enddeclare"
+  "extends"
+  "global"
+  "goto"
+  "implements"
+  "insteadof"
+  "print"
+  "new"
+  "unset"
+  "parent"
+  "self"
+] @keyword
+
+[
+  "enum"
+  "class"
+  "interface"
+  "namespace"
+  "trait"
+] @keyword.type
+
+[
+  "abstract"
+  "const"
+  "final"
+  "private"
+  "protected"
+  "public"
+  "readonly"
+  "static"
+] @keyword.modifier
+
+
+[
+  "return"
+  "exit"
+  "yield"
+  "yield from"
+] @keyword.return
+
+[
+  "case"
+  "else"
+  "elseif"
+  "endif"
+  "endswitch"
+  "if"
+  "switch"
+  "match"
+  "??"
+] @keyword.conditional
+
+[
+  "break"
+  "continue"
+  "do"
+  "endfor"
+  "endforeach"
+  "endwhile"
+  "for"
+  "foreach"
+  "while"
+] @keyword.repeat
+
+[
+  "catch"
+  "finally"
+  "throw"
+  "try"
+] @keyword.exception
+
+[
+  "include_once"
+  "include"
+  "require_once"
+  "require"
+  "use"
+] @keyword.import
+
+[
+  ","
+  ";"
+  ":"
+  "\\"
+] @punctuation.delimiter
+
+[
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+  "#["
+] @punctuation.bracket
+
+[
+  "="
+  "."
+  "-"
+  "*"
+  "/"
+  "+"
+  "%"
+  "**"
+  "~"
+  "|"
+  "^"
+  "&"
+  "<<"
+  ">>"
+  "<<<"
+  "->"
+  "?->"
+  "=>"
+  "<"
+  "<="
+  ">="
+  ">"
+  "<>"
+  "<=>"
+  "=="
+  "!="
+  "==="
+  "!=="
+  "!"
+  "&&"
+  "||"
+  ".="
+  "-="
+  "+="
+  "*="
+  "/="
+  "%="
+  "**="
+  "&="
+  "|="
+  "^="
+  "<<="
+  ">>="
+  "??="
+  "--"
+  "++"
+  "@"
+  "::"
+] @operator
+
 [
  (primitive_type)
  (cast_type)
@@ -14,7 +182,6 @@
   name: (name) @type)
 (namespace_use_clause
   [(name) (qualified_name)] @type)
-(namespace_aliasing_clause (name)) @type
 (class_interface_clause
   [(name) (qualified_name)] @type)
 (class_constant_access_expression
@@ -106,168 +273,5 @@
 (comment) @comment
 
 (named_label_statement) @label
-
-[
- "and"
- "as"
- "instanceof"
- "or"
- "xor"
-] @keyword.operator
-
-[
- "fn"
- "function"
-] @keyword.function
-
-[
- (php_tag)
- "abstract"
- "break"
- "class"
- "clone"
- "const"
- "declare"
- "default"
- "echo"
- "enddeclare"
- "enum"
- "extends"
- "final"
- "global"
- "goto"
- "implements"
- "insteadof"
- "interface"
- "namespace"
- "new"
- "private"
- "protected"
- "public"
- "readonly"
- "static"
- "trait"
- "unset"
- "self"
- "parent"
- "case"
- "else"
- "elseif"
- "endif"
- "endswitch"
- "if"
- "switch"
- "match"
- ] @keyword
-
-[
-  "return"
-  "yield"
-] @keyword.return
-
-[
- "continue"
- "do"
- "endfor"
- "endforeach"
- "endwhile"
- "for"
- "foreach"
- "while"
- ] @repeat
-
-[
- "catch"
- "finally"
- "throw"
- "try"
- ] @exception
-
-[
- "include_once"
- "include"
- "require_once"
- "require"
- "use"
- ] @include
-
-[
- ","
- ";"
- ] @punctuation.delimiter
-
-[
-  "?>"
-  "("
-  ")"
-  "{"
-  "}"
-  "?"
-  ":"
-  "??"
- ] @punctuation.bracket
-
-[
-  "="
-
-  "."
-  "-"
-  "*"
-  "/"
-  "+"
-  "%"
-  "**"
-
-  "~"
-  "|"
-  "^"
-  "&"
-  "<<"
-  ">>"
-
-  "->"
-  "?->"
-
-  "=>"
-
-  "<"
-  "<="
-  ">="
-  ">"
-  "<>"
-  "=="
-  "!="
-  "==="
-  "!=="
-
-  "!"
-  "&&"
-  "||"
-
-  ".="
-  "-="
-  "+="
-  "*="
-  "/="
-  "%="
-  "**="
-  "&="
-  "|="
-  "^="
-  "<<="
-  ">>="
-  "??="
-  "--"
-  "++"
-
-  "@"
-  "::"
-] @operator
-
-[
-  "]"
-  "["
-] @punctuation.bracket
-
 
 (ERROR) @error

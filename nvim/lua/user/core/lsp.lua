@@ -1,17 +1,15 @@
+local x = vim.diagnostic.severity
+
 vim.diagnostic.config {
-  virtual_text = {
-    prefix = '',
-  },
-  signs = true,
+  virtual_text = { prefix = '' },
+  signs = { text = { [x.ERROR] = '󰅙', [x.WARN] = '', [x.INFO] = '󰋼', [x.HINT] = '󰌵' } },
   underline = true,
   update_in_insert = false,
+  float = { border = 'single' },
 }
 
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = 'single',
-})
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-  border = 'single',
-  focusable = false,
-  relative = 'cursor',
-})
+vim.keymap.set('n', 'K', function()
+  vim.lsp.buf.hover {
+    border = 'single',
+  }
+end)

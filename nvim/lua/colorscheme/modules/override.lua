@@ -1,8 +1,6 @@
 local colors = require 'colorscheme.colors'
 
 return {
-  { 'PMenuSel', { fg = colors.base02, bg = colors.base0D } },
-
   { '@variable.sql', { fg = colors.base07 } },
   { '@field.sql', { fg = colors.base07 } },
 

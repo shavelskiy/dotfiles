@@ -33,9 +33,6 @@ return {
           height = 0.80,
           preview_cutoff = 120,
         },
-        path_display = { 'truncate' },
-        border = {},
-        set_env = { ['COLORTERM'] = 'truecolor' },
         mappings = {
           n = {
             ['q'] = actions.close,
