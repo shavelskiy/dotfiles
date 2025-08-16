@@ -4,7 +4,6 @@ local on_attach = function(client, bufnr)
   if client.name ~= 'intelephense' then
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
-    -- client.server_capabilities.semanticTokensProvider = nil
   end
 end
 

@@ -33,6 +33,8 @@ return {
 
     require('nvim-treesitter').install(langs)
 
+    table.insert(langs, 'typescriptreact')
+
     vim.api.nvim_create_autocmd('FileType', {
       pattern = langs,
       callback = function()
