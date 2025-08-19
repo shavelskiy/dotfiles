@@ -112,7 +112,6 @@
   "]"
   "{"
   "}"
-  "#["
 ] @punctuation.bracket
 
 [

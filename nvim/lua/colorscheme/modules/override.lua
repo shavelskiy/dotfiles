@@ -90,5 +90,12 @@ return {
   { '@attribute.php', { fg = colors.base0D } },
   { '@type.phpdoc', { fg = colors.base07 } },
 
-  { '@module.go', { fg = colors.base06 } },
+  { '@module.go', { fg = colors.base07 } },
+  { '@variable.go', { fg = colors.base07 } },
+  { '@variable.parameter.go', { fg = colors.base07 } },
+  { '@variable.member.go', { fg = colors.base0D } },
+  { '@operator.go', { fg = colors.base0C } },
+  { '@punctuation.bracket.go', { fg = colors.base0C } },
+  { '@type.go', { fg = colors.base09 } },
+  { '@type.builtin.go', { fg = colors.base09 } },
 }

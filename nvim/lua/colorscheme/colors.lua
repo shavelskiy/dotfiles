@@ -8,15 +8,6 @@ return {
   base06 = '#a1aab8',
   base07 = '#d6deeb',
 
-  -- base08 = '#ff5874',
-  -- base09 = '#f78c6c',
-  -- base0A = '#ffcb8b',
-  -- base0B = '#a1cd5e',
-  -- base0C = '#7fdbca',
-  -- base0D = '#82aaff',
-  -- base0E = '#c792ea',
-  -- base0F = '#fc514e',
-
   base08 = '#ff6b7f',
   base09 = '#ff966b',
   base0A = '#ffd99e',
