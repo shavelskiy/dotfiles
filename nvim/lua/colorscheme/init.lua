@@ -13,6 +13,7 @@ local modules = {
   'mason',
   'nvimtree',
   'statusline',
+  'syntax',
   'tabline',
   'telescope',
   'treesitter',
