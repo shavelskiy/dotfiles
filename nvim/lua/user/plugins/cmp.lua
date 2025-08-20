@@ -43,6 +43,25 @@ local icons = {
   BladeNav = '',
 }
 
+local hlCache = {}
+
+local function format_colors(entry, item)
+  local color = entry.completion_item.documentation
+
+  if color and type(color) == 'string' and color:match '^#%x%x%x%x%x%x$' then
+    local hl = 'hex-' .. color:sub(2)
+
+    if not hlCache[hl] then
+      vim.api.nvim_set_hl(0, hl, { fg = color })
+      hlCache[hl] = true
+    end
+
+    item.kind = ' ' .. icons.Color
+    item.kind_hl_group = hl
+    item.menu_hl_group = hl
+  end
+end
+
 return {
   'hrsh7th/nvim-cmp',
   dependencies = {
@@ -74,11 +93,21 @@ return {
         expand = function(args) luasnip.lsp_expand(args.body) end,
       },
       formatting = {
-        format = function(_, vim_item)
-          vim_item.kind = string.format('%s %s', icons[vim_item.kind], vim_item.kind)
-          return vim_item
+        format = function(entry, item)
+          local kind = item.kind or ''
+
+          item.menu = kind
+          item.menu_hl_group = 'LineNr'
+          item.kind = ' ' .. (icons[item.kind] or '') .. ' '
+
+          if kind == 'Color' then format_colors(entry, item) end
+
+          if #item.abbr > 60 then item.abbr = string.sub(item.abbr, 1, 60) .. '…' end
+
+          return item
         end,
       },
+
       mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
