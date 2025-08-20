@@ -97,8 +97,8 @@ return {
           local kind = item.kind or ''
 
           item.menu = kind
-          item.menu_hl_group = 'LineNr'
-          item.kind = ' ' .. (icons[item.kind] or '') .. ' '
+          item.menu_hl_group = 'CmpItemKind' .. kind
+          item.kind = (icons[item.kind] or '')
 
           if kind == 'Color' then format_colors(entry, item) end
 
