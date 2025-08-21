@@ -6,8 +6,6 @@ return {
   { '@property.json', { fg = colors.base08 } },
   { '@tag.twig', { fg = colors.base0E } },
 
-  { '@type.builtin.tsx', { fg = colors.base0E } },
-
   { '@string.php', { fg = colors.base0A } },
   { '@variable.php', { fg = colors.base0C } },
   { '@conditional.php', { fg = colors.base0C } },
