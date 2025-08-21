@@ -62,7 +62,7 @@ return {
   { '@keyword.coroutine', { fg = colors.base0E } },
   { '@keyword.function', { fg = colors.base0E } },
   { '@keyword.operator', { fg = colors.base0E } },
-  { '@keyword.import', { link = 'Include' } },
+  { '@keyword.import', { fg = colors.base0E } },
   { '@keyword.type', { fg = colors.base0E } },
   { '@keyword.modifier', { fg = colors.base0E } },
   { '@keyword.repeat', { fg = colors.base0E } },
@@ -96,7 +96,7 @@ return {
   { '@markup.italic', { italic = true } },
   { '@markup.strikethrough', { strikethrough = true } },
 
-  { '@tag', { fg = colors.base0C } },
+  { '@tag', { fg = colors.base0D } },
   { '@tag.builtin', { fg = colors.base0C } },
   { '@tag.attribute', { fg = colors.base0A } },
   { '@tag.delimiter', { fg = colors.base0C } },
