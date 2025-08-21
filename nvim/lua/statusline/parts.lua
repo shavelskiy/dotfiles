@@ -46,25 +46,6 @@ local pwd = function()
   return kek .. '%#StatusLineSeparator#%#StatusLineNone#'
 end
 
-local lsp_progress = function()
-  -- local Lsp = vim.lsp.util.get_progress_messages()[1]
-
-  if vim.o.columns < 120 or not Lsp then return '' end
-
-  -- local msg = Lsp.message or ''
-  -- local percentage = Lsp.percentage or 0
-  -- local title = Lsp.title or ''
-  local msg = ''
-  local percentage = 0
-  local title = ''
-  local spinners = { '', '' }
-  local ms = vim.loop.hrtime() / 1000000
-  local frame = math.floor(ms / 120) % #spinners
-  local content = string.format(' %%<%s %s %s (%s%%%%) ', spinners[frame + 1], title, msg, percentage)
-
-  return ('%#StatusLineLspProgress# ' .. content .. ' ') or ''
-end
-
 local lsp_diagnostics = function(result)
   local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
   local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
@@ -146,7 +127,6 @@ return {
   cover_nvim_tree = cover_nvim_tree,
   mode = mode,
   pwd = pwd,
-  lsp_progress = lsp_progress,
   lsp_diagnostics = lsp_diagnostics,
   lsp_status = lsp_status,
   dap_status = dap_status,
