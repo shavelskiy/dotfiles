@@ -27,6 +27,7 @@ return {
       'twig',
       'fish',
       'vue',
+      'svelte',
       'prisma',
       'proto',
     }

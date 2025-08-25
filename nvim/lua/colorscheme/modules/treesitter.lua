@@ -54,7 +54,7 @@ return {
   { '@method', { fg = colors.base0D } },
   { '@method.call', { fg = colors.base0D } },
 
-  { '@constructor', { fg = colors.base0C } },
+  { '@constructor', { fg = colors.base07 } },
   { '@operator', { fg = colors.base0C } },
 
   -- Keywords
@@ -97,7 +97,7 @@ return {
   { '@markup.strikethrough', { strikethrough = true } },
 
   { '@tag', { fg = colors.base0D } },
-  { '@tag.builtin', { fg = colors.base0C } },
+  { '@tag.builtin', { fg = colors.base0D } },
   { '@tag.attribute', { fg = colors.base0A } },
-  { '@tag.delimiter', { fg = colors.base0C } },
+  { '@tag.delimiter', { fg = colors.base0D } },
 }
