@@ -28,7 +28,6 @@ return {
   },
   {
     'mason-org/mason-lspconfig.nvim',
-    commit = '1a31f82',
     dependencies = { 'neovim/nvim-lspconfig' },
     config = function()
       require('mason-lspconfig').setup {
