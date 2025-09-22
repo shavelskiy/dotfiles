@@ -1,1 +1,16 @@
-return {}
+return {
+  settings = {
+    svelte = {
+      plugin = {
+        svelte = {
+          compilerWarnings = {
+            ['a11y-click-events-have-key-events'] = 'ignore',
+            ['a11y-no-static-element-interactions'] = 'ignore',
+            ['a11y-no-noninteractive-element-interactions'] = 'ignore',
+            ['a11y-missing-attribute'] = 'ignore',
+          },
+        },
+      },
+    },
+  },
+}

@@ -5,9 +5,5 @@
   "semi": false,
   "trailingComma": "all",
   "useTabs": false,
-  "endOfLine": "auto",
-  "plugins": [
-    "prettier-plugin-svelte",
-    "prettier-plugin-tailwindcss",
-  ]
+  "endOfLine": "auto"
 }

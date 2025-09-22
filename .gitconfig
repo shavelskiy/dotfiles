@@ -13,13 +13,13 @@
 [diff]
   tool = vimrdiff
 [difftool "vimrdiff"]
-  cmd = vimr --nvim --wait -d $LOCAL $REMOTE
+  cmd = vimr --vi --wait -d $LOCAL $REMOTE
 [merge]
   tool = vimrdiff
 [mergetool "vimrdiff"]
-  cmd = vimr --nvim --wait -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+  cmd = vimr --vi --wait -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [core]
-  editor = nvim
+  editor = vi
   pager = delta
 [interactive]
   diffFilter = delta --color-only

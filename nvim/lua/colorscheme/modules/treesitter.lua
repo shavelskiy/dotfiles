@@ -32,6 +32,7 @@ return {
   { '@boolean', { fg = colors.base09 } },
   { '@number', { fg = colors.base08 } },
   { '@number.float', { fg = colors.base09 } },
+  { '@float', { fg = colors.base09 } },
 
   -- Types
   { '@type', { fg = colors.base07 } },

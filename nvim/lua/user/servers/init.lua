@@ -3,7 +3,6 @@ return {
   'ts_ls',
   'lua_ls',
   'dockerls',
-  -- 'twiggy_language_server',
   'gopls',
   'cssls',
   'vuels',
