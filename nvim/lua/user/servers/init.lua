@@ -1,11 +1,10 @@
 return {
-  'intelephense',
-  'ts_ls',
-  'lua_ls',
+  'cssls',
   'dockerls',
   'gopls',
-  'cssls',
-  'vuels',
-  'tailwindcss',
+  'intelephense',
+  'lua_ls',
   'svelte',
+  'tailwindcss',
+  'ts_ls',
 }
