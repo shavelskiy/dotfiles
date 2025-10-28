@@ -8,6 +8,7 @@ return {
             ['a11y-no-static-element-interactions'] = 'ignore',
             ['a11y-no-noninteractive-element-interactions'] = 'ignore',
             ['a11y-missing-attribute'] = 'ignore',
+            ['a11y-mouse-events-have-key-events'] = 'ignore',
           },
         },
       },

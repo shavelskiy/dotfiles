@@ -20,6 +20,9 @@ return {
 
     require('telescope').setup {
       defaults = {
+        file_ignore_patterns = {
+          '.git',
+        },
         prompt_prefix = '  ',
         selection_caret = '  ',
         sorting_strategy = 'ascending',
@@ -41,6 +44,14 @@ return {
             ['<C-e>'] = { '<esc>', type = 'command' },
             ['<esc>'] = actions.close,
           },
+        },
+      },
+      pickers = {
+        find_files = {
+          hidden = true,
+        },
+        live_grep = {
+          additional_args = function() return { '--hidden' } end,
         },
       },
       extensions_list = { 'dap' },
