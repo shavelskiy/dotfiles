@@ -22,6 +22,8 @@ return {
       defaults = {
         file_ignore_patterns = {
           '.git',
+          'docs',
+          'scripts',
         },
         prompt_prefix = '  ',
         selection_caret = '  ',
