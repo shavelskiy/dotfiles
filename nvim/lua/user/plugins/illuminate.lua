@@ -20,6 +20,7 @@ return {
         'dapui_breakpoints',
         'dapui_stacks',
         'dap-float',
+        'Avante',
       },
       filetypes_allowlist = {},
       modes_denylist = {},
