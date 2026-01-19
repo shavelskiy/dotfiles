@@ -5,8 +5,14 @@ return {
   version = false,
   opts = {
     instructions_file = 'avante.md',
-    provider = 'gemini',
+    provider = 'openai',
     providers = {
+      openrouter = {
+        __inherited_from = 'openai',
+        endpoint = 'https://openrouter.ai/api/v1',
+        api_key_name = 'OPENROUTER_API_KEY',
+        model = 'anthropic/claude-opus-4.5',
+      },
       openai = {
         model = 'gpt-4o-mini',
       },

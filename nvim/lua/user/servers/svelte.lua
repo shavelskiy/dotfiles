@@ -9,6 +9,7 @@ return {
             ['a11y-no-noninteractive-element-interactions'] = 'ignore',
             ['a11y-missing-attribute'] = 'ignore',
             ['a11y-mouse-events-have-key-events'] = 'ignore',
+            ['a11y-positive-tabindex'] = 'ignore',
           },
         },
       },
