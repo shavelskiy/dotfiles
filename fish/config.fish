@@ -2,6 +2,7 @@ set fish_greeting ""
 
 alias ll "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lla "ll -a"
+alias cat "bat"
 alias cspell "~/.local/share/nvim/mason/bin/cspell"
 alias vim "~/.local/share/bob/nvim-bin/nvim"
 alias work-clear "git branch | grep -v "main" | xargs git branch -D"
