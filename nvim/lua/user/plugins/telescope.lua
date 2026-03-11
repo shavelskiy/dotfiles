@@ -58,8 +58,6 @@ local function multi_file_select(prompt_bufnr)
         end
       end
     end
-
-    print('Открыто ' .. num_selections .. ' файлов')
   else
     actions.file_edit(prompt_bufnr)
   end

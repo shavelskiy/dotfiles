@@ -55,3 +55,5 @@ bl=38;5;220:\
 hd=37:\
 lp=37:\
 cc=37"
+
+. ~/.config/fish/secrets.fish
