@@ -1,7 +1,5 @@
 local opt = vim.opt
 
-vim.g.mapleader = ' '
-
 opt.scrolloff = 15
 
 opt.completeopt = 'menu,menuone,noselect'
@@ -15,7 +13,7 @@ opt.mouse = ''
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.smartindent = true
-opt.tabstop = 2
+opt.tabstop = 8
 opt.softtabstop = 2
 
 opt.fillchars = { eob = ' ', diff = '╱' }
@@ -33,7 +31,6 @@ opt.shortmess:append 'sI'
 opt.signcolumn = 'yes'
 opt.splitbelow = true
 opt.splitright = true
-opt.tabstop = 8
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true

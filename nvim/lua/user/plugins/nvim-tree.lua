@@ -48,8 +48,6 @@ local on_attach = function(bufnr)
   vim.keymap.set('n', 'J', api.node.navigate.sibling.last, opts 'Last Sibling')
   vim.keymap.set('n', 'K', api.node.navigate.sibling.first, opts 'First Sibling')
   vim.keymap.set('n', 'P', api.node.navigate.parent, opts 'Parent Directory')
-  vim.keymap.set('n', 's', api.node.run.system, opts 'Run System')
-  vim.keymap.set('n', '.', api.node.run.cmd, opts 'Run Command')
   vim.keymap.set('n', '<C-k>', api.node.show_info_popup, opts 'Info')
 
   vim.keymap.set('n', '-', api.tree.change_root_to_parent, opts 'Up')

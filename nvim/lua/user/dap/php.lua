@@ -9,7 +9,7 @@ dap.configurations.php = {
   {
     type = 'php',
     request = 'launch',
-    name = 'xdeubg (9003) | application',
+    name = 'xdebug (9003) | application',
     port = 9003,
     serverSourceRoot = '/application',
     localSourceRoot = '${workspaceFolder}',

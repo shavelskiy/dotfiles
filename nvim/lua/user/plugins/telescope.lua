@@ -17,14 +17,14 @@ local function multi_file_select(prompt_bufnr)
   local num_selections = #selections
 
   if num_selections > 1 then
-    local cwd = picker.cwd or vim.loop.cwd()
+    local cwd = picker.cwd or vim.uv.cwd()
     actions.close(prompt_bufnr)
 
     local first_file = true
     for _, entry in ipairs(selections) do
       local file_path
 
-      if entry.Path then -- для некоторых источников
+      if entry.Path then
         file_path = entry.Path
       elseif entry.filename then
         file_path = entry.filename
@@ -112,7 +112,6 @@ return {
           additional_args = function() return { '--hidden' } end,
         },
       },
-      extensions_list = { 'dap' },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown {},
@@ -120,6 +119,7 @@ return {
       },
     }
 
+    require('telescope').load_extension 'dap'
     require('telescope').load_extension 'ui-select'
   end,
   keys = {
