@@ -1,3 +1,11 @@
+local modelMap = {
+  minimax = 'minimax/minimax-m2.7',
+  deepseek = 'deepseek/deepseek-v3.2',
+  opus = 'anthropic/claude-opus-4.7',
+}
+
+local model = 'deepseek'
+
 return {
   'yetone/avante.nvim',
   build = 'make',
@@ -11,8 +19,7 @@ return {
         __inherited_from = 'openai',
         endpoint = 'https://openrouter.ai/api/v1',
         api_key_name = 'OPENROUTER_API_KEY',
-        -- model = 'anthropic/claude-opus-4.5',
-        model = 'minimax/minimax-m2.5',
+        model = modelMap[model],
       },
     },
     selection = {
