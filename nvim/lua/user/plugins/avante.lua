@@ -4,7 +4,7 @@ local modelMap = {
   opus = 'anthropic/claude-opus-4.7',
 }
 
-local model = 'deepseek'
+local model = 'minimax'
 
 return {
   'yetone/avante.nvim',

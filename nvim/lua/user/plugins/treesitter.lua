@@ -1,15 +1,15 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  branch = 'main',
+  lazy = false,
   build = ':TSUpdate',
+  event = { 'BufReadPost', 'BufNewFile' },
+  branch = 'main',
   config = function()
-    require('nvim-treesitter').setup {}
-
     local langs = {
       'bash',
-      'tsx',
       'javascript',
       'typescript',
+      'tsx',
       'php',
       'phpdoc',
       'json',
@@ -18,9 +18,9 @@ return {
       'css',
       'go',
       'dockerfile',
-      'vim',
       'lua',
       'markdown',
+      'markdown_inline',
       'make',
       'query',
       'sql',
@@ -32,15 +32,15 @@ return {
       'proto',
     }
 
-    require('nvim-treesitter').install(langs)
+    require('nvim-treesitter').setup {}
 
-    table.insert(langs, 'typescriptreact')
+    require('nvim-treesitter').install(langs)
 
     vim.api.nvim_create_autocmd('FileType', {
       pattern = langs,
       callback = function()
+        pcall(vim.treesitter.start)
         vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-        vim.treesitter.start()
       end,
     })
   end,
