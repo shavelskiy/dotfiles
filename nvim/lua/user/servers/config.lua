@@ -16,7 +16,7 @@ vim.lsp.config('*', {
   capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
 
-for _, server in pairs(require 'user.servers.init') do
+for _, server in pairs(require 'user.servers') do
   vim.lsp.config(server, getConfig(server))
   vim.lsp.enable(server, false)
 end

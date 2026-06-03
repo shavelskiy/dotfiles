@@ -41,9 +41,9 @@ end
 
 local pwd = function()
   local dir_name = vim.fn.fnamemodify(vim.fn.expand '%', ':~:.')
-  local kek = '%#StatusLineText#' .. '  ' .. dir_name:gsub('/', ' / ') .. '  '
+  local part = '%#StatusLineText#' .. '  ' .. dir_name:gsub('/', ' / ') .. '  '
 
-  return kek .. '%#StatusLineSeparator#%#StatusLineNone#'
+  return part .. '%#StatusLineSeparator#%#StatusLineNone#'
 end
 
 local lsp_diagnostics = function(result)
