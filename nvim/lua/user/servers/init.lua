@@ -6,5 +6,5 @@ return {
   'lua_ls',
   'svelte',
   'tailwindcss',
-  'ts_ls',
+  'vtsls',
 }
