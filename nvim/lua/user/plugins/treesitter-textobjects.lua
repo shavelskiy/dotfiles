@@ -1,6 +1,8 @@
 return {
   'nvim-treesitter/nvim-treesitter-textobjects',
   branch = 'main',
+  dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  event = { 'BufReadPost', 'BufNewFile' },
   init = function() vim.g.no_plugin_maps = true end,
   config = function()
     vim.keymap.set({ 'n', 'x', 'o' }, ']m', function() require('nvim-treesitter-textobjects.move').goto_next_start('@function.outer', 'textobjects') end)

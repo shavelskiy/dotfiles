@@ -76,10 +76,11 @@ local lsp_status = function(result)
     end
   end
 
-  local sources = require 'null-ls.sources'
-
-  for _, source in ipairs(sources.get_available(filetype)) do
-    if source.name ~= 'cspell' then table.insert(data, source.name .. '*') end
+  local ok, sources = pcall(require, 'null-ls.sources')
+  if ok then
+    for _, source in ipairs(sources.get_available(filetype)) do
+      if source.name ~= 'cspell' then table.insert(data, source.name .. '*') end
+    end
   end
 
   if next(data) ~= nil then
@@ -102,7 +103,7 @@ local dap_status = function(result)
 end
 
 local git = function(result)
-  if not vim.b.gitsigns_head or vim.b.gitsigns_git_status then return result end
+  if not vim.b.gitsigns_status_dict then return result end
 
   local git_status = vim.b.gitsigns_status_dict
 

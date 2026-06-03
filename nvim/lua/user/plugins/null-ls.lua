@@ -1,5 +1,6 @@
 return {
   'nvimtools/none-ls.nvim',
+  event = { 'BufReadPost', 'BufNewFile' },
   dependencies = {
     'davidmh/cspell.nvim',
   },

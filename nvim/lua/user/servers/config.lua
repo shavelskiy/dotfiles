@@ -1,9 +1,8 @@
-local on_attach = function(client)
-  if client.name ~= 'intelephense' then
-    client.server_capabilities.documentFormattingProvider = false
-    client.server_capabilities.documentRangeFormattingProvider = false
-  end
-end
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if ok then capabilities = cmp_nvim_lsp.default_capabilities(capabilities) end
+
+local on_attach = require 'user.lsp.on_attach'
 
 local getConfig = function(server)
   local settings = require('user.servers.' .. server)
@@ -13,12 +12,12 @@ local getConfig = function(server)
 end
 
 vim.lsp.config('*', {
-  capabilities = vim.lsp.protocol.make_client_capabilities(),
+  capabilities = capabilities,
 })
 
-for _, server in pairs(require 'user.servers') do
+for _, server in ipairs(require 'user.servers') do
   vim.lsp.config(server, getConfig(server))
-  vim.lsp.enable(server, false)
+  vim.lsp.enable(server)
 end
 
 local x = vim.diagnostic.severity
@@ -30,9 +29,3 @@ vim.diagnostic.config {
   update_in_insert = false,
   float = { border = 'single' },
 }
-
-vim.keymap.set('n', 'K', function()
-  vim.lsp.buf.hover {
-    border = 'single',
-  }
-end)

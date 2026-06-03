@@ -1,5 +1,6 @@
 return {
   'rmagatti/auto-session',
+  event = 'VimEnter',
   config = function()
     local function close_nvim_tree() require('nvim-tree.api').tree.close() end
     local function open_nvim_tree() require('nvim-tree.api').tree.open() end
