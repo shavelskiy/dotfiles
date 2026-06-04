@@ -8,20 +8,16 @@ local hl = {
 }
 
 return {
-  { 'DiffAdd', { fg = colors.base0B, bg = colors.base01 } },
-  { 'DiffChange', { fg = colors.base04, bg = colors.base01 } },
-  { 'DiffDelete', { fg = colors.base08, bg = colors.base01 } },
-  { 'DiffText', { fg = colors.base0D, bg = colors.base01 } },
-  { 'DiffAdded', { fg = colors.base0B, bg = colors.base01 } },
+  { 'DiffAdd', { fg = colors.base0B, bg = hl.add } },
+  { 'DiffChange', { fg = colors.base04, bg = hl.change } },
+  { 'DiffDelete', { fg = colors.base08, bg = hl.delete } },
+  { 'DiffText', { fg = colors.base0D, bg = hl.text } },
+  { 'DiffAdded', { fg = colors.base0B, bg = hl.add } },
   { 'DiffFile', { fg = colors.base08, bg = colors.base01 } },
-  { 'DiffNewFile', { fg = colors.base0B, bg = colors.base01 } },
+  { 'DiffNewFile', { fg = colors.base0B, bg = hl.add } },
   { 'DiffLine', { fg = colors.base0D, bg = colors.base01 } },
-  { 'DiffRemoved', { fg = colors.base08, bg = colors.base01 } },
+  { 'DiffRemoved', { fg = colors.base08, bg = hl.delete } },
 
-  { 'DiffAdd', { bg = hl.add } },
-  { 'DiffChange', { bg = hl.change } },
-  { 'DiffDelete', { bg = hl.delete } },
-  { 'DiffText', { bg = hl.text } },
   { 'DiffviewDiffAddAsDelete', { bg = hl.delete } },
   { 'DiffviewDiffDelete', { fg = colors.base03, bg = 'none' } },
 

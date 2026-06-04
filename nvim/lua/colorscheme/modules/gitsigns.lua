@@ -10,7 +10,7 @@ return {
 
   { 'GitSignsDiffAdd', { fg = colors.base0D } },
   { 'GitSignsDiffAdded', { fg = colors.base0B } },
-  { 'GitSignsDiffChange', { fg = colors.base04 } },
+  { 'GitSignsDiffChange', { fg = colors.base0A } },
   { 'GitSignsDiffChangeDelete', { fg = colors.base0F } },
   { 'GitSignsDiffModified', { fg = colors.base08 } },
   { 'GitSignsDiffDelete', { fg = colors.base0F } },

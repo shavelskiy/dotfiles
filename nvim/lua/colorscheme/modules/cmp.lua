@@ -4,7 +4,7 @@ return {
   { 'CmpItemAbbr', { fg = colors.base06 } },
   { 'CmpItemAbbrMatch', { fg = colors.base0D, bold = true } },
   { 'CmpBorder', { fg = colors.base04 } },
-  { 'CmPmenu', { bg = colors.base01 } },
+  { 'CmpPmenu', { bg = colors.base01 } },
 
   { 'CmpDocBorder', { fg = colors.base04, bg = colors.base01 } },
   { 'CmpDoc', { fg = colors.base06, bg = colors.base01 } },
