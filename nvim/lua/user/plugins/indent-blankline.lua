@@ -1,12 +1,11 @@
 return {
   'lukas-reineke/indent-blankline.nvim',
+  main = 'ibl',
   event = { 'BufReadPost', 'BufNewFile' },
   config = function()
-    local highlight = {
-      'CursorColumn',
-    }
     require('ibl').setup {
-      indent = { highlight = highlight, char = '│' },
+      indent = { char = '│', highlight = { 'IblIndent' } },
+      whitespace = { highlight = { 'IblWhitespace' } },
       scope = { enabled = false },
     }
   end,

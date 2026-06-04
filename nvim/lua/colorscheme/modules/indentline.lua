@@ -1,7 +1,7 @@
 local colors = require 'colorscheme.colors'
 
 return {
-  { '@ibl', { fg = colors.base0E } },
-  { '@ibl.indent.char.1', { fg = colors.base03 } },
-  { '@ibl.whitespace.char.1', { fg = 'none' } },
+  { 'IblIndent', { fg = colors.base03, bg = 'none' } },
+  { 'IblWhitespace', { fg = 'none', bg = 'none' } },
+  { 'IblScope', { fg = colors.base0E, bg = 'none' } },
 }
