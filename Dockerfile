@@ -1,36 +1,34 @@
-FROM alpine:3.17 AS base
+FROM alpine:3.20 AS base
 
 RUN apk --no-cache add \
   alpine-sdk \
+  bat \
+  curl \
+  eza \
+  fish \
+  git \
+  neovim \
   nodejs \
   npm \
-  neovim \
   ripgrep \
-  tree-sitter-cli \
-  fish \
-  eza \
-  tmux
+  tmux \
+  tree-sitter-cli
 
-RUN git clone https://github.com/shavelskiy/dotfiles.git ~/dotfiles
+COPY . /root/dotfiles
 
-ENV SHELL /usr/bin/fish
+ENV SHELL=/usr/bin/fish
 
-RUN mkdir ~/.config
-RUN ln -s ~/dotfiles/nvim ~/.config/nvim
-RUN ln -s ~/dotfiles/fish ~/.config/fish
-RUN ln -s ~/dotfiles/tmux ~/.config/tmux
-RUN ln -s ~/dotfiles/.prettierrc.json ~/.prettierrc.json
-RUN ln -s ~/dotfiles/.gitignore ~/.gitignore
-RUN ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+RUN mkdir -p ~/.config && \
+  ln -sf ~/dotfiles/nvim ~/.config/nvim && \
+  ln -sf ~/dotfiles/fish ~/.config/fish && \
+  ln -sf ~/dotfiles/tmux ~/.config/tmux && \
+  ln -sf ~/dotfiles/.prettierrc ~/.prettierrc && \
+  ln -sf ~/dotfiles/.gitconfig ~/.gitconfig && \
+  ln -sf ~/dotfiles/cspell.json ~/.cspell.json
+
+RUN fish -c 'set -g fish_greeting ""; curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && fisher update'
 
 RUN nvim --headless "+Lazy! sync" +qa
-
-# RUN curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-# RUN cd dotfiles && git reset --hard
-# RUN fisher update
-
-# cd ~/.local/share/nvim/mason/packages/prettier
-# npm install --save-dev @prettier/plugin-xml prettier-plugin-twig-melody
 
 WORKDIR /root
 

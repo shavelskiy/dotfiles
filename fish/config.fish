@@ -3,19 +3,28 @@ set fish_greeting ""
 alias ll "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lla "ll -a"
 alias cat "bat"
-alias cspell "~/.local/share/nvim/mason/bin/cspell"
 alias vim "~/.local/share/bob/nvim-bin/nvim"
-alias work-clear "git branch | grep -v "main" | xargs git branch -D"
+
+if test -x "$HOME/.local/bin/cspell"
+    alias cspell "$HOME/.local/bin/cspell"
+else if test -x "$HOME/.local/share/nvim/mason/bin/cspell"
+    alias cspell "$HOME/.local/share/nvim/mason/bin/cspell"
+end
+
+function work-clear
+    for branch in (git branch | string trim | string replace -r '^\* ' '' | string match -v main | string match -v master)
+        git branch -D $branch
+    end
+end
 
 set -g fish_autosuggestion_enabled 0
 
 set -gx EDITOR nvim
 
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
-set -gx PATH ~/go/bin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
+fish_add_path ~/bin
+fish_add_path ~/.local/bin
+fish_add_path ~/go/bin
+fish_add_path /opt/homebrew/bin
 
 set -gx EXA_COLORS "\
 pi=38;5;14:\
@@ -57,4 +66,6 @@ hd=37:\
 lp=37:\
 cc=37"
 
-. ~/.config/fish/secrets.fish
+if test -f ~/.config/fish/secrets.fish
+    source ~/.config/fish/secrets.fish
+end
