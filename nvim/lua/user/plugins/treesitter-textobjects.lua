@@ -14,6 +14,7 @@ return {
     )
     vim.keymap.set({ 'n', 'x', 'o' }, ']s', function() require('nvim-treesitter-textobjects.move').goto_next_start('@local.scope', 'locals') end)
     vim.keymap.set({ 'n', 'x', 'o' }, ']z', function() require('nvim-treesitter-textobjects.move').goto_next_start('@fold', 'folds') end)
+    vim.keymap.set({ 'n', 'x', 'o' }, '[z', function() require('nvim-treesitter-textobjects.move').goto_previous_start('@fold', 'folds') end)
 
     vim.keymap.set({ 'n', 'x', 'o' }, ']M', function() require('nvim-treesitter-textobjects.move').goto_next_end('@function.outer', 'textobjects') end)
     vim.keymap.set({ 'n', 'x', 'o' }, '][', function() require('nvim-treesitter-textobjects.move').goto_next_end('@class.outer', 'textobjects') end)

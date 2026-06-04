@@ -7,7 +7,7 @@ return {
   { 'ErrorMsg', { fg = colors.base08, bg = colors.base01 } },
   { 'Exception', { fg = colors.base08 } },
   { 'FoldColumn', { fg = colors.base0C, bg = colors.base01 } },
-  { 'Folded', { fg = colors.base04, bg = colors.base11 } },
+  { 'Folded', { fg = colors.base04, bg = colors.base02 } },
   { 'IncSearch', { fg = colors.base02, bg = colors.base09 } },
   { 'Italic', {} },
   { 'Macro', { fg = colors.base08 } },

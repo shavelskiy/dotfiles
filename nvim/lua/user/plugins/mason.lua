@@ -32,6 +32,7 @@ return {
     config = function()
       require('mason-lspconfig').setup {
         ensure_installed = require 'user.servers',
+        automatic_enable = false,
       }
     end,
   },
