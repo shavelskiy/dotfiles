@@ -36,10 +36,11 @@ return {
     end,
   },
   {
-    'jay-babu/mason-null-ls.nvim',
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    dependencies = { 'mason-org/mason.nvim' },
     config = function()
-      require('mason-null-ls').setup {
-        ensure_installed = { 'prettier', 'cspell', 'stylua', 'twigcs', 'sqlfluff' },
+      require('mason-tool-installer').setup {
+        ensure_installed = { 'prettier', 'stylua', 'sqlfluff', 'djlint' },
       }
     end,
   },

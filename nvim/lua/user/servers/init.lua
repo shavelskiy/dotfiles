@@ -1,5 +1,6 @@
 return {
   'cssls',
+  'cspell_ls',
   'dockerls',
   'gopls',
   'intelephense',

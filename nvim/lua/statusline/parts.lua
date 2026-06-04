@@ -68,25 +68,12 @@ local lsp_diagnostics = function(result)
 end
 
 local lsp_status = function(result)
-  local filetype = vim.bo[0].filetype
   local data = {}
-  for _, client in ipairs(vim.lsp.get_clients({ bufnr = 0 })) do
-    if client.name ~= 'null-ls' then
-      table.insert(data, client.name)
-    end
+  for _, client in ipairs(vim.lsp.get_clients { bufnr = 0 }) do
+    table.insert(data, client.name)
   end
 
-  local ok, sources = pcall(require, 'null-ls.sources')
-  if ok then
-    for _, source in ipairs(sources.get_available(filetype)) do
-      if source.name ~= 'cspell' then table.insert(data, source.name .. '*') end
-    end
-  end
-
-  if next(data) ~= nil then
-    table.insert(result, '%#StatusLineLspStatus#  LSP ' .. table.concat(data, ', '))
-    return result
-  end
+  if #data > 0 then table.insert(result, '%#StatusLineLspStatus#  LSP ' .. table.concat(data, ', ')) end
 
   return result
 end
