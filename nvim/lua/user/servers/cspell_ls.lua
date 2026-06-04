@@ -1,25 +1,5 @@
 return {
-  filetypes = {
-    'bash',
-    'css',
-    'dockerfile',
-    'fish',
-    'go',
-    'html',
-    'javascript',
-    'javascriptreact',
-    'json',
-    'lua',
-    'markdown',
-    'php',
-    'sql',
-    'svelte',
-    'twig',
-    'typescript',
-    'typescriptreact',
-    'vue',
-    'yaml',
-  },
+  filetypes = nil,
   handlers = {
     ['textDocument/publishDiagnostics'] = function(err, result, ctx, config)
       if result and result.diagnostics then
