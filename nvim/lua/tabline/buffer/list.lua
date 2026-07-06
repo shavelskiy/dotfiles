@@ -2,7 +2,7 @@ local buffer_parts = require 'tabline.buffer.parts'
 local utils = require 'tabline.utils'
 local is_buf_valid = require('tabline.api').is_buf_valid
 
-local get_length = function(parts) return parts.forse_size == nil and 7 + #parts.name or math.abs(parts.forse_size) end
+local get_length = function(parts) return parts.force_size == nil and 7 + #parts.name or math.abs(parts.force_size) end
 
 local get_buffer_width = function(buffers_parts)
   local result = 0
@@ -39,19 +39,21 @@ return function(available_space)
         current_parts = buffer_parts(bufnr)
         if get_buffer_width(buffers_parts) + get_length(current_parts) > available_space then
           if has_current or utils.is_from_offset() then
-            current_parts.forse_size = available_space - get_buffer_width(buffers_parts)
+            current_parts.force_size = available_space - get_buffer_width(buffers_parts)
             table.insert(buffers_parts, current_parts)
             break
           end
 
-          while (get_buffer_width(buffers_parts) - get_length(buffers_parts[1]) + get_length(current_parts)) > available_space do
+          while #buffers_parts > 0 and (get_buffer_width(buffers_parts) - get_length(buffers_parts[1]) + get_length(current_parts)) > available_space do
             vim.g.tabline_offset = vim.g.tabline_offset + 1
             table.remove(buffers_parts, 1)
           end
 
-          tmp = buffers_parts[1]
-          tmp.forse_size = get_buffer_width(buffers_parts) - get_length(tmp) + get_length(current_parts) - available_space
-          buffers_parts[1] = tmp
+          if #buffers_parts > 0 then
+            tmp = buffers_parts[1]
+            tmp.force_size = get_buffer_width(buffers_parts) - get_length(tmp) + get_length(current_parts) - available_space
+            buffers_parts[1] = tmp
+          end
         end
 
         has_current = bufnr == current_buf and true or has_current

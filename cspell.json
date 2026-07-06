@@ -183,9 +183,26 @@
     "deezer",
     "zamsha"
   ],
-  "dictionaries": ["ru-ru"],
-  "languageSettings": [{ "languageId": "*", "dictionaries": ["html", "php", "typescript"] }],
+  "dictionaries": [
+    "ru-ru"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "dictionaries": [
+        "html",
+        "php",
+        "typescript"
+      ]
+    }
+  ],
   "version": "0.2",
   "flagWords": [],
-  "language": ["en", "ru"]
+  "language": [
+    "en",
+    "ru"
+  ],
+  "userWords": [
+    "Gapless"
+  ]
 }

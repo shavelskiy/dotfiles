@@ -59,7 +59,7 @@ local function multi_file_select(prompt_bufnr)
       end
     end
   else
-    actions.file_edit(prompt_bufnr)
+    actions.select_default(prompt_bufnr)
   end
 end
 

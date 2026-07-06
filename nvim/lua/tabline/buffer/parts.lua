@@ -14,12 +14,12 @@ local new_hl = function(group1, group2)
 end
 
 local get_icon = function(name, bufnr)
-  if not devicons_present then return '' end
+  if not devicons_present then return { hl = '', icon = '' } end
 
   local icon, icon_hl = devicons.get_icon(name, string.match(name, '%a+$'), { default = true })
 
   local success, hl = pcall(new_hl, icon_hl, (is_active(bufnr) and vim.g.tabline_show_pick ~= true) and 'TablineBufOn' or 'TablineBufOff')
-  if not success then return '' end
+  if not success then return { hl = '', icon = icon or '' } end
 
   return {
     hl = hl,
@@ -60,6 +60,7 @@ return function(bufnr)
 
   local icon_data = get_icon(name, bufnr)
 
+  name = update_name(name, bufnr)
   name = (#name > 40 and string.sub(name, 1, 30) .. '..') or name
 
   return {
@@ -69,7 +70,7 @@ return function(bufnr)
     },
     pick = get_pick_data(bufnr),
     hl = get_highlight(bufnr),
-    name = update_name(name, bufnr),
-    forse_size = nil,
+    name = name,
+    force_size = nil,
   }
 end

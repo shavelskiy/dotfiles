@@ -17,18 +17,18 @@ return function(parts)
 
   table.insert(groups, { hl = parts.hl, text = ' ' .. parts.name .. '  ' })
 
-  if parts.forse_size ~= nil then
-    local lenght = math.abs(parts.forse_size)
+  if parts.force_size ~= nil then
+    local length = math.abs(parts.force_size)
 
-    if parts.forse_size < 0 then groups = reverse(groups) end
+    if parts.force_size < 0 then groups = reverse(groups) end
 
     for i, group in ipairs(groups) do
-      group.text = vim.fn.strcharpart(group.text, parts.forse_size < 0 and vim.api.nvim_strwidth(group.text) - lenght or 0, lenght)
-      lenght = lenght - vim.api.nvim_strwidth(group.text)
+      group.text = vim.fn.strcharpart(group.text, parts.force_size < 0 and vim.api.nvim_strwidth(group.text) - length or 0, length)
+      length = length - vim.api.nvim_strwidth(group.text)
       groups[i] = group
     end
 
-    if parts.forse_size < 0 then groups = reverse(groups) end
+    if parts.force_size < 0 then groups = reverse(groups) end
   end
 
   local result = ''
