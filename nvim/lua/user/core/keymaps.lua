@@ -32,8 +32,8 @@ local keymaps = {
   { 'n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]] },
   { { 'n', 'v' }, '<leader>d', [["_d]] },
 
-  { 'n', ']d', function() vim.diagnostic.goto_next({ float = true }) end },
-  { 'n', '[d', function() vim.diagnostic.goto_prev({ float = true }) end },
+  { 'n', ']d', function() vim.diagnostic.jump { count = 1, float = true } end },
+  { 'n', '[d', function() vim.diagnostic.jump { count = -1, float = true } end },
   { 'n', '<leader>cd', function() vim.diagnostic.open_float(nil, { border = 'single' }) end },
 
   { 'i', '<C-j>', '<Esc>:m .+1<CR>==gi' },

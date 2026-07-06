@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 require 'user.init'
 require 'colorscheme.init'
 require 'statusline.init'

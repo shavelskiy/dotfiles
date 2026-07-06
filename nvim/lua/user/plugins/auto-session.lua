@@ -10,11 +10,9 @@ return {
       post_save_cmds = { open_nvim_tree },
       post_open_cmds = { open_nvim_tree },
       post_restore_cmds = { open_nvim_tree },
-      cwd_change_handling = {
-        restore_upcoming_session = true,
-        pre_cwd_changed_hook = close_nvim_tree,
-        post_cwd_changed_hook = open_nvim_tree,
-      },
+      cwd_change_handling = true,
+      pre_cwd_changed_cmds = { close_nvim_tree },
+      post_cwd_changed_cmds = { open_nvim_tree },
     }
   end,
 }

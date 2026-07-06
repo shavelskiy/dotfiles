@@ -11,55 +11,30 @@ end
 local function multi_file_select(prompt_bufnr)
   local actions = require 'telescope.actions'
   local action_state = require 'telescope.actions.state'
+  local from_entry = require 'telescope.from_entry'
 
   local picker = action_state.get_current_picker(prompt_bufnr)
   local selections = picker:get_multi_selection()
-  local num_selections = #selections
 
-  if num_selections > 1 then
-    local cwd = picker.cwd or vim.uv.cwd()
-    actions.close(prompt_bufnr)
-
-    local first_file = true
-    for _, entry in ipairs(selections) do
-      local file_path
-
-      if entry.Path then
-        file_path = entry.Path
-      elseif entry.filename then
-        file_path = entry.filename
-      elseif entry.value then
-        local value = entry.value
-        local colon_pos = value:find ':'
-        if colon_pos then
-          file_path = value:sub(1, colon_pos - 1)
-        else
-          file_path = value
-        end
-      elseif type(entry) == 'string' then
-        file_path = entry
-      elseif entry[1] then
-        file_path = entry[1]
-      end
-
-      if file_path then
-        local full_path
-        if file_path:sub(1, 1) == '/' or file_path:match '^%a:[/\\]' then
-          full_path = file_path
-        else
-          full_path = cwd .. '/' .. file_path
-        end
-
-        if first_file then
-          vim.cmd('edit ' .. vim.fn.fnameescape(full_path))
-          first_file = false
-        else
-          vim.cmd('badd ' .. vim.fn.fnameescape(full_path))
-        end
-      end
-    end
-  else
+  if #selections < 2 then
     actions.select_default(prompt_bufnr)
+    return
+  end
+
+  local cwd = picker.cwd or vim.uv.cwd()
+  actions.close(prompt_bufnr)
+
+  local paths = {}
+  for _, entry in ipairs(selections) do
+    local path = from_entry.path(entry, false, false)
+    if path then
+      if not path:match '^/' then path = cwd .. '/' .. path end
+      table.insert(paths, path)
+    end
+  end
+
+  for i, path in ipairs(paths) do
+    vim.cmd((i == 1 and 'edit ' or 'badd ') .. vim.fn.fnameescape(path))
   end
 end
 
