@@ -3,7 +3,7 @@ set fish_greeting ""
 alias ll "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lla "ll -a"
 alias cat "bat"
-alias vim "~/.local/share/bob/nvim-bin/nvim"
+alias vim nvim
 alias clauded "claude --dangerously-skip-permissions"
 alias tp "tmuxp load"
 
@@ -26,6 +26,7 @@ set -gx EDITOR nvim
 fish_add_path ~/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/go/bin
+fish_add_path ~/.local/share/bob/nvim-bin
 fish_add_path /opt/homebrew/bin
 
 set -gx EXA_COLORS "\
