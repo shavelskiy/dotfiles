@@ -21,7 +21,7 @@
 [core]
   editor = vi
   pager = delta
-	excludesfile = /Users/v.shavelskiy/.gitignore
+	excludesfile = ~/.gitignore
 [interactive]
   diffFilter = delta --color-only
 

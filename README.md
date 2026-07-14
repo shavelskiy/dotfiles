@@ -28,6 +28,7 @@ Optional: [bob](https://github.com/MordechaiHadad/bob) for nvim version manageme
 | `tmux/` | `~/.config/tmux` |
 | `nvim/` | `~/.config/nvim` |
 | `.gitconfig` | `~/.gitconfig` |
+| `.gitignore` | `~/.gitignore` (global git excludes) |
 | `.prettierrc` | `~/.prettierrc` |
 | `cspell.json` | `~/.cspell.json` |
 
