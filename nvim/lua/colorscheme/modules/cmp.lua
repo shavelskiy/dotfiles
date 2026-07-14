@@ -4,7 +4,7 @@ return {
   -- menu window
   { 'BlinkCmpMenu', { fg = colors.base06, bg = colors.base01 } },
   { 'BlinkCmpMenuBorder', { fg = colors.base04 } },
-  { 'BlinkCmpMenuSelection', { bg = colors.base02 } },
+  { 'BlinkCmpMenuSelection', { fg = colors.base02, bg = colors.base0D } },
   { 'BlinkCmpScrollBarThumb', { bg = colors.base04 } },
   { 'BlinkCmpScrollBarGutter', { bg = colors.base03 } },
 

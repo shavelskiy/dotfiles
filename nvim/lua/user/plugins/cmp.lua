@@ -119,6 +119,7 @@ return {
         menu = {
           border = 'single',
           scrollbar = false,
+          max_height = 50,
           draw = {
             columns = {
               { 'kind_icon' },
@@ -128,14 +129,6 @@ return {
             components = {
               kind_icon = {
                 highlight = color_highlight,
-              },
-              label = {
-                width = { fill = true },
-                text = function(ctx)
-                  local label = ctx.label
-                  if #label > 60 then label = string.sub(label, 1, 60) .. '…' end
-                  return label
-                end,
               },
             },
           },
