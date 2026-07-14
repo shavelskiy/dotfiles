@@ -1,66 +1,65 @@
 local buffer_parts = require 'tabline.buffer.parts'
-local utils = require 'tabline.utils'
 local is_buf_valid = require('tabline.api').is_buf_valid
 
 local get_length = function(parts) return parts.force_size == nil and 7 + #parts.name or math.abs(parts.force_size) end
 
-local get_buffer_width = function(buffers_parts)
-  local result = 0
-
-  for _, parts in ipairs(buffers_parts) do
-    result = result + get_length(parts)
-  end
-
-  return result
-end
-
-local fix_offset = function()
-  if utils.is_from_offset() then return end
-
-  local current_buf = vim.api.nvim_get_current_buf()
-
-  for i, bufnr in ipairs(vim.t.bufs) do
-    if is_buf_valid(bufnr) and (bufnr == current_buf) and vim.g.tabline_offset >= i then vim.g.tabline_offset = i - 1 end
-  end
-end
-
 return function(available_space)
-  local current_buf = vim.api.nvim_get_current_buf()
-  local has_current = false
+  -- collect valid buffers together with their rendered parts and widths
+  local parts, widths, n = {}, {}, 0
+  local current_buf, current_idx = vim.api.nvim_get_current_buf(), nil
 
-  local buffers_parts = {}
-  local current_parts, tmp = nil, nil
-
-  fix_offset()
-
-  for i, bufnr in ipairs(vim.t.bufs) do
-    if i > vim.g.tabline_offset then
-      if is_buf_valid(bufnr) then
-        current_parts = buffer_parts(bufnr)
-        if get_buffer_width(buffers_parts) + get_length(current_parts) > available_space then
-          if has_current or utils.is_from_offset() then
-            current_parts.force_size = available_space - get_buffer_width(buffers_parts)
-            table.insert(buffers_parts, current_parts)
-            break
-          end
-
-          while #buffers_parts > 0 and (get_buffer_width(buffers_parts) - get_length(buffers_parts[1]) + get_length(current_parts)) > available_space do
-            vim.g.tabline_offset = vim.g.tabline_offset + 1
-            table.remove(buffers_parts, 1)
-          end
-
-          if #buffers_parts > 0 then
-            tmp = buffers_parts[1]
-            tmp.force_size = get_buffer_width(buffers_parts) - get_length(tmp) + get_length(current_parts) - available_space
-            buffers_parts[1] = tmp
-          end
-        end
-
-        has_current = bufnr == current_buf and true or has_current
-        table.insert(buffers_parts, current_parts)
-      end
+  for _, bufnr in ipairs(vim.t.bufs or {}) do
+    if is_buf_valid(bufnr) then
+      n = n + 1
+      parts[n] = buffer_parts(bufnr)
+      widths[n] = get_length(parts[n])
+      if bufnr == current_buf then current_idx = n end
     end
   end
 
-  return buffers_parts
+  if n == 0 then
+    vim.g.tabline_offset = 0
+    return {}
+  end
+
+  -- total width of the buffers in the inclusive index range [a, b]
+  local range_width = function(a, b)
+    local w = 0
+    for i = a, b do w = w + widths[i] end
+    return w
+  end
+
+  -- offset = number of buffers hidden past the left edge
+  local offset = math.max(0, math.min(vim.g.tabline_offset or 0, n - 1))
+
+  if current_idx then
+    -- never let the current buffer scroll off the left edge
+    if offset >= current_idx then offset = current_idx - 1 end
+    -- scroll right just enough for the current buffer to fully fit
+    while offset < current_idx - 1 and range_width(offset + 1, current_idx) > available_space do
+      offset = offset + 1
+    end
+  end
+
+  -- pull hidden buffers back in from the left while trailing space is free
+  while offset > 0 and range_width(offset, n) <= available_space do
+    offset = offset - 1
+  end
+
+  vim.g.tabline_offset = offset
+
+  -- build the visible slice, truncating the last buffer if it overflows the edge
+  local result, used = {}, 0
+  for i = offset + 1, n do
+    if used + widths[i] > available_space then
+      parts[i].force_size = available_space - used
+      if parts[i].force_size > 0 then table.insert(result, parts[i]) end
+      break
+    end
+
+    table.insert(result, parts[i])
+    used = used + widths[i]
+  end
+
+  return result
 end
