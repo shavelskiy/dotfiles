@@ -1,6 +1,7 @@
 return {
   {
     'mason-org/mason.nvim',
+    cmd = { 'Mason', 'MasonInstall', 'MasonUpdate', 'MasonUninstall', 'MasonLog' },
     config = function()
       require('mason').setup {
         ui = {
@@ -28,7 +29,8 @@ return {
   },
   {
     'mason-org/mason-lspconfig.nvim',
-    dependencies = { 'neovim/nvim-lspconfig' },
+    event = 'VeryLazy',
+    dependencies = { 'mason-org/mason.nvim' },
     config = function()
       require('mason-lspconfig').setup {
         ensure_installed = require 'user.servers',
@@ -38,6 +40,7 @@ return {
   },
   {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
+    event = 'VeryLazy',
     dependencies = { 'mason-org/mason.nvim' },
     config = function()
       require('mason-tool-installer').setup {
@@ -47,6 +50,8 @@ return {
   },
   {
     'jay-babu/mason-nvim-dap.nvim',
+    event = 'VeryLazy',
+    dependencies = { 'mason-org/mason.nvim' },
     config = function()
       require('mason-nvim-dap').setup {
         ensure_installed = { 'php', 'delve' },
