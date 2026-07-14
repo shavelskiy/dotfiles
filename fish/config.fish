@@ -4,6 +4,7 @@ alias ll "eza --color=always --long --git --no-filesize --icons=always --no-time
 alias lla "ll -a"
 alias cat "bat"
 alias vim "~/.local/share/bob/nvim-bin/nvim"
+alias clauded "claude --dangerously-skip-permissions"
 
 if test -x "$HOME/.local/bin/cspell"
     alias cspell "$HOME/.local/bin/cspell"
