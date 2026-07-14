@@ -1,0 +1,11 @@
+session_name: dotfiles
+start_directory: ~/
+
+shell_command_before:
+  - clear
+
+windows:
+  - window_name: dotfiles
+    start_directory: ~/dotfiles
+    panes:
+      - vim

@@ -1,0 +1,22 @@
+session_name: tride
+start_directory: ~/tride
+
+shell_command_before:
+  - clear
+
+windows:
+  - window_name: control
+    layout: even-vertical
+    panes:
+      - start_directory: ~/work/tride/frontend
+      - start_directory: ~/work/tride/backend-tride
+
+  - window_name: backend
+    start_directory: ~/work/tride/backend-tride
+    panes:
+      - vim
+
+  - window_name: frontend
+    start_directory: ~/work/tride/frontend
+    panes:
+      - vim

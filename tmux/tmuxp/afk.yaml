@@ -1,0 +1,22 @@
+session_name: afk
+start_directory: ~/afk
+
+shell_command_before:
+  - clear
+
+windows:
+  - window_name: control
+    layout: even-vertical
+    panes:
+      - start_directory: ~/work/afk/frontend
+      - start_directory: ~/work/afk/backend
+
+  - window_name: backend
+    start_directory: ~/work/afk/backend
+    panes:
+      - vim
+
+  - window_name: frontend
+    start_directory: ~/work/afk/frontend
+    panes:
+      - vim

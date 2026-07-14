@@ -5,6 +5,7 @@ alias lla "ll -a"
 alias cat "bat"
 alias vim "~/.local/share/bob/nvim-bin/nvim"
 alias clauded "claude --dangerously-skip-permissions"
+alias tp "tmuxp load"
 
 if test -x "$HOME/.local/bin/cspell"
     alias cspell "$HOME/.local/bin/cspell"

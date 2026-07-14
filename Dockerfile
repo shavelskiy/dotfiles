@@ -22,6 +22,7 @@ RUN mkdir -p ~/.config && \
   ln -sf ~/dotfiles/nvim ~/.config/nvim && \
   ln -sf ~/dotfiles/fish ~/.config/fish && \
   ln -sf ~/dotfiles/tmux ~/.config/tmux && \
+  ln -sf ~/dotfiles/tmux/tmuxp ~/.config/tmuxp && \
   ln -sf ~/dotfiles/.prettierrc ~/.prettierrc && \
   ln -sf ~/dotfiles/.gitconfig ~/.gitconfig && \
   ln -sf ~/dotfiles/cspell.json ~/.cspell.json
