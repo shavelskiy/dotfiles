@@ -1,6 +1,6 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
-if ok then capabilities = cmp_nvim_lsp.default_capabilities(capabilities) end
+local ok, blink = pcall(require, 'blink.cmp')
+if ok then capabilities = blink.get_lsp_capabilities(capabilities) end
 
 local on_attach = require 'user.lsp.on_attach'
 

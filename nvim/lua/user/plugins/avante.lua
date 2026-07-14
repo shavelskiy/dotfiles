@@ -32,7 +32,7 @@ return {
     'MunifTanjim/nui.nvim',
     'nvim-tree/nvim-web-devicons',
     'nvim-telescope/telescope.nvim',
-    'hrsh7th/nvim-cmp',
+    'saghen/blink.cmp',
     {
       'MeanderingProgrammer/render-markdown.nvim',
       opts = {
