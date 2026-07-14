@@ -114,7 +114,7 @@ return {
           auto_brackets = { enabled = true },
         },
         list = {
-          selection = { preselect = false, auto_insert = false },
+          selection = { preselect = false, auto_insert = true },
         },
         menu = {
           border = 'single',
