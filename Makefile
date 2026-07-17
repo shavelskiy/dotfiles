@@ -11,6 +11,7 @@ symlinks:
 	ln -sfn $(DOTFILES)/fish ~/.config/fish
 	ln -sfn $(DOTFILES)/tmux ~/.config/tmux
 	ln -sfn $(DOTFILES)/nvim ~/.config/nvim
+	ln -sf $(DOTFILES)/ghostty ~/.config/ghostty
 	ln -sfn $(DOTFILES)/tmux/tmuxp ~/.config/tmuxp
 	ln -sf $(DOTFILES)/.gitconfig ~/.gitconfig
 	ln -sf $(DOTFILES)/.gitignore ~/.gitignore

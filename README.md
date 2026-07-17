@@ -196,12 +196,6 @@ cspell link add ru-ru php html typescript
 
 ---
 
-## iTerm2 themes
-
-`iterm2-themes/` contains `.itermcolors` presets (ayu-dark, gruvbox, nightfly). Import via iTerm2 → Preferences → Profiles → Colors → Color Presets → Import.
-
----
-
 ## Docker test environment
 
 ```bash

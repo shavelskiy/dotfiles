@@ -1,0 +1,18 @@
+font-size = 10
+font-family = JetBrainsMono Nerd Font
+
+theme = my-theme
+
+cursor-style = block
+cursor-style-blink = false
+
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+
+macos-option-as-alt = true
+
+scrollback-limit = 50000
+
+shell-integration = detect
+
+keybind = super+r=reload_config
