@@ -36,7 +36,6 @@ return {
           vim.keymap.set('n', map[1], map[2], { buffer = bufnr, desc = map[3] })
         end
 
-        -- Text-object: hunk selection in visual mode.
         vim.keymap.set({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { buffer = bufnr, desc = 'Select hunk' })
       end,
     }
