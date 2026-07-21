@@ -47,3 +47,6 @@ for _, map in pairs(keymaps) do
   local options = map[4] and vim.tbl_extend('keep', map[4], default_options) or default_options
   vim.keymap.set(map[1], map[2], map[3], options)
 end
+
+vim.keymap.set('n', '<leader>/', 'gcc', { silent = true, remap = true, desc = 'Comment toggle (line)' })
+vim.keymap.set('x', '<leader>/', 'gc', { silent = true, remap = true, desc = 'Comment toggle (selection)' })

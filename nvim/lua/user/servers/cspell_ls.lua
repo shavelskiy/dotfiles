@@ -1,13 +1,16 @@
+local default_handler = vim.lsp.handlers['textDocument/publishDiagnostics']
+
 return {
   filetypes = nil,
   handlers = {
     ['textDocument/publishDiagnostics'] = function(err, result, ctx, config)
       if result and result.diagnostics then
+        local severity = vim.lsp.protocol.DiagnosticSeverity.Error
         for _, diagnostic in ipairs(result.diagnostics) do
-          diagnostic.severity = vim.lsp.protocol.DiagnosticSeverity.Error
+          diagnostic.severity = severity
         end
       end
-      return vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+      return default_handler(err, result, ctx, config)
     end,
   },
 }

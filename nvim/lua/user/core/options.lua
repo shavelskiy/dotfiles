@@ -34,4 +34,6 @@ opt.undofile = true
 
 opt.updatetime = 250
 
+opt.foldlevelstart = 99
+
 opt.spell = false

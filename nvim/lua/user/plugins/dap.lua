@@ -4,6 +4,7 @@ return {
   dependencies = {
     'rcarriga/nvim-dap-ui',
     'nvim-neotest/nvim-nio',
+    'theHamsta/nvim-dap-virtual-text',
   },
   config = function()
     require('dapui').setup {
@@ -22,6 +23,10 @@ return {
       controls = {
         enabled = false,
       },
+    }
+
+    require('nvim-dap-virtual-text').setup {
+      commented = true,
     }
 
     require 'user.dap.init'

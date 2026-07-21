@@ -9,4 +9,19 @@ return function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
   end
+
+  if client:supports_method('textDocument/documentHighlight') then
+    local group = vim.api.nvim_create_augroup('lsp_document_highlight', { clear = false })
+    vim.api.nvim_clear_autocmds { buffer = bufnr, group = group }
+    vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+      group = group,
+      buffer = bufnr,
+      callback = vim.lsp.buf.document_highlight,
+    })
+    vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+      group = group,
+      buffer = bufnr,
+      callback = vim.lsp.buf.clear_references,
+    })
+  end
 end

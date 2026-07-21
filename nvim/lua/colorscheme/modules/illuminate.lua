@@ -1,7 +1,7 @@
 local colors = require 'colorscheme.colors'
 
 return {
-  { 'IlluminatedWordText', { underline = true, sp = colors.base05 } },
-  { 'IlluminatedWordRead', { underline = true, sp = colors.base05 } },
-  { 'IlluminatedWordWrite', { underline = true, sp = colors.base05 } },
+  { 'LspReferenceText', { underline = true, sp = colors.base05 } },
+  { 'LspReferenceRead', { underline = true, sp = colors.base05 } },
+  { 'LspReferenceWrite', { underline = true, sp = colors.base05 } },
 }
