@@ -139,7 +139,7 @@ Plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim) (auto-boo
 | Debug | nvim-dap + dap-ui (go, php) |
 | Git | gitsigns, diffview |
 | Motions | [leap.nvim](https://github.com/ggandor/leap.nvim) (`s` / `S`) |
-| Misc | Comment, autopairs, indent-blankline, illuminate, auto-session, avante (AI) |
+| Misc | autopairs, indent-blankline, persistence (sessions); built-in commenting (`gc`) and LSP document highlight |
 
 ### Editing keymaps (`lua/user/core/keymaps.lua`)
 
@@ -173,8 +173,8 @@ Formatting is done by conform (LSP fallback); `intelephense` keeps document form
 ### File tree / git / debug
 
 - `<C-n>` toggle tree · `<leader>e` focus tree.
-- `<leader>/` toggle comment · `<leader>hb` blame line · `<leader>hR` reset buffer · `<leader>tb` toggle line blame.
-- `<F6/F7/F8>` step over/into/out · `<leader>dt` breakpoint · `<leader>dc` continue · `<leader>di` toggle dap-ui.
+- `<leader>/` toggle comment (built-in `gc`) · `]h` / `[h` next / prev hunk · `<leader>hp` preview hunk · `<leader>hs` stage hunk · `<leader>hr` reset hunk · `<leader>hb` blame line · `<leader>hR` reset buffer · `<leader>tb` toggle line blame.
+- `<F6/F7/F8>` step over/into/out · `<leader>dt` breakpoint · `<leader>dc` continue · `<leader>di` toggle dap-ui. Variable values are shown inline via nvim-dap-virtual-text.
 
 ### Configured LSP servers
 

@@ -27,7 +27,7 @@ RUN mkdir -p ~/.config && \
   ln -sf ~/dotfiles/.gitconfig ~/.gitconfig && \
   ln -sf ~/dotfiles/cspell.json ~/.cspell.json
 
-RUN fish -c 'set -g fish_greeting ""; curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && fisher update'
+RUN fish -c 'set -g fish_greeting ""; curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher update'
 
 RUN nvim --headless "+Lazy! sync" +qa
 

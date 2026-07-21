@@ -21,10 +21,18 @@
 [core]
   editor = vi
   pager = delta
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [interactive]
   diffFilter = delta --color-only
 
+[init]
+  defaultBranch = main
+[push]
+  default = current
+[rerere]
+  enabled = true
+[rebase]
+  autosquash = true
 [delta]
   navigate = true
 [pull]
