@@ -41,7 +41,7 @@ return {
     dependencies = { 'mason-org/mason.nvim' },
     config = function()
       require('mason-tool-installer').setup {
-        ensure_installed = { 'prettier', 'stylua', 'sqlfluff', 'djlint' },
+        ensure_installed = { 'prettierd', 'stylua', 'sqlfluff', 'djlint' },
       }
     end,
   },
