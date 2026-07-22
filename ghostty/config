@@ -9,6 +9,8 @@ cursor-style-blink = false
 copy-on-select = clipboard
 mouse-hide-while-typing = true
 
+clipboard-write = allow
+
 macos-option-as-alt = true
 
 scrollback-limit = 50000
