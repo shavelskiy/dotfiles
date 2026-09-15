@@ -11,7 +11,7 @@ return {
       group = group,
       nested = true,
       callback = function()
-        if vim.fn.argc() == 0 and not vim.g.started_with_stdin then
+        if vim.fn.argc() == 0 then
           require('persistence').load()
         end
       end,

@@ -10,6 +10,7 @@ return {
             ['a11y-missing-attribute'] = 'ignore',
             ['a11y-mouse-events-have-key-events'] = 'ignore',
             ['a11y-positive-tabindex'] = 'ignore',
+            ['a11y-media-has-caption'] = 'ignore',
           },
         },
       },

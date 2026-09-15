@@ -38,3 +38,6 @@ da=38;5;245:in=37:bl=38;5;220:hd=37:lp=37:cc=37"
 if test -f ~/.config/fish/secrets.fish
     source ~/.config/fish/secrets.fish
 end
+
+# kimi-code
+fish_add_path -g "/Users/v.shavelskiy/.kimi-code/bin"

@@ -1,7 +1,6 @@
 local default_handler = vim.lsp.handlers['textDocument/publishDiagnostics']
 
 return {
-  filetypes = nil,
   handlers = {
     ['textDocument/publishDiagnostics'] = function(err, result, ctx, config)
       if result and result.diagnostics then

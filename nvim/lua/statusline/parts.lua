@@ -47,10 +47,18 @@ local pwd = function()
 end
 
 local lsp_diagnostics = function(result)
-  local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
-  local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
-  local hints = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
-  local info = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
+  local severity = vim.diagnostic.severity
+  local counts = {}
+
+  for _, diagnostic in ipairs(vim.diagnostic.get(0)) do
+    local s = diagnostic.severity
+    if s then counts[s] = (counts[s] or 0) + 1 end
+  end
+
+  local errors = counts[severity.ERROR] or 0
+  local warnings = counts[severity.WARN] or 0
+  local hints = counts[severity.HINT] or 0
+  local info = counts[severity.INFO] or 0
 
   local data = {}
 
