@@ -85,6 +85,8 @@ return {
   -- Comments
   { '@comment', { fg = colors.base04, italic = true } },
 
+  { '@error', { fg = colors.base08 } },
+
   -- Markup
   { '@markup.heading', { fg = colors.base0D } },
   { '@markup.raw', { fg = colors.base09 } },

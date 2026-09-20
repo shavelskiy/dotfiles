@@ -26,4 +26,9 @@ return {
   { 'DapUIBreakpointsInfo', { fg = colors.base0D } },
   { 'DapUIBreakpointsCurrentLine', { fg = colors.base0B, bold = true } },
   { 'DapUIBreakpointsDisabledLine', { fg = colors.base0F } },
+
+  { 'NvimDapVirtualText', { fg = colors.base0C } },
+  { 'NvimDapVirtualTextChanged', { fg = colors.base0A } },
+  { 'NvimDapVirtualTextError', { fg = colors.base08 } },
+  { 'NvimDapVirtualTextInfo', { fg = colors.base0D } },
 }

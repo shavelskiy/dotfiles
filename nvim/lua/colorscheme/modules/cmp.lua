@@ -13,6 +13,12 @@ return {
   { 'BlinkCmpDocBorder', { fg = colors.base04, bg = colors.base01 } },
   { 'BlinkCmpDocSeparator', { fg = colors.base04, bg = colors.base01 } },
 
+  { 'BlinkCmpSignatureHelp', { fg = colors.base06, bg = colors.base01 } },
+  { 'BlinkCmpSignatureHelpBorder', { fg = colors.base04, bg = colors.base01 } },
+  { 'BlinkCmpSignatureHelpActiveParameter', { fg = colors.base0A, bold = true } },
+
+  { 'BlinkCmpGhostText', { fg = colors.base04, italic = true } },
+
   -- label / abbr
   { 'BlinkCmpLabel', { fg = colors.base06, bg = colors.base01 } },
   { 'BlinkCmpLabelDeprecated', { fg = colors.base04, strikethrough = true } },
@@ -48,4 +54,14 @@ return {
   { 'BlinkCmpKindFolder', { fg = colors.base07 } },
   { 'BlinkCmpKindFile', { fg = colors.base07 } },
   { 'BlinkCmpKindColor', { fg = colors.base0F } },
+
+  { 'BlinkCmpKindArray', { fg = colors.base0A } },
+  { 'BlinkCmpKindTable', { fg = colors.base0A } },
+  { 'BlinkCmpKindObject', { fg = colors.base0A } },
+  { 'BlinkCmpKindBoolean', { fg = colors.base09 } },
+  { 'BlinkCmpKindNumber', { fg = colors.base09 } },
+  { 'BlinkCmpKindNull', { fg = colors.base0F } },
+  { 'BlinkCmpKindString', { fg = colors.base0B } },
+  { 'BlinkCmpKindTag', { fg = colors.base0D } },
+  { 'BlinkCmpKindPackage', { fg = colors.base06 } },
 }

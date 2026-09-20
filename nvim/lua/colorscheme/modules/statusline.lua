@@ -32,7 +32,6 @@ return {
   { 'StatusLineLspHints', { fg = colors.base0E, bg = bubleBackgroud } },
   { 'StatusLineLspInfo', { fg = colors.base0B, bg = bubleBackgroud } },
   { 'StatusLineLspStatus', { fg = colors.base0D, bg = bubleBackgroud } },
-  { 'StatusLineLspProgress', { fg = colors.base0B, bg = bubleBackgroud } },
 
   { 'StatusLineGitAdded', { fg = colors.base0B, bg = bubleBackgroud } },
   { 'StatusLineGitChanged', { fg = colors.base0D, bg = bubleBackgroud } },
