@@ -8,8 +8,8 @@ windows:
   - window_name: control
     layout: even-vertical
     panes:
-      - start_directory: ~/work/tride/frontend
-      - start_directory: ~/work/tride/backend-tride
+      - start_directory: ~/work/tride-workspace/frontend
+      - start_directory: ~/work/tride-workspace/backend-tride
 
   - window_name: backend
     start_directory: ~/work/tride/backend-tride

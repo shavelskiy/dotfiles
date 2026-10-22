@@ -41,3 +41,5 @@ end
 
 # kimi-code
 fish_add_path -g "/Users/v.shavelskiy/.kimi-code/bin"
+
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

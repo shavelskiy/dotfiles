@@ -43,6 +43,10 @@ M.close_buffer = function(bufnr)
     vim.cmd(vim.bo.buflisted and 'set nobl | enew' or 'hide')
   else
     bufnr = bufnr or api.nvim_get_current_buf()
+    if vim.bo[bufnr].modified then
+      vim.notify('buffer has unsaved changes', vim.log.levels.WARN)
+      return
+    end
     M.prev_tab()
     vim.cmd('confirm bd' .. bufnr)
   end
